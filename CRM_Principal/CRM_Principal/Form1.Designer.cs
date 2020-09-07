@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.usuario = new System.Windows.Forms.TextBox();
+            this.txtuser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.contra_pass = new System.Windows.Forms.TextBox();
+            this.txtpass = new System.Windows.Forms.TextBox();
             this.Ingresar_JD = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,17 +60,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario:";
             // 
-            // usuario
+            // txtuser
             // 
-            this.usuario.AccessibleDescription = "";
-            this.usuario.AccessibleName = "";
-            this.usuario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuario.Location = new System.Drawing.Point(170, 251);
-            this.usuario.Name = "usuario";
-            this.usuario.Size = new System.Drawing.Size(143, 26);
-            this.usuario.TabIndex = 2;
-            this.usuario.Tag = "";
-            this.usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtuser.AccessibleDescription = "";
+            this.txtuser.AccessibleName = "";
+            this.txtuser.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtuser.Location = new System.Drawing.Point(170, 251);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(143, 26);
+            this.txtuser.TabIndex = 2;
+            this.txtuser.Tag = "";
+            this.txtuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -84,16 +84,16 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Contraseña:";
             // 
-            // contra_pass
+            // txtpass
             // 
-            this.contra_pass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contra_pass.Location = new System.Drawing.Point(170, 286);
-            this.contra_pass.Name = "contra_pass";
-            this.contra_pass.Size = new System.Drawing.Size(143, 26);
-            this.contra_pass.TabIndex = 4;
-            this.contra_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.contra_pass.UseSystemPasswordChar = true;
-            this.contra_pass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtpass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.Location = new System.Drawing.Point(170, 286);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(143, 26);
+            this.txtpass.TabIndex = 4;
+            this.txtpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtpass.UseSystemPasswordChar = true;
+            this.txtpass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Ingresar_JD
             // 
@@ -106,6 +106,7 @@
             this.Ingresar_JD.TabIndex = 5;
             this.Ingresar_JD.Text = "Ingresar";
             this.Ingresar_JD.UseVisualStyleBackColor = true;
+            this.Ingresar_JD.Click += new System.EventHandler(this.Ingresar_JD_Click);
             // 
             // Form1
             // 
@@ -113,9 +114,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 364);
             this.Controls.Add(this.Ingresar_JD);
-            this.Controls.Add(this.contra_pass);
+            this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.usuario);
+            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -134,9 +135,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox usuario;
+        private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox contra_pass;
+        private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Button Ingresar_JD;
     }
 }

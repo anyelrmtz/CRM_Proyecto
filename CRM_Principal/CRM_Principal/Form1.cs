@@ -26,5 +26,10 @@ namespace CRM_Principal
         {
 
         }
+
+        private void Ingresar_JD_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }
