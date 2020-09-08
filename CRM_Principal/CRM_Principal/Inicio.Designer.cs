@@ -72,7 +72,6 @@
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(196, 22);
             this.txtuser.TabIndex = 3;
-            this.txtuser.TextChanged += new System.EventHandler(this.textBox2_TextChanged_1);
             // 
             // button1
             // 
@@ -83,6 +82,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Iniciar Sesión";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
