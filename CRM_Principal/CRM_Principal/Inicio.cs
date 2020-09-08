@@ -28,7 +28,9 @@ namespace CRM_Principal
 
         }
 
-        private void Ingresar_JD_Click(object sender, EventArgs e)
+        
+
+        private void button1_Click(object sender, EventArgs e)
         {
             MySqlConnection conectar = new MySqlConnection("server=sql3.freemysqlhosting.net; database=sql3364286;Uid=sql3364286;pwd=j1AwNptgUn;");
             conectar.Open();
@@ -36,13 +38,13 @@ namespace CRM_Principal
             MySqlCommand codigo = new MySqlCommand();
             MySqlConnection conectanos = new MySqlConnection();
             codigo.Connection = conectar;
-            codigo.CommandText = ("select * from usuarios where user = '"+txtuser.Text+"' and contra = '"+txtpass.Text+"'");
+            codigo.CommandText = ("select * from usuarios where user = '" + txtuser.Text + "' and contra = '" + txtpass.Text + "'");
             MySqlDataReader leer = codigo.ExecuteReader();
             if (leer.Read())
             {
                 MessageBox.Show("bienvenido");
                 Principal llamar = new Principal();
-                
+
                 llamar.ShowDialog();
                 this.Close();
 
@@ -52,11 +54,6 @@ namespace CRM_Principal
                 MessageBox.Show("contraseña o usuario no existe");
             }
             conectar.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

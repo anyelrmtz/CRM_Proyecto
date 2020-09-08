@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.txtuser = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Ingresar_JD = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -73,16 +73,16 @@
             this.txtuser.Size = new System.Drawing.Size(196, 22);
             this.txtuser.TabIndex = 3;
             // 
-            // button1
+            // Ingresar_JD
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(217, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Iniciar Sesión";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Ingresar_JD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ingresar_JD.Location = new System.Drawing.Point(217, 129);
+            this.Ingresar_JD.Name = "Ingresar_JD";
+            this.Ingresar_JD.Size = new System.Drawing.Size(109, 27);
+            this.Ingresar_JD.TabIndex = 4;
+            this.Ingresar_JD.Text = "Iniciar Sesión";
+            this.Ingresar_JD.UseVisualStyleBackColor = true;
+            this.Ingresar_JD.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -100,7 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 179);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Ingresar_JD);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label2);
@@ -118,7 +118,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Ingresar_JD;
         private System.Windows.Forms.Button button2;
     }
 }
