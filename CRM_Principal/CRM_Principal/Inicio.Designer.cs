@@ -1,6 +1,6 @@
 ﻿namespace CRM_Principal
 {
-    partial class Inicio
+    partial class login
     {
         /// <summary>
         /// Variable del diseñador necesaria.
