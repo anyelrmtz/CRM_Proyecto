@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace CRM_Principal
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
         }
@@ -41,6 +41,11 @@ namespace CRM_Principal
             if (leer.Read())
             {
                 MessageBox.Show("bienvenido");
+                Principal llamar = new Principal();
+                
+                llamar.ShowDialog();
+                this.Close();
+
             }
             else
             {
