@@ -53,5 +53,10 @@ namespace CRM_Principal
             }
             conectar.Close();
         }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
