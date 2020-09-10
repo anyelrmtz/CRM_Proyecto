@@ -55,6 +55,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="U_General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="U_General.Designer.cs">
+      <DependentUpon>U_General.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,8 +75,23 @@
     <Compile Include="Registrar_Usuarios.Designer.cs">
       <DependentUpon>Registrar_Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="U_Leads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="U_Leads.Designer.cs">
+      <DependentUpon>U_Leads.cs</DependentUpon>
+    </Compile>
+    <Compile Include="U_Prospecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="U_Prospecto.Designer.cs">
+      <DependentUpon>U_Prospecto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_General.resx">
+      <DependentUpon>U_General.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -86,6 +107,12 @@
     </Compile>
     <EmbeddedResource Include="Registrar_Usuarios.resx">
       <DependentUpon>Registrar_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_Leads.resx">
+      <DependentUpon>U_Leads.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="U_Prospecto.resx">
+      <DependentUpon>U_Prospecto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
