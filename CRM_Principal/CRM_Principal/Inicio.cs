@@ -43,7 +43,7 @@ namespace CRM_Principal
             if (leer.Read())
             {
                 MessageBox.Show("bienvenido");
-                Principal llamar = new Principal();
+                Inicio_Principal llamar = new Inicio_Principal();
 
                 llamar.ShowDialog();
                 this.Close();

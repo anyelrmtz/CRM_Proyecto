@@ -55,17 +55,17 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio_Principal.Designer.cs">
+      <DependentUpon>Inicio_Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="U_General.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="U_General.Designer.cs">
       <DependentUpon>U_General.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,9 +92,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="U_General.resx">
       <DependentUpon>U_General.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

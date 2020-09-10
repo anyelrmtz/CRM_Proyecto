@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CRM_Principal
 {
-    public partial class Principal : Form
+    public partial class Inicio_Principal : Form
     {
-        public Principal()
+        public Inicio_Principal()
         {
             InitializeComponent();
         }
