@@ -44,7 +44,7 @@ namespace CRM_Principal
             {
                 MessageBox.Show("bienvenido");
                 Inicio_Principal llamar = new Inicio_Principal();
-
+                this.Hide();
                 llamar.ShowDialog();
                 this.Close();
 
@@ -54,6 +54,14 @@ namespace CRM_Principal
                 MessageBox.Show("contraseña o usuario no existe");
             }
             conectar.Close();
+        }
+
+        private void Registro_Click(object sender, EventArgs e)
+        {
+            Registrar_Usuarios nuevo = new Registrar_Usuarios();
+            this.Hide();
+            nuevo.ShowDialog();
+            this.Close();
         }
     }
 }

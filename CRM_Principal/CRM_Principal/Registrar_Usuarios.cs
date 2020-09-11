@@ -16,5 +16,13 @@ namespace CRM_Principal
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            login inicio = new login();
+            this.Hide();
+            inicio.ShowDialog();
+            this.Close();
+        }
     }
 }
