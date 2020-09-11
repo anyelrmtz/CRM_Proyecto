@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registrar_Usuarios));
             this.label1 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,10 +57,11 @@
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(189, 26);
             this.Nombre.TabIndex = 1;
+            this.Nombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(224, 148);
+            this.button1.Location = new System.Drawing.Point(124, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -74,6 +76,7 @@
             this.ususario.Name = "ususario";
             this.ususario.Size = new System.Drawing.Size(189, 26);
             this.ususario.TabIndex = 4;
+            this.ususario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -92,6 +95,8 @@
             this.contra.Name = "contra";
             this.contra.Size = new System.Drawing.Size(189, 26);
             this.contra.TabIndex = 6;
+            this.contra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.contra.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -105,7 +110,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(224, 195);
+            this.button2.Location = new System.Drawing.Point(224, 148);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -115,12 +120,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(129, 148);
+            this.button3.Location = new System.Drawing.Point(29, 148);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 8;
             this.button3.Text = "Cancelar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Registrar_Usuarios
             // 
@@ -136,7 +142,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Nombre);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registrar_Usuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registrar Usuario";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -90,6 +90,9 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inicio_Principal.resx">
+      <DependentUpon>Inicio_Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="U_General.resx">
       <DependentUpon>U_General.cs</DependentUpon>
     </EmbeddedResource>

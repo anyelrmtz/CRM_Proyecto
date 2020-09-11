@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtpass = new System.Windows.Forms.TextBox();
@@ -64,6 +65,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(196, 22);
             this.txtpass.TabIndex = 2;
+            this.txtpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtpass.UseSystemPasswordChar = true;
             // 
             // txtuser
@@ -73,6 +75,7 @@
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(196, 22);
             this.txtuser.TabIndex = 3;
+            this.txtuser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Ingresar_JD
             // 
@@ -107,6 +110,7 @@
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRM Juno Doctors";

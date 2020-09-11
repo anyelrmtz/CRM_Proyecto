@@ -71,12 +71,41 @@ namespace CRM_Principal
                     else
                     {
                         MessageBox.Show("El Usuario Se guardo Exitosamente ");
+                        limpiar borrar = new limpiar();
+                        borrar.limpiarcampos(this);
                     }
                 }
 
 
             }
             conectar.Close();
+           
+        }
+        class limpiar
+        {
+            public void limpiarcampos(Control control)
+            {
+                foreach(var txt in control.Controls)
+                {
+                    if (txt is TextBox)
+                    {
+                        ((TextBox)txt).Clear();
+                    }
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Desea cancelar el guardado? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(resultado == DialogResult.Yes)
+            {
+                login inicio = new login();
+                this.Hide();
+                inicio.ShowDialog();
+                this.Close();
+
+            }
         }
     }
 }
