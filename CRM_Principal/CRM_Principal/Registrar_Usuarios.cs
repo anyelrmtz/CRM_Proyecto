@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace CRM_Principal
 {
@@ -23,6 +24,59 @@ namespace CRM_Principal
             this.Hide();
             inicio.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conectar = new MySqlConnection("server=sql3.freemysqlhosting.net; database=sql3364286;Uid=sql3364286;pwd=j1AwNptgUn;");
+            conectar.Open();
+
+            MySqlCommand buscaruser = new MySqlCommand();
+            MySqlConnection conectanos = new MySqlConnection();
+            buscaruser.Connection = conectar;
+            buscaruser.CommandText = ("select * from usuarios where user = '" + ususario.Text + "'");
+            
+            MySqlDataReader leer = buscaruser.ExecuteReader();
+            if (leer.Read())
+            {
+                MessageBox.Show("ya existe el este usuario");
+                conectar.Close();
+
+            }
+            else
+            {
+                conectar.Close();
+                conectar.Open();
+                MySqlCommand buscanom = new MySqlCommand();
+                buscanom.Connection = conectar;
+                buscanom.CommandText = ("select * from usuarios where nombre = '" + Nombre.Text + "'");
+                MySqlDataReader leer2 = buscanom.ExecuteReader();
+                if(leer2.Read())
+                {
+                    MessageBox.Show("Este nombre ya esta registrado");
+                    conectar.Close();
+                }
+                else
+                {
+                    conectar.Close();
+                    conectar.Open();
+                    MySqlCommand agregar_user = new MySqlCommand();
+                    agregar_user.Connection = conectar;
+                    agregar_user.CommandText = ("insert into usuarios(user,contra,nombre) values('"+ususario.Text+"','"+contra.Text+"','"+Nombre.Text+"')");
+                    MySqlDataReader leer3 = agregar_user.ExecuteReader();
+                    if (leer3.Read())
+                    {
+                        MessageBox.Show("Error en guardad");
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Usuario Se guardo Exitosamente ");
+                    }
+                }
+
+
+            }
+            conectar.Close();
         }
     }
 }
