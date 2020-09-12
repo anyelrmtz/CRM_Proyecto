@@ -14,16 +14,22 @@ namespace CRM_Principal
 {
     public partial class Inicio_Principal : Form
     {
-        public String tipo_user;
-        public String nombre_user;
-        public String salida_user;
-        public Inicio_Principal()
+        public string id_us;
+        public string usuario;
+        public string nombre_user;
+        public string tipo_user;
+        public string salida_user;
+        public Inicio_Principal(login.Datos info)
         {
             InitializeComponent();
             
             DateTime ahora = DateTime.Now;
             salida_user = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
-            
+            id_us = info.id_user;
+            usuario = info.usuario;
+            nombre_user = info.usuario;
+            tipo_user = info.tipo_usuario;
+            MessageBox.Show(id_us );
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,11 +67,12 @@ namespace CRM_Principal
             {
                 MySqlConnection conectar = new MySqlConnection("server=sql3.freemysqlhosting.net; database=sql3364286;Uid=sql3364286;pwd=j1AwNptgUn;");
                 conectar.Open();
-                MySqlCommand buscaruser = new MySqlCommand();
+                MySqlCommand actualisar = new MySqlCommand();
                 MySqlConnection conectanos = new MySqlConnection();
-                buscaruser.Connection = conectar;
-                buscaruser.CommandText = ("update entrada_user set salida ='"+salida_user+"' where user='"+nombre_user+"' ");
-                MySqlDataReader leer = buscaruser.ExecuteReader();
+                actualisar.Connection = conectar;
+                actualisar.CommandText = ("UPDATE entrada_user SET salida= '"+salida_user+ "', on_of=0 WHERE user='" + nombre_user+ "' AND on_of='" + id_us+"';");
+                MySqlDataReader leer = actualisar.ExecuteReader();
+                conectar.Close();
                 login inicio = new login();
                 this.Hide();
                 inicio.ShowDialog();
