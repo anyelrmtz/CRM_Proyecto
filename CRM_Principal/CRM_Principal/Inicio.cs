@@ -46,6 +46,7 @@ namespace CRM_Principal
                 Inicio_Principal llamar = new Inicio_Principal();
                 this.Hide();
                 llamar.ShowDialog();
+                llamar.tipo_user = leer.GetString(3);
                 this.Close();
 
             }

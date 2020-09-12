@@ -12,6 +12,8 @@ namespace CRM_Principal
 {
     public partial class Inicio_Principal : Form
     {
+        public string tipo_user;
+
         public Inicio_Principal()
         {
             InitializeComponent();
