@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSecionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tallerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCitasAgendadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSecionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Hora_envivo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -88,6 +88,13 @@
             this.agregarUsuarioToolStripMenuItem1.Size = new System.Drawing.Size(214, 22);
             this.agregarUsuarioToolStripMenuItem1.Text = "Configuracion de Usuarios";
             // 
+            // cerrarSecionToolStripMenuItem
+            // 
+            this.cerrarSecionToolStripMenuItem.Name = "cerrarSecionToolStripMenuItem";
+            this.cerrarSecionToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.cerrarSecionToolStripMenuItem.Text = "Cerrar sesión";
+            this.cerrarSecionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSecionToolStripMenuItem_Click);
+            // 
             // administracionToolStripMenuItem
             // 
             this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -109,7 +116,7 @@
             this.consultasToolStripMenuItem,
             this.procedimientosToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.ventasToolStripMenuItem.Text = "Ingresos";
             // 
             // tallerToolStripMenuItem
@@ -158,13 +165,13 @@
             // gastosToolStripMenuItem
             // 
             this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
-            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.gastosToolStripMenuItem.Text = "Gastos";
             // 
             // graficasToolStripMenuItem
             // 
             this.graficasToolStripMenuItem.Name = "graficasToolStripMenuItem";
-            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.graficasToolStripMenuItem.Text = "Graficas";
             // 
             // usuariosToolStripMenuItem
@@ -223,13 +230,6 @@
             this.verCitasAgendadasToolStripMenuItem.Name = "verCitasAgendadasToolStripMenuItem";
             this.verCitasAgendadasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.verCitasAgendadasToolStripMenuItem.Text = "Ver Citas Agendadas";
-            // 
-            // cerrarSecionToolStripMenuItem
-            // 
-            this.cerrarSecionToolStripMenuItem.Name = "cerrarSecionToolStripMenuItem";
-            this.cerrarSecionToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.cerrarSecionToolStripMenuItem.Text = "Cerrar sesión";
-            this.cerrarSecionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSecionToolStripMenuItem_Click);
             // 
             // Hora_envivo
             // 

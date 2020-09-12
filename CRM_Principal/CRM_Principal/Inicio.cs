@@ -13,9 +13,15 @@ namespace CRM_Principal
 {
     public partial class login : Form
     {
+        public String tipo_user;
+        public String entrada;
+        public String nombre;
+
         public login()
         {
             InitializeComponent();
+            DateTime ahora = DateTime.Now;
+            entrada = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -42,11 +48,20 @@ namespace CRM_Principal
             MySqlDataReader leer = codigo.ExecuteReader();
             if (leer.Read())
             {
+                tipo_user = leer.GetString(4);
+               nombre = leer.GetString(3);
+                conectar.Close();
+                conectar.Open();
+                MySqlCommand registro_usuario = new MySqlCommand();
+                registro_usuario.Connection = conectar;
+                registro_usuario.CommandText = ("insert into entrada_user(user,tipo_user,entrada) values('"+txtuser.Text+"','"+tipo_user+"','"+entrada+"')");
+                MySqlDataReader insertado = registro_usuario.ExecuteReader();
                 MessageBox.Show("bienvenido");
                 Inicio_Principal llamar = new Inicio_Principal();
+                llamar.tipo_user = tipo_user;
+                llamar.nombre_user = nombre;
                 this.Hide();
                 llamar.ShowDialog();
-                llamar.tipo_user = leer.GetString(3);
                 this.Close();
 
             }
@@ -63,6 +78,11 @@ namespace CRM_Principal
             this.Hide();
             nuevo.ShowDialog();
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

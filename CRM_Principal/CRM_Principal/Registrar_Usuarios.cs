@@ -59,21 +59,27 @@ namespace CRM_Principal
                 else
                 {
                     conectar.Close();
-                    conectar.Open();
-                    MySqlCommand agregar_user = new MySqlCommand();
-                    agregar_user.Connection = conectar;
-                    agregar_user.CommandText = ("insert into usuarios(user,contra,nombre) values('"+ususario.Text+"','"+contra.Text+"','"+Nombre.Text+"')");
-                    MySqlDataReader leer3 = agregar_user.ExecuteReader();
-                    if (leer3.Read())
+                    DialogResult resultado = MessageBox.Show("Desea guardar los datos Ingresados? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resultado == DialogResult.Yes)
                     {
-                        MessageBox.Show("Error en guardad");
+                        conectar.Open();
+                        MySqlCommand agregar_user = new MySqlCommand();
+                        agregar_user.Connection = conectar;
+                        agregar_user.CommandText = ("insert into usuarios(user,contra,nombre,tipo_user) values('" + ususario.Text + "','" + contra.Text + "','" + Nombre.Text + "','"+tipo_user.Text+"')");
+                        MySqlDataReader leer3 = agregar_user.ExecuteReader();
+                        if (leer3.Read())
+                        {
+                            MessageBox.Show("Error en guardad");
+                        }
+                        else
+                        {
+                            MessageBox.Show("El Usuario Se guardo Exitosamente ");
+                            limpiar borrar = new limpiar();
+                            borrar.limpiarcampos(this);
+                        }
+
                     }
-                    else
-                    {
-                        MessageBox.Show("El Usuario Se guardo Exitosamente ");
-                        limpiar borrar = new limpiar();
-                        borrar.limpiarcampos(this);
-                    }
+                    
                 }
 
 
@@ -90,6 +96,9 @@ namespace CRM_Principal
                     if (txt is TextBox)
                     {
                         ((TextBox)txt).Clear();
+                    } else if(txt is ComboBox)
+                    {
+                        ((ComboBox)txt).SelectedIndex = 0;
                     }
                 }
             }

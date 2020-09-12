@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace CRM_Principal
 {
     public partial class Inicio_Principal : Form
     {
-        public string tipo_user;
-
+        public String tipo_user;
+        public String nombre_user;
+        public String salida_user;
         public Inicio_Principal()
         {
             InitializeComponent();
+            
+            DateTime ahora = DateTime.Now;
+            salida_user = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
             
         }
 
@@ -53,6 +59,13 @@ namespace CRM_Principal
             DialogResult resultado = MessageBox.Show("en verdad quiere cerar Sesión? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (resultado == DialogResult.Yes)
             {
+                MySqlConnection conectar = new MySqlConnection("server=sql3.freemysqlhosting.net; database=sql3364286;Uid=sql3364286;pwd=j1AwNptgUn;");
+                conectar.Open();
+                MySqlCommand buscaruser = new MySqlCommand();
+                MySqlConnection conectanos = new MySqlConnection();
+                buscaruser.Connection = conectar;
+                buscaruser.CommandText = ("update entrada_user set salida ='"+salida_user+"' where user='"+nombre_user+"' ");
+                MySqlDataReader leer = buscaruser.ExecuteReader();
                 login inicio = new login();
                 this.Hide();
                 inicio.ShowDialog();
