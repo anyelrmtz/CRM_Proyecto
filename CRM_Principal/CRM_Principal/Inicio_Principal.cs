@@ -16,5 +16,15 @@ namespace CRM_Principal
         {
             InitializeComponent();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tallerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
