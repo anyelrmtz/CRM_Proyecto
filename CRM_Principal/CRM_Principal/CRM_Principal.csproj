@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="confi_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="confi_usuarios.Designer.cs">
+      <DependentUpon>confi_usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="U_Prospecto.Designer.cs">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="confi_usuarios.resx">
+      <DependentUpon>confi_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +139,9 @@
   <ItemGroup>
     <Content Include="Imagenes\logotipo_full_hd.jpg" />
     <Content Include="Imagenes\logotipo_full_hd_transparente.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
