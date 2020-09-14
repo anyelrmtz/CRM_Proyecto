@@ -29,7 +29,6 @@ namespace CRM_Principal
             usuario = info.usuario;
             nombre_user = info.usuario;
             tipo_user = info.tipo_usuario;
-            MessageBox.Show(id_us );
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
