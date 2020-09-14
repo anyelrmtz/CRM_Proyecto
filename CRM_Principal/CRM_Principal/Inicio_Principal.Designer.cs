@@ -54,8 +54,10 @@
             this.verCitasAgendadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Hora_envivo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -116,7 +118,7 @@
             this.consultasToolStripMenuItem,
             this.procedimientosToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ventasToolStripMenuItem.Text = "Ingresos";
             // 
             // tallerToolStripMenuItem
@@ -165,13 +167,13 @@
             // gastosToolStripMenuItem
             // 
             this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
-            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gastosToolStripMenuItem.Text = "Gastos";
             // 
             // graficasToolStripMenuItem
             // 
             this.graficasToolStripMenuItem.Name = "graficasToolStripMenuItem";
-            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graficasToolStripMenuItem.Text = "Graficas";
             // 
             // usuariosToolStripMenuItem
@@ -249,6 +251,11 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // Inicio_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +275,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,5 +308,6 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarSecionToolStripMenuItem;
         private System.Windows.Forms.Label Hora_envivo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
