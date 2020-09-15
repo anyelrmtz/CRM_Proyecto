@@ -76,6 +76,7 @@ namespace CRM_Principal
                             MessageBox.Show("El Usuario Se guardo Exitosamente ");
                             limpiar borrar = new limpiar();
                             borrar.limpiarcampos(this);
+                            
                         }
 
                     }

@@ -140,8 +140,5 @@
     <Content Include="Imagenes\logotipo_full_hd.jpg" />
     <Content Include="Imagenes\logotipo_full_hd_transparente.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

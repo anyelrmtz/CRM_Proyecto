@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_agregar = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_agregar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_user = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_elimi_historial = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_user)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -60,16 +60,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
             // 
-            // btn_agregar
+            // btn_eliminar
             // 
-            this.btn_agregar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_agregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_agregar.Location = new System.Drawing.Point(6, 34);
-            this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(167, 27);
-            this.btn_agregar.TabIndex = 0;
-            this.btn_agregar.Text = "Agregar Usuario";
-            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_eliminar.BackColor = System.Drawing.Color.Red;
+            this.btn_eliminar.Location = new System.Drawing.Point(9, 131);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(164, 26);
+            this.btn_eliminar.TabIndex = 2;
+            this.btn_eliminar.Text = "Elimar Usuario";
+            this.btn_eliminar.UseVisualStyleBackColor = false;
             // 
             // btn_actualizar
             // 
@@ -81,19 +80,21 @@
             this.btn_actualizar.Text = "Actualizar Datos";
             this.btn_actualizar.UseVisualStyleBackColor = false;
             // 
-            // btn_eliminar
+            // btn_agregar
             // 
-            this.btn_eliminar.BackColor = System.Drawing.Color.Red;
-            this.btn_eliminar.Location = new System.Drawing.Point(9, 131);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(164, 26);
-            this.btn_eliminar.TabIndex = 2;
-            this.btn_eliminar.Text = "Elimar Usuario";
-            this.btn_eliminar.UseVisualStyleBackColor = false;
+            this.btn_agregar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_agregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_agregar.Location = new System.Drawing.Point(6, 34);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(167, 27);
+            this.btn_agregar.TabIndex = 0;
+            this.btn_agregar.Text = "Agregar Usuario";
+            this.btn_agregar.UseVisualStyleBackColor = false;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dataGridView_user);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(209, 12);
             this.groupBox2.Name = "groupBox2";
@@ -102,13 +103,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usuarios";
             // 
-            // dataGridView1
+            // dataGridView_user
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(687, 147);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView_user.AllowUserToAddRows = false;
+            this.dataGridView_user.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_user.Location = new System.Drawing.Point(7, 22);
+            this.dataGridView_user.Name = "dataGridView_user";
+            this.dataGridView_user.Size = new System.Drawing.Size(686, 150);
+            this.dataGridView_user.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -141,6 +143,7 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Historial de Ingreso";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // dataGridView2
             // 
@@ -163,9 +166,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "confi_usuarios";
             this.Text = "confi_usuarios";
+            this.Load += new System.EventHandler(this.confi_usuarios_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_user)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -180,10 +184,10 @@
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_agregar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_elimi_historial;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView2;
+        public System.Windows.Forms.DataGridView dataGridView_user;
     }
 }
