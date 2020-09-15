@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="confi_usuarios.cs">
+    <Compile Include="configuracion_user\confi_usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="confi_usuarios.Designer.cs">
+    <Compile Include="configuracion_user\confi_usuarios.Designer.cs">
       <DependentUpon>confi_usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
@@ -75,10 +75,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registrar_Usuarios.cs">
+    <Compile Include="configuracion_user\Registrar_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registrar_Usuarios.Designer.cs">
+    <Compile Include="configuracion_user\Registrar_Usuarios.Designer.cs">
       <DependentUpon>Registrar_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="U_Leads.cs">
@@ -93,7 +93,7 @@
     <Compile Include="U_Prospecto.Designer.cs">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="confi_usuarios.resx">
+    <EmbeddedResource Include="configuracion_user\confi_usuarios.resx">
       <DependentUpon>confi_usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
@@ -114,7 +114,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registrar_Usuarios.resx">
+    <EmbeddedResource Include="configuracion_user\Registrar_Usuarios.resx">
       <DependentUpon>Registrar_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="U_Leads.resx">

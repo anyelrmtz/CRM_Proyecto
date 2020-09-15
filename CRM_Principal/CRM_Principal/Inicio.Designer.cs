@@ -34,7 +34,6 @@
             this.txtpass = new System.Windows.Forms.TextBox();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.Ingresar_JD = new System.Windows.Forms.Button();
-            this.Registro = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,24 +86,13 @@
             this.Ingresar_JD.BackColor = System.Drawing.Color.GreenYellow;
             this.Ingresar_JD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ingresar_JD.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.Ingresar_JD.Location = new System.Drawing.Point(198, 245);
+            this.Ingresar_JD.Location = new System.Drawing.Point(111, 234);
             this.Ingresar_JD.Name = "Ingresar_JD";
             this.Ingresar_JD.Size = new System.Drawing.Size(130, 27);
             this.Ingresar_JD.TabIndex = 4;
             this.Ingresar_JD.Text = "Iniciar Sesión";
             this.Ingresar_JD.UseVisualStyleBackColor = false;
             this.Ingresar_JD.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Registro
-            // 
-            this.Registro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registro.Location = new System.Drawing.Point(18, 245);
-            this.Registro.Name = "Registro";
-            this.Registro.Size = new System.Drawing.Size(119, 27);
-            this.Registro.TabIndex = 5;
-            this.Registro.Text = "Registrarse";
-            this.Registro.UseVisualStyleBackColor = true;
-            this.Registro.Click += new System.EventHandler(this.Registro_Click);
             // 
             // pictureBox1
             // 
@@ -122,9 +110,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(352, 295);
+            this.ClientSize = new System.Drawing.Size(352, 273);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Registro);
             this.Controls.Add(this.Ingresar_JD);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.txtpass);
@@ -148,7 +135,6 @@
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.TextBox txtuser;
         private System.Windows.Forms.Button Ingresar_JD;
-        private System.Windows.Forms.Button Registro;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

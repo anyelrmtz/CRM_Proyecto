@@ -83,10 +83,7 @@ namespace CRM_Principal
 
         private void Registro_Click(object sender, EventArgs e)
         {
-            Registrar_Usuarios nuevo = new Registrar_Usuarios();
-            this.Hide();
-            nuevo.ShowDialog();
-            this.Close();
+          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
