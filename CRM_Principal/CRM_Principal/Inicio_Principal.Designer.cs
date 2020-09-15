@@ -55,9 +55,11 @@
             this.Hora_envivo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.panel_contenedor = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.panel_contenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -89,6 +91,7 @@
             this.agregarUsuarioToolStripMenuItem1.Name = "agregarUsuarioToolStripMenuItem1";
             this.agregarUsuarioToolStripMenuItem1.Size = new System.Drawing.Size(214, 22);
             this.agregarUsuarioToolStripMenuItem1.Text = "Configuracion de Usuarios";
+            this.agregarUsuarioToolStripMenuItem1.Click += new System.EventHandler(this.agregarUsuarioToolStripMenuItem1_Click);
             // 
             // cerrarSecionToolStripMenuItem
             // 
@@ -118,7 +121,7 @@
             this.consultasToolStripMenuItem,
             this.procedimientosToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.ventasToolStripMenuItem.Text = "Ingresos";
             // 
             // tallerToolStripMenuItem
@@ -167,13 +170,13 @@
             // gastosToolStripMenuItem
             // 
             this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
-            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.gastosToolStripMenuItem.Text = "Gastos";
             // 
             // graficasToolStripMenuItem
             // 
             this.graficasToolStripMenuItem.Name = "graficasToolStripMenuItem";
-            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.graficasToolStripMenuItem.Text = "Graficas";
             // 
             // usuariosToolStripMenuItem
@@ -244,7 +247,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(920, 487);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -256,12 +259,20 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // panel_contenedor
+            // 
+            this.panel_contenedor.Controls.Add(this.pictureBox1);
+            this.panel_contenedor.Location = new System.Drawing.Point(0, 27);
+            this.panel_contenedor.Name = "panel_contenedor";
+            this.panel_contenedor.Size = new System.Drawing.Size(920, 485);
+            this.panel_contenedor.TabIndex = 3;
+            // 
             // Inicio_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 513);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.Hora_envivo);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -276,6 +287,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.panel_contenedor.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +321,6 @@
         private System.Windows.Forms.Label Hora_envivo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Panel panel_contenedor;
     }
 }

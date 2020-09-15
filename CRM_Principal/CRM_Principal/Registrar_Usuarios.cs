@@ -28,7 +28,7 @@ namespace CRM_Principal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conectar = new MySqlConnection("server=sql3.freemysqlhosting.net; database=sql3364286;Uid=sql3364286;pwd=j1AwNptgUn;");
+            MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
             conectar.Open();
 
             MySqlCommand buscaruser = new MySqlCommand();

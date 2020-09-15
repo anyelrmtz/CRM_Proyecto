@@ -64,7 +64,7 @@ namespace CRM_Principal
             DialogResult resultado = MessageBox.Show("en verdad quiere cerar Sesión? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (resultado == DialogResult.Yes)
             {
-                MySqlConnection conectar = new MySqlConnection("server=sql3.freemysqlhosting.net; database=sql3364286;Uid=sql3364286;pwd=j1AwNptgUn;");
+                MySqlConnection conectar = new MySqlConnection("server = 10.23.249.209; Uid = doctorjuno; pwd = 12345; database = crm; ");
                 conectar.Open();
                 MySqlCommand actualisar = new MySqlCommand();
                 MySqlConnection conectanos = new MySqlConnection();
@@ -78,6 +78,22 @@ namespace CRM_Principal
                 this.Close();
 
             }
+        }
+        private void Abrirfromconfig_user(object fromconfig_user)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            confi_usuarios con = fromconfig_user as confi_usuarios;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
+
+        private void agregarUsuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Abrirfromconfig_user(new confi_usuarios());
         }
     }
 }
