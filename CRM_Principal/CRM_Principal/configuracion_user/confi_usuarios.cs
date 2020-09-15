@@ -14,6 +14,13 @@ namespace CRM_Principal
 {
     public partial class confi_usuarios : Form
     {
+        public String data;
+        public struct Envio
+        {
+            public string user;
+
+        }
+
         public confi_usuarios()
         {
             InitializeComponent();
@@ -22,13 +29,14 @@ namespace CRM_Principal
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             Registrar_Usuarios nuevo = new Registrar_Usuarios();
+           
             nuevo.ShowDialog();
         }
 
         private void confi_usuarios_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'crmDataSet1.usuarios' Puede moverla o quitarla según sea necesario.
-            Datos();
+            Datos(this);
             // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
             this.entrada_userTableAdapter.Fill(this.crmDataSet.entrada_user);
             // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
@@ -39,7 +47,8 @@ namespace CRM_Principal
 
 
         }
-        public void Datos()
+
+        public void Datos(Control control)
         {
             this.usuariosTableAdapter.Fill(this.crmDataSet1.usuarios);
         }
@@ -69,8 +78,29 @@ namespace CRM_Principal
 
         }
 
+        private void btn_actualisar_Click(object sender, EventArgs e)
+        {
+            Datos(this);
+        }
+
+        private void btn_actualizar_Click(object sender, EventArgs e)
+        {
+            Envio info;
+            info.user = data;
+
+            Actulizar_Datos_user con = new Actulizar_Datos_user(info);
+            con.ShowDialog();
 
 
+
+
+        }
+
+        private void dataGridView_user_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+           data = dataGridView_user.CurrentRow.Cells[0].Value.ToString();
+        }
     }
 
 

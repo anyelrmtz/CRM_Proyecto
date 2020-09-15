@@ -29,6 +29,18 @@ namespace CRM_Principal
             usuario = info.usuario;
             nombre_user = info.usuario;
             tipo_user = info.tipo_usuario;
+            Estatus_user();
+        }
+
+        public void Estatus_user()
+        {
+            if(tipo_user == "Administrador")
+            {
+                menuStrip1.Enabled = true;
+            }else if(tipo_user == "Asistente")
+            {
+                agregarUsuarioToolStripMenuItem1.Enabled= false;
+            }
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)

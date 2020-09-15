@@ -98,8 +98,8 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `id`, `user`, `contra`, `nombre`, `tipo_user` FROM `usuarios`</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `id`, `user`, `contra`, `nombre`, `tipo_user` FROM `usuarios` ORDER BY id DESC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -138,7 +138,7 @@
   <xs:element name="crmDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="crmDataSet1" msprop:Generator_UserDSName="crmDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="entrada_user" msprop:Generator_TableClassName="entrada_userDataTable" msprop:Generator_TableVarName="tableentrada_user" msprop:Generator_TablePropName="entrada_user" msprop:Generator_RowDeletingName="entrada_userRowDeleting" msprop:Generator_RowChangingName="entrada_userRowChanging" msprop:Generator_RowEvHandlerName="entrada_userRowChangeEventHandler" msprop:Generator_RowDeletedName="entrada_userRowDeleted" msprop:Generator_UserTableName="entrada_user" msprop:Generator_RowChangedName="entrada_userRowChanged" msprop:Generator_RowEvArgName="entrada_userRowChangeEvent" msprop:Generator_RowClassName="entrada_userRow">
+        <xs:element name="entrada_user" msprop:Generator_TableClassName="entrada_userDataTable" msprop:Generator_TableVarName="tableentrada_user" msprop:Generator_RowChangedName="entrada_userRowChanged" msprop:Generator_TablePropName="entrada_user" msprop:Generator_RowDeletingName="entrada_userRowDeleting" msprop:Generator_RowChangingName="entrada_userRowChanging" msprop:Generator_RowEvHandlerName="entrada_userRowChangeEventHandler" msprop:Generator_RowDeletedName="entrada_userRowDeleted" msprop:Generator_RowClassName="entrada_userRow" msprop:Generator_UserTableName="entrada_user" msprop:Generator_RowEvArgName="entrada_userRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -180,7 +180,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_RowEvArgName="usuariosRowChangeEvent" msprop:Generator_RowClassName="usuariosRow">
+        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_RowClassName="usuariosRow" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowEvArgName="usuariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />

@@ -142,6 +142,7 @@
             // 
             // tipo_user
             // 
+            this.tipo_user.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.tipo_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipo_user.FormattingEnabled = true;
             this.tipo_user.Items.AddRange(new object[] {

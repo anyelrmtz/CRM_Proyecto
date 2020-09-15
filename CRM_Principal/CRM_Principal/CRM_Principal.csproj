@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="configuracion_user\Actulizar_Datos_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion_user\Actulizar_Datos_user.Designer.cs">
+      <DependentUpon>Actulizar_Datos_user.cs</DependentUpon>
+    </Compile>
     <Compile Include="configuracion_user\confi_usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="U_Prospecto.Designer.cs">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="configuracion_user\Actulizar_Datos_user.resx">
+      <DependentUpon>Actulizar_Datos_user.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="configuracion_user\confi_usuarios.resx">
       <DependentUpon>confi_usuarios.cs</DependentUpon>
     </EmbeddedResource>
