@@ -27,15 +27,21 @@ namespace CRM_Principal
 
         private void confi_usuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'crmDataSet1.usuarios' Puede moverla o quitarla según sea necesario.
+            Datos();
             // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
             this.entrada_userTableAdapter.Fill(this.crmDataSet.entrada_user);
             // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
 
-            dataGridView_user.DataSource = mostrardatos_user();
+            //dataGridView_user.DataSource = mostrardatos_user();
 
 
 
 
+        }
+        public void Datos()
+        {
+            this.usuariosTableAdapter.Fill(this.crmDataSet1.usuarios);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

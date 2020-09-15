@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>crmDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="crmDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crmDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +146,17 @@
     </None>
     <None Include="crmDataSet.xss">
       <DependentUpon>crmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="crmDataSet1.xsc">
+      <DependentUpon>crmDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="crmDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>crmDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="crmDataSet1.xss">
+      <DependentUpon>crmDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
