@@ -28,14 +28,16 @@ namespace CRM_Principal
         private void confi_usuarios_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
-           
+            this.entrada_userTableAdapter.Fill(this.crmDataSet.entrada_user);
+            // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
+
             dataGridView_user.DataSource = mostrardatos_user();
 
 
 
 
         }
-         
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -49,7 +51,7 @@ namespace CRM_Principal
             MySqlConnection conectanos = new MySqlConnection();
             codigo.Connection = conectar;
             codigo.CommandText = ("select user,nombre,tipo_user from usuarios ");
-            MySqlDataAdapter leer = new MySqlDataAdapter(codigo.CommandText,conectar);
+            MySqlDataAdapter leer = new MySqlDataAdapter(codigo.CommandText, conectar);
             DataTable mostrardatos = new DataTable();
             leer.Fill(mostrardatos);
             return mostrardatos;
@@ -60,5 +62,12 @@ namespace CRM_Principal
         {
 
         }
+
+
+
     }
+
+
+
+
 }

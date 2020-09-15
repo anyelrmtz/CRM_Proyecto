@@ -22,5 +22,16 @@ namespace CRM_Principal.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=10.23.249.209;user id=doctorjuno;password=12345;persistsecurityinfo=True;d" +
+            "atabase=crm")]
+        public string conexionjuno {
+            get {
+                return ((string)(this["conexionjuno"]));
+            }
+        }
     }
 }

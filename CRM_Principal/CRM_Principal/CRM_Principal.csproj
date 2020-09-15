@@ -55,6 +55,14 @@
     <Compile Include="configuracion_user\confi_usuarios.Designer.cs">
       <DependentUpon>confi_usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="crmDataSet.cs">
+      <DependentUpon>crmDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="crmDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crmDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +131,17 @@
     <EmbeddedResource Include="U_Prospecto.resx">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="crmDataSet.xsc">
+      <DependentUpon>crmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="crmDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>crmDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="crmDataSet.xss">
+      <DependentUpon>crmDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
