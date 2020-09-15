@@ -27,6 +27,8 @@ namespace CRM_Principal
 
         private void confi_usuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
+           
             dataGridView_user.DataSource = mostrardatos_user();
 
 
