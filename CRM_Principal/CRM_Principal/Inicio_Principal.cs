@@ -14,24 +14,31 @@ namespace CRM_Principal
 {
     public partial class Inicio_Principal : Form
     {
+        //llamamos las nuevas variables para optener los datos enviados
         public string id_us;
         public string usuario;
         public string nombre_user;
         public string tipo_user;
         public string salida_user;
+        //se estancia para obtener los datos mandados
         public Inicio_Principal(login.Datos info)
         {
             InitializeComponent();
-            
+            //optiene la hora y fehca del sistema
             DateTime ahora = DateTime.Now;
             salida_user = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
+            //se guarda la variable del id del usuario
             id_us = info.id_user;
+            //se guarda la variable del ususario
             usuario = info.usuario;
+            //se guarda la variable del nombre del usuario
             nombre_user = info.usuario;
+            //se guarda la variable de tipo del ususario
             tipo_user = info.tipo_usuario;
+            //se llama una clase para indetificar si es Administrador o Asistente
             Estatus_user();
         }
-
+        //clase que compara si es un Administrador o un Asistente
         public void Estatus_user()
         {
             if(tipo_user == "Administrador")
@@ -52,7 +59,7 @@ namespace CRM_Principal
         {
 
         }
-
+        //clase para optener la hora y fecha actual del sistema
         private void timer1_Tick(object sender, EventArgs e)
         {
             Hora_envivo.Text = DateTime.Now.ToString();
@@ -65,15 +72,17 @@ namespace CRM_Principal
 
         private void Inicio_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(e.CloseReason == CloseReason.UserClosing)
+            //accion para el botton de Cerrar no aga ninguna funcion
+            if (e.CloseReason == CloseReason.UserClosing)
             {
                 e.Cancel = true;
             }
         }
 
         private void cerrarSecionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        { //se llama un mensaje de avertencia si de sea cerrar sesion 
             DialogResult resultado = MessageBox.Show("en verdad quiere cerar Sesión? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //si dise que si ase la funcion de actualisar la tabla de entrada_user y cecierra la ventana actual
             if (resultado == DialogResult.Yes)
             {
                 MySqlConnection conectar = new MySqlConnection("server = 10.23.249.209; Uid = doctorjuno; pwd = 12345; database = crm; ");
@@ -91,6 +100,7 @@ namespace CRM_Principal
 
             }
         }
+        //llamar un from hijo para que el actual(padre) este visisble y se adapte el hijo ala ventana del padre
         private void Abrirfromconfig_user(object fromconfig_user)
         {
             if (this.panel_contenedor.Controls.Count > 0)
@@ -104,7 +114,7 @@ namespace CRM_Principal
         }
 
         private void agregarUsuarioToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
+        {//llamamos el from hijo para que se visualice al tamaño del from padre
             Abrirfromconfig_user(new confi_usuarios());
         }
     }
