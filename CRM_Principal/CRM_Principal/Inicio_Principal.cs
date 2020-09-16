@@ -128,5 +128,42 @@ namespace CRM_Principal
             this.panel_contenedor.Tag = con;
             con.Show();
         }
+
+        private void leadsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirfromU_Leads(new U_Leads());
+        }
+        private void AbrirfromU_Prospectos(object fromU_Prospectos)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            U_Prospecto con = fromU_Prospectos as U_Prospecto;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
+
+        private void prospectoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirfromU_Prospectos(new U_Prospecto());
+        }
+        private void AbrirfromU_General(object fromU_General)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            Principal con = fromU_General as Principal;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
+
+        private void generalesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirfromU_General(new Principal());
+        }
     }
 }
