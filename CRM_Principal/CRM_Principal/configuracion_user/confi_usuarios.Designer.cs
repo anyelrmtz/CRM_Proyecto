@@ -208,6 +208,7 @@
             this.btn_elimi_historial.TabIndex = 0;
             this.btn_elimi_historial.Text = "Eliminar Historial";
             this.btn_elimi_historial.UseVisualStyleBackColor = false;
+            this.btn_elimi_historial.Click += new System.EventHandler(this.btn_elimi_historial_Click);
             // 
             // groupBox4
             // 
