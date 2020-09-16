@@ -24,7 +24,7 @@ namespace CRM_Principal
         public Inicio_Principal(login.Datos info)
         {
             InitializeComponent();
-            //optiene la hora y fehca del sistema
+            //optiene la hora y fecha del sistema
             DateTime ahora = DateTime.Now;
             salida_user = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
             //se guarda la variable del id del usuario
@@ -116,6 +116,17 @@ namespace CRM_Principal
         private void agregarUsuarioToolStripMenuItem1_Click(object sender, EventArgs e)
         {//llamamos el from hijo para que se visualice al tamaño del from padre
             Abrirfromconfig_user(new confi_usuarios());
+        }
+        private void AbrirfromU_Leads(object fromU_Leads)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            U_Leads con = fromU_Leads as U_Leads;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
         }
     }
 }
