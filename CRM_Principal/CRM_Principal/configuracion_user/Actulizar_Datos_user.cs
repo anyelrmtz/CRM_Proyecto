@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace CRM_Principal
 {
@@ -20,17 +22,17 @@ namespace CRM_Principal
             nombre_user = info.user;
             Busqueda();
         }
-
+        SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
         public void Busqueda()
         {
-            MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
+            //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
             conectar.Open();
 
-            MySqlCommand codigo = new MySqlCommand();
-            MySqlConnection conectanos = new MySqlConnection();
+            SqlCommand codigo = new SqlCommand();
+            SqlConnection conectanos = new SqlConnection();
             codigo.Connection = conectar;
-            codigo.CommandText = ("select * from usuarios where user = '" + nombre_user + "'");
-            MySqlDataReader leer = codigo.ExecuteReader();
+            codigo.CommandText = ("select * from usuarios where usuario = '" + nombre_user + "'");
+            SqlDataReader leer = codigo.ExecuteReader();
             if (leer.Read())
             {
                 Nombre.Text = leer.GetString(3);
@@ -57,13 +59,13 @@ namespace CRM_Principal
                 DialogResult resultado = MessageBox.Show("en verdad quiere Actualizar los datos ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (resultado == DialogResult.Yes)
                 {
-                    MySqlConnection conectar = new MySqlConnection("server = 10.23.249.209; Uid = doctorjuno; pwd = 12345; database = crm; ");
+                    
                     conectar.Open();
-                    MySqlCommand actualisar = new MySqlCommand();
-                    MySqlConnection conectanos = new MySqlConnection();
+                    SqlCommand actualisar = new SqlCommand();
+                    SqlConnection conectanos = new SqlConnection();
                     actualisar.Connection = conectar;
-                    actualisar.CommandText = ("UPDATE usuarios SET user= '" + ususario.Text + "', contra='"+contra.Text+"',nombre='"+Nombre.Text+"',tipo_user='"+tipo_user.Text+"' WHERE user='" + nombre_user+ "';");
-                    MySqlDataReader leer = actualisar.ExecuteReader();
+                    actualisar.CommandText = ("UPDATE usuarios SET usuario= '" + ususario.Text + "', contra='"+contra.Text+"',nombre='"+Nombre.Text+"',tipo_user='"+tipo_user.Text+"' WHERE user='" + nombre_user+ "';");
+                    SqlDataReader leer = actualisar.ExecuteReader();
 
                     MessageBox.Show("Usuario Actualiado");
                 }

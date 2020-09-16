@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace CRM_Principal
 {
@@ -25,18 +27,19 @@ namespace CRM_Principal
             inicio.ShowDialog();
             this.Close();
         }
+        SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
+            //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
             conectar.Open();
 
-            MySqlCommand buscaruser = new MySqlCommand();
-            MySqlConnection conectanos = new MySqlConnection();
+            SqlCommand buscaruser = new SqlCommand();
+            SqlConnection conectanos = new SqlConnection();
             buscaruser.Connection = conectar;
-            buscaruser.CommandText = ("select * from usuarios where user = '" + ususario.Text + "'");
+            buscaruser.CommandText = ("select *from usuarios WHERE usuario = '" + ususario.Text + "'");
             
-            MySqlDataReader leer = buscaruser.ExecuteReader();
+            SqlDataReader leer = buscaruser.ExecuteReader();
             if (leer.Read())
             {
                 MessageBox.Show("ya existe el este usuario");
@@ -47,10 +50,10 @@ namespace CRM_Principal
             {
                 conectar.Close();
                 conectar.Open();
-                MySqlCommand buscanom = new MySqlCommand();
+                SqlCommand buscanom = new SqlCommand();
                 buscanom.Connection = conectar;
                 buscanom.CommandText = ("select * from usuarios where nombre = '" + Nombre.Text + "'");
-                MySqlDataReader leer2 = buscanom.ExecuteReader();
+                SqlDataReader leer2 = buscanom.ExecuteReader();
                 if(leer2.Read())
                 {
                     MessageBox.Show("Este nombre ya esta registrado");
@@ -63,10 +66,10 @@ namespace CRM_Principal
                     if (resultado == DialogResult.Yes)
                     {
                         conectar.Open();
-                        MySqlCommand agregar_user = new MySqlCommand();
+                        SqlCommand agregar_user = new SqlCommand();
                         agregar_user.Connection = conectar;
-                        agregar_user.CommandText = ("insert into usuarios(user,contra,nombre,tipo_user) values('" + ususario.Text + "','" + contra.Text + "','" + Nombre.Text + "','"+tipo_user.Text+"')");
-                        MySqlDataReader leer3 = agregar_user.ExecuteReader();
+                        agregar_user.CommandText = ("insert into usuarios(usuario,contra,nombre,tipo_user) values('" + ususario.Text + "','" + contra.Text + "','" + Nombre.Text + "','"+tipo_user.Text+"')");
+                        SqlDataReader leer3 = agregar_user.ExecuteReader();
                         if (leer3.Read())
                         {
                             MessageBox.Show("Error en guardad");

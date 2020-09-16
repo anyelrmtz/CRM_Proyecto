@@ -33,5 +33,16 @@ namespace CRM_Principal.Properties {
                 return ((string)(this["conexionjuno"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.23.249.209;Initial Catalog=junodoctor;Persist Security Info=True;U" +
+            "ser ID=DOCTORJUNIO;Password=junodoctor2020")]
+        public string junodoctorConnectionString {
+            get {
+                return ((string)(this["junodoctorConnectionString"]));
+            }
+        }
     }
 }

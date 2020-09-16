@@ -61,19 +61,6 @@
     <Compile Include="configuracion_user\confi_usuarios.Designer.cs">
       <DependentUpon>confi_usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="crmDataSet.cs">
-      <DependentUpon>crmDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="crmDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crmDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="crmDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crmDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +72,19 @@
     </Compile>
     <Compile Include="Inicio_Principal.Designer.cs">
       <DependentUpon>Inicio_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctorDataSet.cs">
+      <DependentUpon>junodoctorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctorDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="U_General.cs">
       <SubType>Form</SubType>
@@ -145,27 +145,27 @@
     <EmbeddedResource Include="U_Prospecto.resx">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="crmDataSet.xsc">
-      <DependentUpon>crmDataSet.xsd</DependentUpon>
+    <None Include="junodoctorDataSet.xsc">
+      <DependentUpon>junodoctorDataSet.xsd</DependentUpon>
     </None>
-    <None Include="crmDataSet.xsd">
+    <None Include="junodoctorDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>crmDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>junodoctorDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="crmDataSet.xss">
-      <DependentUpon>crmDataSet.xsd</DependentUpon>
+    <None Include="junodoctorDataSet.xss">
+      <DependentUpon>junodoctorDataSet.xsd</DependentUpon>
     </None>
-    <None Include="crmDataSet1.xsc">
-      <DependentUpon>crmDataSet1.xsd</DependentUpon>
+    <None Include="junodoctorDataSet1.xsc">
+      <DependentUpon>junodoctorDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="crmDataSet1.xsd">
+    <None Include="junodoctorDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>crmDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>junodoctorDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="crmDataSet1.xss">
-      <DependentUpon>crmDataSet1.xsd</DependentUpon>
+    <None Include="junodoctorDataSet1.xss">
+      <DependentUpon>junodoctorDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

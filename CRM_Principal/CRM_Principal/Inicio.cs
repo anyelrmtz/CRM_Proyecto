@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace CRM_Principal
 {
@@ -50,17 +52,21 @@ namespace CRM_Principal
 
         private void button1_Click(object sender, EventArgs e)
         {    //conexion de la base de datos al servidor
-            MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
+             //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
+            SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             //conexion avierta
             conectar.Open();
             //variables para abrir conexion y llamar el comando
-            MySqlCommand codigo = new MySqlCommand();
-            MySqlConnection conectanos = new MySqlConnection();
+            // MySqlCommand codigo = new MySqlCommand();
+            SqlCommand codigo = new SqlCommand();
+            //MySqlConnection conectanos = new MySqlConnection();
+            SqlConnection conectanos = new SqlConnection();
             //se declara las variables
             codigo.Connection = conectar;
-            codigo.CommandText = ("select * from usuarios where user = '" + txtuser.Text + "' and contra = '" + txtpass.Text + "'");
+            codigo.CommandText = ("select * from usuarios where usuario = '" + txtuser.Text + "' and contra = '" + txtpass.Text + "'");
             //se executa la conexion con la consulta
-            MySqlDataReader leer = codigo.ExecuteReader();
+            // MySqlDataReader leer = codigo.ExecuteReader();
+            SqlDataReader leer = codigo.ExecuteReader();
             //manda los datos optenidos de la consulta
             if (leer.Read())
             {
@@ -74,10 +80,13 @@ namespace CRM_Principal
                 conectar.Close();
                 //se vuelve abrir la conexion y manda datos ala tabla Entrada_user "historial de inicio de secion"
                 conectar.Open();
-                MySqlCommand registro_usuario = new MySqlCommand();
+                //MySqlCommand registro_usuario = new MySqlCommand();
+                SqlCommand registro_usuario = new SqlCommand();
                 registro_usuario.Connection = conectar;
-                registro_usuario.CommandText = ("insert into entrada_user(on_of,user,tipo_user,entrada) values('"+info.id_user+"','" + txtuser.Text+"','"+info.tipo_usuario+"','"+entrada+"')");
-                MySqlDataReader insertado = registro_usuario.ExecuteReader();
+                registro_usuario.CommandText = ("insert into entrada_user(on_of,usuario,tipo_user,entrada) values('"+info.id_user+"','" + txtuser.Text+"','"+info.tipo_usuario+"','"+entrada+"')");
+
+                //MySqlDataReader insertado = registro_usuario.ExecuteReader();
+                SqlDataReader insertado = registro_usuario.ExecuteReader();
                 MessageBox.Show("bienvenido");
                 //llamamos el from Principal y se cierra el actual"
                 Inicio_Principal llamar = new Inicio_Principal(info);

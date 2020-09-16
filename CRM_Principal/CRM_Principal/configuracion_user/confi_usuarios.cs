@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 
 namespace CRM_Principal
@@ -36,22 +38,25 @@ namespace CRM_Principal
 
         private void confi_usuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'junodoctorDataSet1.entrada_user' Puede moverla o quitarla según sea necesario.
+            this.entrada_userTableAdapter.Fill(this.junodoctorDataSet1.entrada_user);
+            // TODO: esta línea de código carga datos en la tabla 'junodoctorDataSet.usuarios' Puede moverla o quitarla según sea necesario.
+         
             // muestra la tabla de los usuarios
             Datos(this);
-            // TODO: esta línea de código carga datos en la tabla 'crmDataSet.entrada_user' Puede moverla o quitarla según sea necesario.
-            this.entrada_userTableAdapter.Fill(this.crmDataSet.entrada_user);
-            
+         
 
 
 
 
         }
         //conexion de base de datos
-        MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
+        //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
+        SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
         //llama la funcion para mostrar los datos
         public void Datos(Control control)
         {
-            this.usuariosTableAdapter.Fill(this.crmDataSet1.usuarios);
+            this.usuariosTableAdapter.Fill(this.junodoctorDataSet.usuarios);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -67,6 +72,7 @@ namespace CRM_Principal
 
         private void btn_actualisar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(data);
             Datos(this);
         }
         //boton para actualisar un usuario
@@ -93,7 +99,7 @@ namespace CRM_Principal
         private void dataGridView_user_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-           data = dataGridView_user.CurrentRow.Cells[0].Value.ToString();
+           data = dataGridView_user.CurrentRow.Cells[1].Value.ToString();
         }
         //boton para eliminar un usuario
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -108,20 +114,22 @@ namespace CRM_Principal
                 if (resultado == DialogResult.Yes)
                 {
                     conectar.Open();
-                    MySqlCommand agregar_user = new MySqlCommand();
+                    SqlCommand agregar_user = new SqlCommand();
                     agregar_user.Connection = conectar;
-                    agregar_user.CommandText = ("DELETE FROM usuarios WHERE user='" + data + "';");
-                    MySqlDataReader leer3 = agregar_user.ExecuteReader();
+                    agregar_user.CommandText = ("DELETE FROM usuarios WHERE usuario='" + data + "';");
+                    SqlDataReader leer3 = agregar_user.ExecuteReader();
                     if (leer3.Read())
                     {
                         MessageBox.Show("Error en guardad");
+                        conectar.Close();
                     }
                     else
                     {
+                        conectar.Close();
                         MessageBox.Show("Usuario Eliminado ");
                         Datos(this);
-                       
 
+                        
                     }
                 }
 
@@ -135,13 +143,19 @@ namespace CRM_Principal
             if (resultado == DialogResult.Yes)
             {
                 conectar.Open();
-                MySqlCommand agregar_user = new MySqlCommand();
+                SqlCommand agregar_user = new SqlCommand();
                 agregar_user.Connection = conectar;
                 agregar_user.CommandText = ("TRUNCATE TABLE entrada_user");
-                MySqlDataReader leer3 = agregar_user.ExecuteReader();
+                SqlDataReader leer3 = agregar_user.ExecuteReader();
                 MessageBox.Show("Selimino todo los datos corectamente");
-                this.entrada_userTableAdapter.Fill(this.crmDataSet.entrada_user);
+                this.entrada_userTableAdapter.Fill(this.junodoctorDataSet1.entrada_user);
+                conectar.Close();
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 

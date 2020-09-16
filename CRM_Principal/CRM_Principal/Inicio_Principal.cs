@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-
+//using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+using System.Data.Sql;
 
 namespace CRM_Principal
 {
@@ -37,6 +38,7 @@ namespace CRM_Principal
             tipo_user = info.tipo_usuario;
             //se llama una clase para indetificar si es Administrador o Asistente
             Estatus_user();
+           
         }
         //clase que compara si es un Administrador o un Asistente
         public void Estatus_user()
@@ -85,13 +87,17 @@ namespace CRM_Principal
             //si dise que si ase la funcion de actualisar la tabla de entrada_user y cecierra la ventana actual
             if (resultado == DialogResult.Yes)
             {
-                MySqlConnection conectar = new MySqlConnection("server = 10.23.249.209; Uid = doctorjuno; pwd = 12345; database = crm; ");
+                //MySqlConnection conectar = new MySqlConnection("server = 10.23.249.209; Uid = doctorjuno; pwd = 12345; database = crm; ");
+                SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
                 conectar.Open();
-                MySqlCommand actualisar = new MySqlCommand();
-                MySqlConnection conectanos = new MySqlConnection();
+                // MySqlCommand actualisar = new MySqlCommand();
+                SqlCommand actualisar = new SqlCommand();
+                //MySqlConnection conectanos = new MySqlConnection();
+                SqlConnection conectanos = new SqlConnection();
                 actualisar.Connection = conectar;
-                actualisar.CommandText = ("UPDATE entrada_user SET salida= '"+salida_user+ "', on_of=0 WHERE user='" + nombre_user+ "' AND on_of='" + id_us+"';");
-                MySqlDataReader leer = actualisar.ExecuteReader();
+                actualisar.CommandText = ("UPDATE entrada_user SET salida='"+salida_user+ "', on_of=0 WHERE usuario='" + nombre_user+ "' AND on_of='" + id_us+"';");
+                // MySqlDataReader leer = actualisar.ExecuteReader();
+                SqlDataReader leer = actualisar.ExecuteReader();
                 conectar.Close();
                 login inicio = new login();
                 this.Hide();
