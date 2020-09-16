@@ -143,6 +143,21 @@ namespace CRM_Principal
             }
            
         }
+
+        private void btn_elimi_historial_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("en verdad quieres Eliminar todo el historial? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (resultado == DialogResult.Yes)
+            {
+                conectar.Open();
+                MySqlCommand agregar_user = new MySqlCommand();
+                agregar_user.Connection = conectar;
+                agregar_user.CommandText = ("TRUNCATE TABLE entrada_user");
+                MySqlDataReader leer3 = agregar_user.ExecuteReader();
+                MessageBox.Show("Seelimino todo los datos corectamente");
+                this.entrada_userTableAdapter.Fill(this.crmDataSet.entrada_user);
+            }
+        }
     }
 
 
