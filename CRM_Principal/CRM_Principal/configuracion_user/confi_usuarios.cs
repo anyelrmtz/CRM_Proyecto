@@ -58,22 +58,7 @@ namespace CRM_Principal
         {
 
         }
-        public DataTable mostrardatos_user()
-        {
-            
-            conectar.Open();
-
-            MySqlCommand codigo = new MySqlCommand();
-            MySqlConnection conectanos = new MySqlConnection();
-            codigo.Connection = conectar;
-            codigo.CommandText = ("select user,nombre,tipo_user from usuarios ");
-            MySqlDataAdapter leer = new MySqlDataAdapter(codigo.CommandText, conectar);
-            DataTable mostrardatos = new DataTable();
-            leer.Fill(mostrardatos);
-            conectar.Close();
-            return mostrardatos;
-            
-        }
+        
 
         private void groupBox4_Enter(object sender, EventArgs e)
         {
@@ -154,7 +139,7 @@ namespace CRM_Principal
                 agregar_user.Connection = conectar;
                 agregar_user.CommandText = ("TRUNCATE TABLE entrada_user");
                 MySqlDataReader leer3 = agregar_user.ExecuteReader();
-                MessageBox.Show("Seelimino todo los datos corectamente");
+                MessageBox.Show("Selimino todo los datos corectamente");
                 this.entrada_userTableAdapter.Fill(this.crmDataSet.entrada_user);
             }
         }
