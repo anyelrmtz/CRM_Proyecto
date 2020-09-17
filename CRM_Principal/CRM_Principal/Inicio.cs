@@ -48,12 +48,12 @@ namespace CRM_Principal
 
         }
 
-        
+        //conexion de la base de datos al servidor
+        //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
+        SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
         private void button1_Click(object sender, EventArgs e)
-        {    //conexion de la base de datos al servidor
-             //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
-            SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+        {    
             //conexion avierta
             conectar.Open();
             //variables para abrir conexion y llamar el comando
