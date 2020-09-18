@@ -34,15 +34,6 @@
             this.agregarUsuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSecionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tallerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vacunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.talleresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vacunasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.procedimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graficasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel_contenedor = new System.Windows.Forms.Panel();
+            this.cotizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -103,75 +95,11 @@
             // administracionToolStripMenuItem
             // 
             this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventasToolStripMenuItem,
-            this.gastosToolStripMenuItem,
-            this.graficasToolStripMenuItem});
+            this.graficasToolStripMenuItem,
+            this.cotizaciónToolStripMenuItem});
             this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
             this.administracionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.administracionToolStripMenuItem.Text = "Administracion";
-            // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tallerToolStripMenuItem,
-            this.cursosToolStripMenuItem,
-            this.vacunasToolStripMenuItem,
-            this.talleresToolStripMenuItem,
-            this.vacunasToolStripMenuItem1,
-            this.consultasToolStripMenuItem,
-            this.procedimientosToolStripMenuItem});
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ventasToolStripMenuItem.Text = "Ingresos";
-            // 
-            // tallerToolStripMenuItem
-            // 
-            this.tallerToolStripMenuItem.Name = "tallerToolStripMenuItem";
-            this.tallerToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.tallerToolStripMenuItem.Text = "General";
-            this.tallerToolStripMenuItem.Click += new System.EventHandler(this.tallerToolStripMenuItem_Click);
-            // 
-            // cursosToolStripMenuItem
-            // 
-            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.cursosToolStripMenuItem.Text = "Medicamentos";
-            // 
-            // vacunasToolStripMenuItem
-            // 
-            this.vacunasToolStripMenuItem.Name = "vacunasToolStripMenuItem";
-            this.vacunasToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.vacunasToolStripMenuItem.Text = "Cursos";
-            // 
-            // talleresToolStripMenuItem
-            // 
-            this.talleresToolStripMenuItem.Name = "talleresToolStripMenuItem";
-            this.talleresToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.talleresToolStripMenuItem.Text = "Talleres";
-            // 
-            // vacunasToolStripMenuItem1
-            // 
-            this.vacunasToolStripMenuItem1.Name = "vacunasToolStripMenuItem1";
-            this.vacunasToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
-            this.vacunasToolStripMenuItem1.Text = "Vacunas";
-            // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            // 
-            // procedimientosToolStripMenuItem
-            // 
-            this.procedimientosToolStripMenuItem.Name = "procedimientosToolStripMenuItem";
-            this.procedimientosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.procedimientosToolStripMenuItem.Text = "Procedimientos";
-            // 
-            // gastosToolStripMenuItem
-            // 
-            this.gastosToolStripMenuItem.Name = "gastosToolStripMenuItem";
-            this.gastosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gastosToolStripMenuItem.Text = "Gastos";
             // 
             // graficasToolStripMenuItem
             // 
@@ -270,6 +198,13 @@
             this.panel_contenedor.Size = new System.Drawing.Size(920, 485);
             this.panel_contenedor.TabIndex = 3;
             // 
+            // cotizaciónToolStripMenuItem
+            // 
+            this.cotizaciónToolStripMenuItem.Name = "cotizaciónToolStripMenuItem";
+            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cotizaciónToolStripMenuItem.Text = "Cotización";
+            this.cotizaciónToolStripMenuItem.Click += new System.EventHandler(this.cotizaciónToolStripMenuItem_Click);
+            // 
             // Inicio_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,8 +235,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem administracionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gastosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem graficasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
@@ -313,17 +246,11 @@
         private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendarCitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCitasAgendadasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tallerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vacunasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem talleresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vacunasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem procedimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSecionToolStripMenuItem;
         private System.Windows.Forms.Label Hora_envivo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Panel panel_contenedor;
+        private System.Windows.Forms.ToolStripMenuItem cotizaciónToolStripMenuItem;
     }
 }

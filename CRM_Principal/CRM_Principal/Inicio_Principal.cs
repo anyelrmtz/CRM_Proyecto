@@ -171,5 +171,21 @@ namespace CRM_Principal
         {
             AbrirfromU_General(new Principal());
         }
+        private void AbrirfromCotizacion(object fromCotizacion)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            Cotizacion con = fromCotizacion as Cotizacion;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
+
+        private void cotizaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirfromCotizacion(new Cotizacion());
+        }
     }
 }

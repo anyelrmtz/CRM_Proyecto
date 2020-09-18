@@ -36,33 +36,33 @@
             this.btn_agregar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView_user = new System.Windows.Forms.DataGridView();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junodoctorDataSet = new CRM_Principal.junodoctorDataSet();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_elimi_historial = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.junodoctorDataSet = new CRM_Principal.junodoctorDataSet();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new CRM_Principal.junodoctorDataSetTableAdapters.usuariosTableAdapter();
-            this.junodoctorDataSet1 = new CRM_Principal.junodoctorDataSet1();
-            this.entradauserBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.entrada_userTableAdapter = new CRM_Principal.junodoctorDataSet1TableAdapters.entrada_userTableAdapter();
             this.usuarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entradauserBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junodoctorDataSet1 = new CRM_Principal.junodoctorDataSet1();
+            this.usuariosTableAdapter = new CRM_Principal.junodoctorDataSetTableAdapters.usuariosTableAdapter();
+            this.entrada_userTableAdapter = new CRM_Principal.junodoctorDataSet1TableAdapters.entrada_userTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_user)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entradauserBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,7 +92,7 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.BackColor = System.Drawing.Color.Red;
+            this.btn_eliminar.BackColor = System.Drawing.Color.Tomato;
             this.btn_eliminar.Location = new System.Drawing.Point(9, 152);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(164, 26);
@@ -103,7 +103,7 @@
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.BackColor = System.Drawing.Color.DarkOrange;
+            this.btn_actualizar.BackColor = System.Drawing.Color.Orange;
             this.btn_actualizar.Location = new System.Drawing.Point(9, 81);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(164, 27);
@@ -114,7 +114,7 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btn_agregar.BackColor = System.Drawing.Color.GreenYellow;
             this.btn_agregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_agregar.Location = new System.Drawing.Point(6, 34);
             this.btn_agregar.Name = "btn_agregar";
@@ -154,6 +154,43 @@
             this.dataGridView_user.Size = new System.Drawing.Size(686, 172);
             this.dataGridView_user.TabIndex = 0;
             this.dataGridView_user.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_user_CellContentClick);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // usuarioDataGridViewTextBoxColumn
+            // 
+            this.usuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "usuario";
+            this.usuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
+            this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
+            this.usuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usuarioDataGridViewTextBoxColumn.Width = 87;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "tipo_user";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Tipo de Ususario";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 140;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.junodoctorDataSet;
+            // 
+            // junodoctorDataSet
+            // 
+            this.junodoctorDataSet.DataSetName = "junodoctorDataSet";
+            this.junodoctorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox3
             // 
@@ -207,34 +244,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(687, 190);
             this.dataGridView2.TabIndex = 0;
             // 
-            // junodoctorDataSet
-            // 
-            this.junodoctorDataSet.DataSetName = "junodoctorDataSet";
-            this.junodoctorDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "usuarios";
-            this.usuariosBindingSource.DataSource = this.junodoctorDataSet;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // junodoctorDataSet1
-            // 
-            this.junodoctorDataSet1.DataSetName = "junodoctorDataSet1";
-            this.junodoctorDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // entradauserBindingSource
-            // 
-            this.entradauserBindingSource.DataMember = "entrada_user";
-            this.entradauserBindingSource.DataSource = this.junodoctorDataSet1;
-            // 
-            // entrada_userTableAdapter
-            // 
-            this.entrada_userTableAdapter.ClearBeforeFill = true;
-            // 
             // usuarioDataGridViewTextBoxColumn1
             // 
             this.usuarioDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -271,32 +280,23 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 78;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // entradauserBindingSource
             // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 88;
+            this.entradauserBindingSource.DataMember = "entrada_user";
+            this.entradauserBindingSource.DataSource = this.junodoctorDataSet1;
             // 
-            // usuarioDataGridViewTextBoxColumn
+            // junodoctorDataSet1
             // 
-            this.usuarioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.usuarioDataGridViewTextBoxColumn.DataPropertyName = "usuario";
-            this.usuarioDataGridViewTextBoxColumn.HeaderText = "Usuario";
-            this.usuarioDataGridViewTextBoxColumn.Name = "usuarioDataGridViewTextBoxColumn";
-            this.usuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.usuarioDataGridViewTextBoxColumn.Width = 87;
+            this.junodoctorDataSet1.DataSetName = "junodoctorDataSet1";
+            this.junodoctorDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridViewTextBoxColumn1
+            // usuariosTableAdapter
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "tipo_user";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tipo de Ususario";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 140;
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // entrada_userTableAdapter
+            // 
+            this.entrada_userTableAdapter.ClearBeforeFill = true;
             // 
             // confi_usuarios
             // 
@@ -315,13 +315,13 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_user)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entradauserBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
