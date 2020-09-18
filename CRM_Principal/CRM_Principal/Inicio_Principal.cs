@@ -187,5 +187,27 @@ namespace CRM_Principal
         {
             AbrirfromCotizacion(new Cotizacion());
         }
+
+        private void agendarCitaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AbrirfromA_Clientes(object fromA_Clientes)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            A_Clientes con = fromA_Clientes as A_Clientes;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
+
+        private void agregarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirfromA_Clientes(new A_Clientes());
+        }
     }
 }
