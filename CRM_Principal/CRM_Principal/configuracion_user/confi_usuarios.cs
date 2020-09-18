@@ -72,7 +72,7 @@ namespace CRM_Principal
 
         private void btn_actualisar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(data);
+           
             Datos(this);
         }
         //boton para actualisar un usuario
