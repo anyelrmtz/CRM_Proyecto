@@ -7,9 +7,11 @@
     }
 }
 
-namespace CRM_Principal.junodoctorDataSetTableAdapters {
-    
-    
-    public partial class usuariosTableAdapter {
+namespace CRM_Principal.junodoctorDataSetTableAdapters
+{
+
+
+    public partial class usuariosTableAdapter
+    {
     }
 }

@@ -202,5 +202,8 @@
     <Content Include="Imagenes\logotipo_full_hd.jpg" />
     <Content Include="Imagenes\logotipo_full_hd_transparente.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BD\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
