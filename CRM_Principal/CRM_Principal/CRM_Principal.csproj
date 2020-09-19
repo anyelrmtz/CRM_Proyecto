@@ -98,10 +98,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>junodoctorDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="U_General.cs">
+    <Compile Include="Clientes\U_General.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="U_General.Designer.cs">
+    <Compile Include="Clientes\U_General.Designer.cs">
       <DependentUpon>U_General.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -112,16 +112,16 @@
     <Compile Include="configuracion_user\Registrar_Usuarios.Designer.cs">
       <DependentUpon>Registrar_Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="U_Leads.cs">
+    <Compile Include="Clientes\U_Leads.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="U_Leads.Designer.cs">
+    <Compile Include="Clientes\U_Leads.Designer.cs">
       <DependentUpon>U_Leads.cs</DependentUpon>
     </Compile>
-    <Compile Include="U_Prospecto.cs">
+    <Compile Include="Clientes\U_Prospecto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="U_Prospecto.Designer.cs">
+    <Compile Include="Clientes\U_Prospecto.Designer.cs">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Clientes\A_Clientes.resx">
@@ -142,7 +142,7 @@
     <EmbeddedResource Include="Inicio_Principal.resx">
       <DependentUpon>Inicio_Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="U_General.resx">
+    <EmbeddedResource Include="Clientes\U_General.resx">
       <DependentUpon>U_General.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -157,10 +157,10 @@
     <EmbeddedResource Include="configuracion_user\Registrar_Usuarios.resx">
       <DependentUpon>Registrar_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="U_Leads.resx">
+    <EmbeddedResource Include="Clientes\U_Leads.resx">
       <DependentUpon>U_Leads.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="U_Prospecto.resx">
+    <EmbeddedResource Include="Clientes\U_Prospecto.resx">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="junodoctorDataSet.xsc">
@@ -202,8 +202,6 @@
     <Content Include="Imagenes\logotipo_full_hd.jpg" />
     <Content Include="Imagenes\logotipo_full_hd_transparente.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BD\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
