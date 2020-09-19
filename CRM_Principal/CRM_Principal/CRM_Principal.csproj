@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="A_Clientes.cs">
+    <Compile Include="Clientes\A_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="A_Clientes.Designer.cs">
+    <Compile Include="Clientes\A_Clientes.Designer.cs">
       <DependentUpon>A_Clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="configuracion_user\Actulizar_Datos_user.cs">
@@ -67,10 +67,10 @@
     <Compile Include="configuracion_user\confi_usuarios.Designer.cs">
       <DependentUpon>confi_usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cotizacion.cs">
+    <Compile Include="Administracion\Cotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cotizacion.Designer.cs">
+    <Compile Include="Administracion\Cotizacion.Designer.cs">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
@@ -124,7 +124,7 @@
     <Compile Include="U_Prospecto.Designer.cs">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="A_Clientes.resx">
+    <EmbeddedResource Include="Clientes\A_Clientes.resx">
       <DependentUpon>A_Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configuracion_user\Actulizar_Datos_user.resx">
@@ -133,7 +133,7 @@
     <EmbeddedResource Include="configuracion_user\confi_usuarios.resx">
       <DependentUpon>confi_usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cotizacion.resx">
+    <EmbeddedResource Include="Administracion\Cotizacion.resx">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">

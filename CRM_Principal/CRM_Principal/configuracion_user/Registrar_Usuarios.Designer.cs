@@ -124,9 +124,8 @@
             this.tipo_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipo_user.FormattingEnabled = true;
             this.tipo_user.Items.AddRange(new object[] {
-            "Selecione una Opcion",
-            "Administrador",
-            "Asistente"});
+            "Adimintrador",
+            "Acistene"});
             this.tipo_user.Location = new System.Drawing.Point(129, 145);
             this.tipo_user.Name = "tipo_user";
             this.tipo_user.Size = new System.Drawing.Size(170, 23);
@@ -137,6 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(323, 227);
             this.Controls.Add(this.tipo_user);
