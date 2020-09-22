@@ -50,6 +50,8 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textbox_descrip = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -102,7 +104,7 @@
             // 
             // cantidad_text
             // 
-            this.cantidad_text.Location = new System.Drawing.Point(138, 222);
+            this.cantidad_text.Location = new System.Drawing.Point(138, 313);
             this.cantidad_text.Name = "cantidad_text";
             this.cantidad_text.Size = new System.Drawing.Size(121, 20);
             this.cantidad_text.TabIndex = 5;
@@ -141,7 +143,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 217);
+            this.label5.Location = new System.Drawing.Point(30, 308);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 24);
             this.label5.TabIndex = 9;
@@ -149,7 +151,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(166, 276);
+            this.button1.Location = new System.Drawing.Point(158, 364);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
@@ -261,11 +263,31 @@
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 7;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 234);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 24);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Descripcion";
+            // 
+            // textbox_descrip
+            // 
+            this.textbox_descrip.Location = new System.Drawing.Point(139, 222);
+            this.textbox_descrip.Name = "textbox_descrip";
+            this.textbox_descrip.Size = new System.Drawing.Size(145, 80);
+            this.textbox_descrip.TabIndex = 14;
+            this.textbox_descrip.Text = "";
+            // 
             // Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 448);
+            this.Controls.Add(this.textbox_descrip);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -313,5 +335,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox textbox_descrip;
     }
 }
