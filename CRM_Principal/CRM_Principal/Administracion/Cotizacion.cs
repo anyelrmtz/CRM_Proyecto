@@ -51,8 +51,12 @@ namespace CRM_Principal
                             MessageBox.Show("ingrese un monto");
                         }
                         else
+
                         {
-                            
+                          
+
+
+
                             conectar.Open();
                             SqlCommand agregar_cotizacion = new SqlCommand();
                             agregar_cotizacion.Connection = conectar;
