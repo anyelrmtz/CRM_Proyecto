@@ -11,14 +11,21 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 namespace CRM_Principal
 {
+   
     public partial class Cotizacion : Form
     {
+        //variable fecha hora
+        public String Hora_fecha;
+
         public Cotizacion()
         {
             InitializeComponent();
             Bloqueo();
+            DateTime ahora = DateTime.Now;
+            Hora_fecha = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
         }
-
+      
+        //guardado de cotizacion
         private void button1_Click(object sender, EventArgs e)
         {
             if(comb_cotizar.Text== "Selecione una Opcion")
@@ -45,11 +52,42 @@ namespace CRM_Principal
                         }
                         else
                         {
-                            MessageBox.Show("agrgado exitosamente, este mensaje es de prueba no agrega datos a la BD");
+                            
+                            conectar.Open();
+                            SqlCommand agregar_cotizacion = new SqlCommand();
+                            agregar_cotizacion.Connection = conectar;
+                            agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('"+Hora_fecha+"','"+ comb_cotizar .Text+ "','"+combo_tipo.Text+"','"+combo_servicio.Text+"','"+textbox_descrip.Text+"','"+cantidad_text.Text+"');");
+                            SqlDataReader cotizacion = agregar_cotizacion.ExecuteReader();
+                            if (cotizacion.Read())
+                            {
+                                MessageBox.Show("eror");
+                                conectar.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("agrgado exitosamente");
+                                conectar.Close();
+                                limpiar();
+                                Cargar_tabla();
+                            }
+
+                             
                         }
                     }
                 }
             }
+        }
+        //limpiesa
+        public void limpiar()
+        {
+            combo_servicio.Text = "Selecione una Opcion";
+            combo_tipo.Text = "Selecione una Opcion";
+            comb_cotizar. Text = "Selecione una Opcion";
+            textbox_descrip.Clear();
+            cantidad_text.Clear();
+            combo_tipo.Enabled = false;
+            cantidad_text.Enabled = false;
+
         }
         //bloquea combobos asta llenar los campos
         public void Bloqueo()
@@ -209,6 +247,16 @@ namespace CRM_Principal
             {
                 cantidad_text.Enabled = true;
             }
+        }
+
+        private void Cotizacion_Load(object sender, EventArgs e)
+        {
+            Cargar_tabla();
+        }
+        //carga la tabla
+        public void Cargar_tabla()
+        {
+            this.cotizacionTableAdapter.Fill(this.junodoctorDataSet2.Cotizacion);
         }
     }
 }

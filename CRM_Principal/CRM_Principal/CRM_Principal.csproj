@@ -110,6 +110,11 @@
     <Compile Include="Clientes\U_General.Designer.cs">
       <DependentUpon>U_General.cs</DependentUpon>
     </Compile>
+    <Compile Include="junodoctorDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="configuracion_user\Registrar_Usuarios.cs">
@@ -193,6 +198,17 @@
     </None>
     <None Include="junodoctorDataSet1.xss">
       <DependentUpon>junodoctorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet2.xsc">
+      <DependentUpon>junodoctorDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctorDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctorDataSet2.xss">
+      <DependentUpon>junodoctorDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
