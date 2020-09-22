@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cotizacion));
             this.label1 = new System.Windows.Forms.Label();
             this.comb_cotizar = new System.Windows.Forms.ComboBox();
@@ -42,19 +43,26 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textbox_descrip = new System.Windows.Forms.RichTextBox();
+            this.junodoctorDataSet2 = new CRM_Principal.junodoctorDataSet2();
+            this.cotizacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cotizacionTableAdapter = new CRM_Principal.junodoctorDataSet2TableAdapters.CotizacionTableAdapter();
+            this.fechhoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cotizarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipocotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cotizacionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -183,36 +191,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.fechhoraDataGridViewTextBoxColumn,
+            this.cotizarDataGridViewTextBoxColumn,
+            this.tipocotDataGridViewTextBoxColumn,
+            this.serviDataGridViewTextBoxColumn,
+            this.descripDataGridViewTextBoxColumn,
+            this.costDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.cotizacionBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(30, 90);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(508, 255);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(523, 255);
             this.dataGridView1.TabIndex = 14;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Cotizacion";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tipo";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Servicio";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Costo";
-            this.Column4.Name = "Column4";
             // 
             // label7
             // 
@@ -281,6 +276,74 @@
             this.textbox_descrip.TabIndex = 14;
             this.textbox_descrip.Text = "";
             // 
+            // junodoctorDataSet2
+            // 
+            this.junodoctorDataSet2.DataSetName = "junodoctorDataSet2";
+            this.junodoctorDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cotizacionBindingSource
+            // 
+            this.cotizacionBindingSource.DataMember = "Cotizacion";
+            this.cotizacionBindingSource.DataSource = this.junodoctorDataSet2;
+            // 
+            // cotizacionTableAdapter
+            // 
+            this.cotizacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // fechhoraDataGridViewTextBoxColumn
+            // 
+            this.fechhoraDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fechhoraDataGridViewTextBoxColumn.DataPropertyName = "fech_hora";
+            this.fechhoraDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechhoraDataGridViewTextBoxColumn.Name = "fechhoraDataGridViewTextBoxColumn";
+            this.fechhoraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechhoraDataGridViewTextBoxColumn.Width = 62;
+            // 
+            // cotizarDataGridViewTextBoxColumn
+            // 
+            this.cotizarDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.cotizarDataGridViewTextBoxColumn.DataPropertyName = "cotizar";
+            this.cotizarDataGridViewTextBoxColumn.HeaderText = "Cotizasiòn";
+            this.cotizarDataGridViewTextBoxColumn.Name = "cotizarDataGridViewTextBoxColumn";
+            this.cotizarDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cotizarDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tipocotDataGridViewTextBoxColumn
+            // 
+            this.tipocotDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.tipocotDataGridViewTextBoxColumn.DataPropertyName = "tipo_cot";
+            this.tipocotDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipocotDataGridViewTextBoxColumn.Name = "tipocotDataGridViewTextBoxColumn";
+            this.tipocotDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tipocotDataGridViewTextBoxColumn.Width = 53;
+            // 
+            // serviDataGridViewTextBoxColumn
+            // 
+            this.serviDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.serviDataGridViewTextBoxColumn.DataPropertyName = "servi";
+            this.serviDataGridViewTextBoxColumn.HeaderText = "Servicio";
+            this.serviDataGridViewTextBoxColumn.Name = "serviDataGridViewTextBoxColumn";
+            this.serviDataGridViewTextBoxColumn.ReadOnly = true;
+            this.serviDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // descripDataGridViewTextBoxColumn
+            // 
+            this.descripDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.descripDataGridViewTextBoxColumn.DataPropertyName = "descrip";
+            this.descripDataGridViewTextBoxColumn.HeaderText = "Descripciòn";
+            this.descripDataGridViewTextBoxColumn.Name = "descripDataGridViewTextBoxColumn";
+            this.descripDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descripDataGridViewTextBoxColumn.Width = 88;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "$";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costDataGridViewTextBoxColumn.Width = 5;
+            // 
             // Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,10 +366,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cotizacion";
             this.Text = "Cotizacion";
+            this.Load += new System.EventHandler(this.Cotizacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cotizacionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,11 +397,16 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox textbox_descrip;
+        private junodoctorDataSet2 junodoctorDataSet2;
+        private System.Windows.Forms.BindingSource cotizacionBindingSource;
+        private junodoctorDataSet2TableAdapters.CotizacionTableAdapter cotizacionTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechhoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cotizarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipocotDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serviDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
     }
 }
