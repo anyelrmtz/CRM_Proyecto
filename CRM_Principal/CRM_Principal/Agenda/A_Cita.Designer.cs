@@ -56,8 +56,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -260,8 +258,6 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.comboBox5);
@@ -276,7 +272,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 312);
+            this.label11.Location = new System.Drawing.Point(7, 318);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 47);
             this.label11.TabIndex = 21;
@@ -284,7 +280,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(146, 309);
+            this.textBox8.Location = new System.Drawing.Point(148, 318);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -295,7 +291,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 246);
+            this.label9.Location = new System.Drawing.Point(3, 215);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(126, 15);
             this.label9.TabIndex = 19;
@@ -303,7 +299,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(146, 243);
+            this.textBox6.Location = new System.Drawing.Point(143, 212);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -314,7 +310,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 180);
+            this.label10.Location = new System.Drawing.Point(3, 149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(130, 15);
             this.label10.TabIndex = 17;
@@ -322,7 +318,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(146, 177);
+            this.textBox7.Location = new System.Drawing.Point(143, 146);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -333,7 +329,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(27, 144);
+            this.label13.Location = new System.Drawing.Point(24, 113);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(91, 15);
             this.label13.TabIndex = 13;
@@ -343,7 +339,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(11, 103);
+            this.label14.Location = new System.Drawing.Point(8, 72);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(124, 15);
             this.label14.TabIndex = 12;
@@ -353,33 +349,15 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(27, 65);
+            this.label15.Location = new System.Drawing.Point(24, 34);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(108, 15);
             this.label15.TabIndex = 11;
             this.label15.Text = "Nombre Completo";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(151, 25);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 10;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(44, 28);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 15);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Acompaña";
-            // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(151, 62);
+            this.textBox9.Location = new System.Drawing.Point(148, 31);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(200, 22);
             this.textBox9.TabIndex = 4;
@@ -388,7 +366,7 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(151, 98);
+            this.dateTimePicker1.Location = new System.Drawing.Point(148, 67);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 5;
@@ -397,7 +375,7 @@
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(151, 135);
+            this.comboBox5.Location = new System.Drawing.Point(148, 104);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 24);
             this.comboBox5.TabIndex = 6;
@@ -504,8 +482,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox5;
