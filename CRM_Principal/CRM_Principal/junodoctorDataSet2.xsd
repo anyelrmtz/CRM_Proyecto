@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="junodoctorConnectionString (Settings)" DbObjectName="junodoctor.dbo.Cotizacion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT Id, fech_hora, cotizar, tipo_cot, servi, descrip, cost FROM dbo.Cotizacion ORDER BY Id DESC</CommandText>
+                    <CommandText>SELECT Id, fech_hora, cotizar, tipo_cot, servi, descrip, CONVERT(VARCHAR,CONVERT(VARCHAR,CAST(cost as money),1)) as 'cost' FROM dbo.Cotizacion ORDER BY Id DESC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -37,7 +37,7 @@
   <xs:element name="junodoctorDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="junodoctorDataSet2" msprop:Generator_UserDSName="junodoctorDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Cotizacion" msprop:Generator_TableClassName="CotizacionDataTable" msprop:Generator_TableVarName="tableCotizacion" msprop:Generator_RowChangedName="CotizacionRowChanged" msprop:Generator_TablePropName="Cotizacion" msprop:Generator_RowDeletingName="CotizacionRowDeleting" msprop:Generator_RowChangingName="CotizacionRowChanging" msprop:Generator_RowEvHandlerName="CotizacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CotizacionRowDeleted" msprop:Generator_RowClassName="CotizacionRow" msprop:Generator_UserTableName="Cotizacion" msprop:Generator_RowEvArgName="CotizacionRowChangeEvent">
+        <xs:element name="Cotizacion" msprop:Generator_TableClassName="CotizacionDataTable" msprop:Generator_TableVarName="tableCotizacion" msprop:Generator_TablePropName="Cotizacion" msprop:Generator_RowDeletingName="CotizacionRowDeleting" msprop:Generator_RowChangingName="CotizacionRowChanging" msprop:Generator_RowEvHandlerName="CotizacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CotizacionRowDeleted" msprop:Generator_UserTableName="Cotizacion" msprop:Generator_RowChangedName="CotizacionRowChanged" msprop:Generator_RowEvArgName="CotizacionRowChangeEvent" msprop:Generator_RowClassName="CotizacionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />

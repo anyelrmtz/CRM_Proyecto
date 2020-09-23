@@ -16,7 +16,7 @@ namespace CRM_Principal
     {
         //variable fecha hora
         public String Hora_fecha;
-
+     
         public Cotizacion()
         {
             InitializeComponent();
@@ -53,11 +53,13 @@ namespace CRM_Principal
                         else
 
                         {
-                          
 
+                            DialogResult resultado = MessageBox.Show("Verifique los siguientes datos \n " +
+                                "Cotizar: "+comb_cotizar.Text+""+"\n"+"tipo: "+combo_tipo.Text+" \n"+"Servicio: "+combo_servicio.Text+"\n"+"Descripción: "+textbox_descrip.Text+"\n"+"Costo: "+cantidad_text.Text+"\n"+"Desea guardar los Datos?", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (resultado == DialogResult.Yes) {
+                             
 
-
-                            conectar.Open();
+                                conectar.Open();
                             SqlCommand agregar_cotizacion = new SqlCommand();
                             agregar_cotizacion.Connection = conectar;
                             agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('"+Hora_fecha+"','"+ comb_cotizar .Text+ "','"+combo_tipo.Text+"','"+combo_servicio.Text+"','"+textbox_descrip.Text+"','"+cantidad_text.Text+"');");
@@ -74,8 +76,10 @@ namespace CRM_Principal
                                 limpiar();
                                 Cargar_tabla();
                             }
+                            }
 
-                             
+
+
                         }
                     }
                 }
@@ -261,6 +265,11 @@ namespace CRM_Principal
         public void Cargar_tabla()
         {
             this.cotizacionTableAdapter.Fill(this.junodoctorDataSet2.Cotizacion);
+        }
+
+        private void cantidad_text_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

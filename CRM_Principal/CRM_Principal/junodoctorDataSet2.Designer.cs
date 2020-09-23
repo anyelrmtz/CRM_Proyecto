@@ -1000,8 +1000,8 @@ namespace CRM_Principal.junodoctorDataSet2TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, fech_hora, cotizar, tipo_cot, servi, descrip, cost FROM dbo.Cotizacion" +
-                " ORDER BY Id DESC";
+            this._commandCollection[0].CommandText = "SELECT Id, fech_hora, cotizar, tipo_cot, servi, descrip, CONVERT(VARCHAR,CONVERT(" +
+                "VARCHAR,CAST(cost as money),1)) as \'cost\' FROM dbo.Cotizacion ORDER BY Id DESC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
