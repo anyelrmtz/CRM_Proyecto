@@ -42,12 +42,14 @@
             this.prospectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCitasAgendadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Hora_envivo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel_contenedor = new System.Windows.Forms.Panel();
+            this.agendarCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adultosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.niñosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -104,13 +106,13 @@
             // graficasToolStripMenuItem
             // 
             this.graficasToolStripMenuItem.Name = "graficasToolStripMenuItem";
-            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.graficasToolStripMenuItem.Text = "Graficas";
             // 
             // cotizaciónToolStripMenuItem
             // 
             this.cotizaciónToolStripMenuItem.Name = "cotizaciónToolStripMenuItem";
-            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.cotizaciónToolStripMenuItem.Text = "Cotización";
             this.cotizaciónToolStripMenuItem.Click += new System.EventHandler(this.cotizaciónToolStripMenuItem_Click);
             // 
@@ -157,18 +159,11 @@
             // agendaToolStripMenuItem
             // 
             this.agendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agendarCitaToolStripMenuItem,
-            this.verCitasAgendadasToolStripMenuItem});
+            this.verCitasAgendadasToolStripMenuItem,
+            this.agendarCitasToolStripMenuItem});
             this.agendaToolStripMenuItem.Name = "agendaToolStripMenuItem";
             this.agendaToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.agendaToolStripMenuItem.Text = "Agenda";
-            // 
-            // agendarCitaToolStripMenuItem
-            // 
-            this.agendarCitaToolStripMenuItem.Name = "agendarCitaToolStripMenuItem";
-            this.agendarCitaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.agendarCitaToolStripMenuItem.Text = "Agendar Cita";
-            this.agendarCitaToolStripMenuItem.Click += new System.EventHandler(this.agendarCitaToolStripMenuItem_Click);
             // 
             // verCitasAgendadasToolStripMenuItem
             // 
@@ -206,6 +201,27 @@
             this.panel_contenedor.Name = "panel_contenedor";
             this.panel_contenedor.Size = new System.Drawing.Size(920, 485);
             this.panel_contenedor.TabIndex = 3;
+            // 
+            // agendarCitasToolStripMenuItem
+            // 
+            this.agendarCitasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adultosToolStripMenuItem,
+            this.niñosToolStripMenuItem});
+            this.agendarCitasToolStripMenuItem.Name = "agendarCitasToolStripMenuItem";
+            this.agendarCitasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.agendarCitasToolStripMenuItem.Text = "Agendar Citas";
+            // 
+            // adultosToolStripMenuItem
+            // 
+            this.adultosToolStripMenuItem.Name = "adultosToolStripMenuItem";
+            this.adultosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adultosToolStripMenuItem.Text = "Adultos";
+            // 
+            // niñosToolStripMenuItem
+            // 
+            this.niñosToolStripMenuItem.Name = "niñosToolStripMenuItem";
+            this.niñosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.niñosToolStripMenuItem.Text = "Niños";
             // 
             // Inicio_Principal
             // 
@@ -247,7 +263,6 @@
         private System.Windows.Forms.ToolStripMenuItem prospectoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agendarCitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCitasAgendadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSecionToolStripMenuItem;
         private System.Windows.Forms.Label Hora_envivo;
@@ -255,5 +270,8 @@
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Panel panel_contenedor;
         private System.Windows.Forms.ToolStripMenuItem cotizaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agendarCitasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adultosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem niñosToolStripMenuItem;
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CRM_Principal.Agenda
 {
-    public partial class A_Cita : Form
+    public partial class AC_Niños : Form
     {
-        public A_Cita()
+        public AC_Niños()
         {
             InitializeComponent();
         }

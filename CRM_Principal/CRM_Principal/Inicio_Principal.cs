@@ -188,11 +188,6 @@ namespace CRM_Principal
             AbrirfromCotizacion(new Cotizacion());
         }
 
-        private void agendarCitaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AbrirfromA_Clientes(object fromA_Clientes)
         {
             if (this.panel_contenedor.Controls.Count > 0)
