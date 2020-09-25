@@ -61,6 +61,12 @@
     <Compile Include="Agenda\AC_Niños.Designer.cs">
       <DependentUpon>AC_Niños.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agenda\Ver_citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agenda\Ver_citas.Designer.cs">
+      <DependentUpon>Ver_citas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clientes\A_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agenda\AC_Niños.resx">
       <DependentUpon>AC_Niños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agenda\Ver_citas.resx">
+      <DependentUpon>Ver_citas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\A_Clientes.resx">
       <DependentUpon>A_Clientes.cs</DependentUpon>
