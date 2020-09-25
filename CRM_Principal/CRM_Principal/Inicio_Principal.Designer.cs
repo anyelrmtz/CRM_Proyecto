@@ -43,13 +43,13 @@
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCitasAgendadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendarCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adultosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.niñosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Hora_envivo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel_contenedor = new System.Windows.Forms.Panel();
-            this.agendarCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adultosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.niñosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -171,6 +171,28 @@
             this.verCitasAgendadasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.verCitasAgendadasToolStripMenuItem.Text = "Ver Citas Agendadas";
             // 
+            // agendarCitasToolStripMenuItem
+            // 
+            this.agendarCitasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adultosToolStripMenuItem,
+            this.niñosToolStripMenuItem});
+            this.agendarCitasToolStripMenuItem.Name = "agendarCitasToolStripMenuItem";
+            this.agendarCitasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.agendarCitasToolStripMenuItem.Text = "Agendar Citas";
+            // 
+            // adultosToolStripMenuItem
+            // 
+            this.adultosToolStripMenuItem.Name = "adultosToolStripMenuItem";
+            this.adultosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adultosToolStripMenuItem.Text = "Adultos";
+            this.adultosToolStripMenuItem.Click += new System.EventHandler(this.adultosToolStripMenuItem_Click);
+            // 
+            // niñosToolStripMenuItem
+            // 
+            this.niñosToolStripMenuItem.Name = "niñosToolStripMenuItem";
+            this.niñosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.niñosToolStripMenuItem.Text = "Niños";
+            // 
             // Hora_envivo
             // 
             this.Hora_envivo.Location = new System.Drawing.Point(206, 33);
@@ -201,27 +223,6 @@
             this.panel_contenedor.Name = "panel_contenedor";
             this.panel_contenedor.Size = new System.Drawing.Size(920, 485);
             this.panel_contenedor.TabIndex = 3;
-            // 
-            // agendarCitasToolStripMenuItem
-            // 
-            this.agendarCitasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adultosToolStripMenuItem,
-            this.niñosToolStripMenuItem});
-            this.agendarCitasToolStripMenuItem.Name = "agendarCitasToolStripMenuItem";
-            this.agendarCitasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.agendarCitasToolStripMenuItem.Text = "Agendar Citas";
-            // 
-            // adultosToolStripMenuItem
-            // 
-            this.adultosToolStripMenuItem.Name = "adultosToolStripMenuItem";
-            this.adultosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.adultosToolStripMenuItem.Text = "Adultos";
-            // 
-            // niñosToolStripMenuItem
-            // 
-            this.niñosToolStripMenuItem.Name = "niñosToolStripMenuItem";
-            this.niñosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.niñosToolStripMenuItem.Text = "Niños";
             // 
             // Inicio_Principal
             // 

@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AC_Adultos.cs">
+    <Compile Include="Agenda\AC_Adultos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AC_Adultos.Designer.cs">
+    <Compile Include="Agenda\AC_Adultos.Designer.cs">
       <DependentUpon>AC_Adultos.cs</DependentUpon>
     </Compile>
     <Compile Include="AC_Niños.cs">
@@ -141,7 +141,7 @@
     <Compile Include="Clientes\U_Prospecto.Designer.cs">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AC_Adultos.resx">
+    <EmbeddedResource Include="Agenda\AC_Adultos.resx">
       <DependentUpon>AC_Adultos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AC_Niños.resx">
@@ -236,8 +236,6 @@
     <Content Include="Imagenes\logotipo_full_hd.jpg" />
     <Content Include="Imagenes\logotipo_full_hd_transparente.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Agenda\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

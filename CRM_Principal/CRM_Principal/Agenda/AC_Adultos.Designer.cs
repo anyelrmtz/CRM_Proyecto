@@ -330,6 +330,7 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AC_Adultos";
             this.Text = "AC_Adultos";
             this.groupBox1.ResumeLayout(false);
