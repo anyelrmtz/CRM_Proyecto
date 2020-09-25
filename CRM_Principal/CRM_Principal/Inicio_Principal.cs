@@ -10,6 +10,7 @@ using System.Windows.Forms;
 //using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using System.Data.Sql;
+using CRM_Principal.Agenda;
 
 namespace CRM_Principal
 {
@@ -227,12 +228,17 @@ namespace CRM_Principal
         {
             if (this.panel_contenedor.Controls.Count > 0)
                 this.panel_contenedor.Controls.RemoveAt(0);
-            AC_Adultos con = from_niño_con as AC_Adultos;
+            AC_Niños con = from_niño_con as AC_Niños;
             con.TopLevel = false;
             con.Dock = DockStyle.Fill;
             this.panel_contenedor.Controls.Add(con);
             this.panel_contenedor.Tag = con;
             con.Show();
+        }
+
+        private void niñosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Abrirfrom_consult_niño(new AC_Niños());
         }
     }
 }

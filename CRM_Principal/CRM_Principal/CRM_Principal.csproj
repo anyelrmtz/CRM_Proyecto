@@ -55,10 +55,10 @@
     <Compile Include="Agenda\AC_Adultos.Designer.cs">
       <DependentUpon>AC_Adultos.cs</DependentUpon>
     </Compile>
-    <Compile Include="AC_Niños.cs">
+    <Compile Include="Agenda\AC_Niños.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AC_Niños.Designer.cs">
+    <Compile Include="Agenda\AC_Niños.Designer.cs">
       <DependentUpon>AC_Niños.cs</DependentUpon>
     </Compile>
     <Compile Include="Clientes\A_Clientes.cs">
@@ -144,7 +144,7 @@
     <EmbeddedResource Include="Agenda\AC_Adultos.resx">
       <DependentUpon>AC_Adultos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AC_Niños.resx">
+    <EmbeddedResource Include="Agenda\AC_Niños.resx">
       <DependentUpon>AC_Niños.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\A_Clientes.resx">

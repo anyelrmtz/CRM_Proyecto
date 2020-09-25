@@ -192,6 +192,7 @@
             this.niñosToolStripMenuItem.Name = "niñosToolStripMenuItem";
             this.niñosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.niñosToolStripMenuItem.Text = "Niños";
+            this.niñosToolStripMenuItem.Click += new System.EventHandler(this.niñosToolStripMenuItem_Click);
             // 
             // Hora_envivo
             // 
