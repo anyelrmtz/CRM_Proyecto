@@ -32,32 +32,38 @@ namespace CRM_Principal.Agenda
 
         public void Calendario()
         {
+           
             SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar.Open();
 
             SqlCommand calen = new SqlCommand();
             SqlConnection conectanos = new SqlConnection();
             calen.Connection = conectar;
-            calen.CommandText = ("select *from Prueba ");
+            calen.CommandText = ("select fecha from Prueba ");
 
             SqlDataReader leer = calen.ExecuteReader();
-            if(leer.Read())
+               
+            while(leer.Read())
             {
-                
 
-                Calendario_citas.BoldedDates =new DateTime[]
-                {
-                     DateTime.Parse(leer["fecha"].ToString()),
+
+                this.Calendario_citas.AnnuallyBoldedDates = new DateTime[]
+                { 
+                     DateTime.Parse(leer[0].ToString()),
+                   
+
                      
-                    DateTime.Today.AddDays(0),
-                    new DateTime()
+
                      }; 
                 
-
-            }
-            conectar.Close();
+                
             
-           
+            
+            
+            }
+            
+
+            
 
         }
 
