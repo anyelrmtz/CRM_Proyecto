@@ -240,5 +240,22 @@ namespace CRM_Principal
         {
             Abrirfrom_consult_niño(new AC_Niños());
         }
+
+        private void verCitasAgendadasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frorom_citas(new Ver_citas());
+        }
+        public void Frorom_citas(object citas_agendada)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            Ver_citas con = citas_agendada as Ver_citas;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
+
     }
 }

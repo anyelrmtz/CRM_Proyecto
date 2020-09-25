@@ -40,12 +40,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(920, 487);
+            this.pictureBox1.Size = new System.Drawing.Size(920, 486);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
@@ -77,7 +78,11 @@
             // 
             // Calendario_citas
             // 
-            this.Calendario_citas.Location = new System.Drawing.Point(626, 106);
+            this.Calendario_citas.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Calendario_citas.CalendarDimensions = new System.Drawing.Size(2, 3);
+            this.Calendario_citas.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Calendario_citas.Location = new System.Drawing.Point(525, 9);
+            this.Calendario_citas.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.Calendario_citas.Name = "Calendario_citas";
             this.Calendario_citas.TabIndex = 3;
             // 
@@ -94,6 +99,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ver_citas";
             this.Text = "Ver_citas";
+            this.Load += new System.EventHandler(this.Ver_citas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

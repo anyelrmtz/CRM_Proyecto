@@ -170,6 +170,7 @@
             this.verCitasAgendadasToolStripMenuItem.Name = "verCitasAgendadasToolStripMenuItem";
             this.verCitasAgendadasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.verCitasAgendadasToolStripMenuItem.Text = "Ver Citas Agendadas";
+            this.verCitasAgendadasToolStripMenuItem.Click += new System.EventHandler(this.verCitasAgendadasToolStripMenuItem_Click);
             // 
             // agendarCitasToolStripMenuItem
             // 
