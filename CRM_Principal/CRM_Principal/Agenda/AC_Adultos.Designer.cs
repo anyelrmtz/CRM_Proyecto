@@ -53,6 +53,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label18 = new System.Windows.Forms.Label();
+            this.hora_text = new System.Windows.Forms.TextBox();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -320,11 +323,41 @@
             this.dateTimePicker3.TabIndex = 25;
             this.dateTimePicker3.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(513, 17);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(95, 16);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Hora de la cita";
+            // 
+            // hora_text
+            // 
+            this.hora_text.Location = new System.Drawing.Point(614, 16);
+            this.hora_text.Name = "hora_text";
+            this.hora_text.Size = new System.Drawing.Size(100, 20);
+            this.hora_text.TabIndex = 27;
+            this.hora_text.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Location = new System.Drawing.Point(536, 132);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.TabIndex = 29;
+            this.btn_guardar.Text = "button1";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            // 
             // AC_Adultos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(904, 448);
+            this.Controls.Add(this.btn_guardar);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.hora_text);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.label17);
@@ -367,5 +400,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox hora_text;
+        private System.Windows.Forms.Button btn_guardar;
     }
 }

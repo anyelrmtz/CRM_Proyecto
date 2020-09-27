@@ -29,8 +29,8 @@ namespace CRM_Principal.Agenda
         {
 
         }
-
-        public void Calendario()
+        //beta de calendario
+     /*   public void Calendario()
         {
            
             SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
@@ -65,11 +65,11 @@ namespace CRM_Principal.Agenda
 
             
 
-        }
+        }*/
 
         private void Ver_citas_Load(object sender, EventArgs e)
         {
-            Calendario();
+            
 
         }
     }
