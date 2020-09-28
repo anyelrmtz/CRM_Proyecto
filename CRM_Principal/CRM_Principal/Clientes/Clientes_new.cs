@@ -16,14 +16,25 @@ namespace CRM_Principal.Clientes
 {
     public partial class Clientes_new : Form
     {
-        public Clientes_new(AC_Niños.Datos info)
+        public Clientes_new(AC_Niños.Datos info )
         {
             InitializeComponent();
             Claves();
             text_nombre.Text = info.nom;
             txt_telefono.Text = info.tel;
             Txt_correo.Text = info.correo;
+            
+            
         }
+        public Clientes_new(AC_Adultos.Datos info2 )
+        {
+            InitializeComponent();
+            Claves();
+            text_nombre.Text = info2.nom;
+            txt_telefono.Text = info2.tel;
+            Txt_correo.Text = info2.correo;
+        }
+        
         //conexion
         SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
