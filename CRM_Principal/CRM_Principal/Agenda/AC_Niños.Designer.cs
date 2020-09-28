@@ -489,7 +489,7 @@
             // 
             this.edad_nino.Location = new System.Drawing.Point(148, 121);
             this.edad_nino.Name = "edad_nino";
-            this.edad_nino.Size = new System.Drawing.Size(62, 22);
+            this.edad_nino.Size = new System.Drawing.Size(97, 22);
             this.edad_nino.TabIndex = 22;
             // 
             // label9
