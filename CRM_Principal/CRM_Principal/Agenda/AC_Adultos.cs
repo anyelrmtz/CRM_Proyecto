@@ -238,5 +238,13 @@ namespace CRM_Principal
             }
         }
 
+        private void fehca_naci_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaacutal = DateTime.Today;
+            int anos = fechaacutal.Year - fehca_naci.Value.Year;
+            if (fechaacutal < fehca_naci.Value.AddYears(anos)) anos--;
+            txt_edad.Text = anos + " Años";
+            
+        }
     }
 }
