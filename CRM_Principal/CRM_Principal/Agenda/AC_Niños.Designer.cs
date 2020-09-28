@@ -556,6 +556,7 @@
             this.fecha_na_nino.Size = new System.Drawing.Size(200, 22);
             this.fecha_na_nino.TabIndex = 5;
             this.fecha_na_nino.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
+            this.fecha_na_nino.ValueChanged += new System.EventHandler(this.fecha_na_nino_ValueChanged);
             // 
             // tipo_sangre_nino
             // 

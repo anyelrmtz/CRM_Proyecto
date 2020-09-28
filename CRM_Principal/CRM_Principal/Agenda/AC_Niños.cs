@@ -403,6 +403,24 @@ namespace CRM_Principal.Agenda
         {
 
         }
+
+        private void fecha_na_nino_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaacutal = DateTime.Today;
+            int anos = fechaacutal.Year - fecha_na_nino.Value.Year;
+            if (fechaacutal < fecha_na_nino.Value.AddYears(anos)) anos--;
+            int meses = fechaacutal.Month - fecha_na_nino.Value.Month;
+            if (fechaacutal < fecha_na_nino.Value.AddMonths(meses)) meses--;
+
+            if (anos > 1)
+            {
+                edad_nino.Text = anos + " Años";
+            }
+            else
+            {
+                edad_nino.Text = meses + " Meses";
+            }
+        }
     }
 
     }
