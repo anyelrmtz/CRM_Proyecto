@@ -132,7 +132,8 @@
             this.fecha_tutor_na.Name = "fecha_tutor_na";
             this.fecha_tutor_na.Size = new System.Drawing.Size(200, 22);
             this.fecha_tutor_na.TabIndex = 5;
-            this.fecha_tutor_na.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
+            this.fecha_tutor_na.Value = new System.DateTime(2020, 9, 22, 0, 0, 0, 0);
+            this.fecha_tutor_na.ValueChanged += new System.EventHandler(this.fecha_tutor_na_ValueChanged);
             // 
             // telefono
             // 

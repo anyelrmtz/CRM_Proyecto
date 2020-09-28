@@ -29,7 +29,7 @@ namespace CRM_Principal.Agenda
        
         private void button2_Click(object sender, EventArgs e)
         {
-
+           
         }
         //tutor
         String En_tuto;
@@ -126,6 +126,7 @@ namespace CRM_Principal.Agenda
                 {
                     MessageBox.Show("La cita fue agendada");
                     conectar.Close();
+                    Limpiar();
                 }
             }
         }
@@ -241,5 +242,168 @@ namespace CRM_Principal.Agenda
                 textBox1.Enabled = true;
             }
         }
+
+        public void Limpiar()
+        {
+            foreach(Control c in this.Controls)
+    {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    ComboBox text = ctrl as ComboBox;
+                    text.SelectedIndex=-1;
+                }
+            }
+            
+            
+
+            /////////////////////grupo bos 1
+            foreach (Control c in this.groupBox1.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.groupBox1.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    ComboBox text = ctrl as ComboBox;
+                    text.SelectedIndex = -1;
+                }
+            }
+            /////////////////////grupo bos 2
+            foreach (Control c in this.groupBox2.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.groupBox2.Controls)
+            {
+                if (ctrl is ComboBox)
+                {
+                    ComboBox text = ctrl as ComboBox;
+                    text.SelectedIndex = -1;
+                }
+            }
+            /////////////////////grupo bos 3
+            foreach (Control c in this.groupBox3.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                    c.Enabled = false;
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.groupBox3.Controls)
+            {
+                if (ctrl is RadioButton)
+                {
+                    RadioButton text = ctrl as RadioButton;
+                    text.Checked = false;
+                }
+            }
+            /////////////////////grupo bos 4
+            foreach (Control c in this.groupBox4.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                    c.Enabled = false;
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.groupBox4.Controls)
+            {
+                if (ctrl is RadioButton)
+                {
+                    RadioButton text = ctrl as RadioButton;
+                    text.Checked = false;
+                }
+            }
+            
+            /////////////////////grupo bos 5
+            foreach (Control c in this.groupBox5.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                    c.Enabled = false;
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.groupBox5.Controls)
+            {
+                if (ctrl is RadioButton)
+                {
+                    RadioButton text = ctrl as RadioButton;
+                    text.Checked = false;
+                }
+            }
+            /////////////////////grupo bos 6
+            foreach (Control c in this.groupBox6.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                    c.Enabled = false;
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.groupBox6.Controls)
+            {
+                if (ctrl is RadioButton)
+                {
+                    RadioButton text = ctrl as RadioButton;
+                    text.Checked = false;
+                }
+            }
+            /////////////////////grupo bos 7
+            foreach (Control c in this.groupBox7.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                    c.Enabled = false;
+
+                    this.textBox1.Focus();
+                }
+            }
+            foreach (Control ctrl in this.groupBox7.Controls)
+            {
+                if (ctrl is RadioButton)
+                {
+                    RadioButton text = ctrl as RadioButton;
+                    text.Checked = false;
+                }
+            }
+        }
+
+        private void fecha_tutor_na_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+
+    }
+
