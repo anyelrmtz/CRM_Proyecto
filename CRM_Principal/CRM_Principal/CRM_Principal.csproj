@@ -73,6 +73,12 @@
     <Compile Include="Clientes\A_Clientes.Designer.cs">
       <DependentUpon>A_Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes\Clientes_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\Clientes_new.Designer.cs">
+      <DependentUpon>Clientes_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="configuracion_user\Actulizar_Datos_user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\A_Clientes.resx">
       <DependentUpon>A_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\Clientes_new.resx">
+      <DependentUpon>Clientes_new.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configuracion_user\Actulizar_Datos_user.resx">
       <DependentUpon>Actulizar_Datos_user.cs</DependentUpon>

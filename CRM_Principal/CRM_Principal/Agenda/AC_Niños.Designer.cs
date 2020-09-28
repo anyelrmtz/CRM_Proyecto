@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tipo_consulta = new System.Windows.Forms.ComboBox();
             this.text_nom_tutor = new System.Windows.Forms.TextBox();
             this.tipo_sangre_tu = new System.Windows.Forms.ComboBox();
             this.fecha_tutor_na = new System.Windows.Forms.DateTimePicker();
@@ -62,26 +62,28 @@
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.edad_nino = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.nombre_nino = new System.Windows.Forms.TextBox();
+            this.fecha_na_nino = new System.Windows.Forms.DateTimePicker();
+            this.tipo_sangre_nino = new System.Windows.Forms.ComboBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.btn_Guar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.fehca_sita = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.hora_text = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.doctora_combo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -91,13 +93,16 @@
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // tipo_consulta
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(163, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.tipo_consulta.FormattingEnabled = true;
+            this.tipo_consulta.Items.AddRange(new object[] {
+            "Pediatria",
+            "Nefrologia"});
+            this.tipo_consulta.Location = new System.Drawing.Point(163, 12);
+            this.tipo_consulta.Name = "tipo_consulta";
+            this.tipo_consulta.Size = new System.Drawing.Size(121, 21);
+            this.tipo_consulta.TabIndex = 0;
             // 
             // text_nom_tutor
             // 
@@ -357,15 +362,15 @@
             this.groupBox2.Controls.Add(this.groupBox7);
             this.groupBox2.Controls.Add(this.groupBox6);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.edad_nino);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.comboBox5);
+            this.groupBox2.Controls.Add(this.nombre_nino);
+            this.groupBox2.Controls.Add(this.fecha_na_nino);
+            this.groupBox2.Controls.Add(this.tipo_sangre_nino);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(421, 52);
             this.groupBox2.Name = "groupBox2";
@@ -479,12 +484,12 @@
             this.label16.TabIndex = 23;
             this.label16.Text = "Edad(Meses o Años)";
             // 
-            // textBox10
+            // edad_nino
             // 
-            this.textBox10.Location = new System.Drawing.Point(148, 121);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(62, 22);
-            this.textBox10.TabIndex = 22;
+            this.edad_nino.Location = new System.Drawing.Point(148, 121);
+            this.edad_nino.Name = "edad_nino";
+            this.edad_nino.Size = new System.Drawing.Size(62, 22);
+            this.edad_nino.TabIndex = 22;
             // 
             // label9
             // 
@@ -534,30 +539,33 @@
             this.label15.TabIndex = 11;
             this.label15.Text = "Nombre Completo";
             // 
-            // textBox9
+            // nombre_nino
             // 
-            this.textBox9.Location = new System.Drawing.Point(148, 21);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(200, 22);
-            this.textBox9.TabIndex = 4;
+            this.nombre_nino.Location = new System.Drawing.Point(148, 21);
+            this.nombre_nino.Name = "nombre_nino";
+            this.nombre_nino.Size = new System.Drawing.Size(200, 22);
+            this.nombre_nino.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // fecha_na_nino
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(149, 57);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
+            this.fecha_na_nino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha_na_nino.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fecha_na_nino.Location = new System.Drawing.Point(149, 57);
+            this.fecha_na_nino.Name = "fecha_na_nino";
+            this.fecha_na_nino.Size = new System.Drawing.Size(200, 22);
+            this.fecha_na_nino.TabIndex = 5;
+            this.fecha_na_nino.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
             // 
-            // comboBox5
+            // tipo_sangre_nino
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(148, 88);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 24);
-            this.comboBox5.TabIndex = 6;
+            this.tipo_sangre_nino.FormattingEnabled = true;
+            this.tipo_sangre_nino.Items.AddRange(new object[] {
+            "A+",
+            "0-"});
+            this.tipo_sangre_nino.Location = new System.Drawing.Point(148, 88);
+            this.tipo_sangre_nino.Name = "tipo_sangre_nino";
+            this.tipo_sangre_nino.Size = new System.Drawing.Size(121, 24);
+            this.tipo_sangre_nino.TabIndex = 6;
             // 
             // radioButton2
             // 
@@ -622,21 +630,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dateTimePicker3
+            // fehca_sita
             // 
-            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(483, 10);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(106, 22);
-            this.dateTimePicker3.TabIndex = 20;
-            this.dateTimePicker3.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
+            this.fehca_sita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fehca_sita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fehca_sita.Location = new System.Drawing.Point(574, 10);
+            this.fehca_sita.Name = "fehca_sita";
+            this.fehca_sita.Size = new System.Drawing.Size(106, 22);
+            this.fehca_sita.TabIndex = 20;
+            this.fehca_sita.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(387, 12);
+            this.label12.Location = new System.Drawing.Point(478, 12);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 16);
             this.label12.TabIndex = 24;
@@ -644,7 +652,7 @@
             // 
             // hora_text
             // 
-            this.hora_text.Location = new System.Drawing.Point(714, 13);
+            this.hora_text.Location = new System.Drawing.Point(805, 13);
             this.hora_text.Name = "hora_text";
             this.hora_text.Size = new System.Drawing.Size(100, 20);
             this.hora_text.TabIndex = 25;
@@ -654,7 +662,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(613, 14);
+            this.label18.Location = new System.Drawing.Point(704, 14);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(95, 16);
             this.label18.TabIndex = 26;
@@ -673,21 +681,42 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "¿Alguna Enfermedad?";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(294, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(45, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Doctora";
+            // 
+            // doctora_combo
+            // 
+            this.doctora_combo.FormattingEnabled = true;
+            this.doctora_combo.Items.AddRange(new object[] {
+            "Dr.Citlalli Valera"});
+            this.doctora_combo.Location = new System.Drawing.Point(345, 12);
+            this.doctora_combo.Name = "doctora_combo";
+            this.doctora_combo.Size = new System.Drawing.Size(121, 21);
+            this.doctora_combo.TabIndex = 37;
+            // 
             // AC_Niños
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 487);
+            this.Controls.Add(this.doctora_combo);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.hora_text);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.fehca_sita);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_Guar);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.tipo_consulta);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AC_Niños";
@@ -713,7 +742,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox tipo_consulta;
         private System.Windows.Forms.TextBox text_nom_tutor;
         private System.Windows.Forms.ComboBox tipo_sangre_tu;
         private System.Windows.Forms.DateTimePicker fecha_tutor_na;
@@ -738,13 +767,13 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox nombre_nino;
+        private System.Windows.Forms.DateTimePicker fecha_na_nino;
+        private System.Windows.Forms.ComboBox tipo_sangre_nino;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btn_Guar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker fehca_sita;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton10;
@@ -753,7 +782,7 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox edad_nino;
         private System.Windows.Forms.TextBox hora_text;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -767,5 +796,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox doctora_combo;
     }
 }
