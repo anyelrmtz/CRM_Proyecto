@@ -10,15 +10,19 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using CRM_Principal.Clientes;
 using System.Data.SqlClient;
+using CRM_Principal.Agenda;
 
 namespace CRM_Principal.Clientes
 {
     public partial class Clientes_new : Form
     {
-        public Clientes_new()
+        public Clientes_new(AC_Niños.Datos info)
         {
             InitializeComponent();
             Claves();
+            text_nombre.Text = info.nom;
+            txt_telefono.Text = info.tel;
+            Txt_correo.Text = info.correo;
         }
         //conexion
         SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
@@ -122,13 +126,21 @@ namespace CRM_Principal.Clientes
             else
             {
                 conectar.Close();
-                MessageBox.Show("El Cliente fue creado correctamente");
+                MessageBox.Show("El Cliente fue Agregado en el sistema Correctamente");
+                Limpiar();
 
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+        public void Limpiar()
+        {
+            text_nombre.Clear();
+            txt_telefono.Clear();
+            Txt_correo.Clear();
+            Txt_direcc.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
