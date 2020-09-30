@@ -489,6 +489,7 @@
             // 
             this.edad_nino.Location = new System.Drawing.Point(148, 121);
             this.edad_nino.Name = "edad_nino";
+            this.edad_nino.ReadOnly = true;
             this.edad_nino.Size = new System.Drawing.Size(97, 22);
             this.edad_nino.TabIndex = 22;
             // 
@@ -614,7 +615,7 @@
             // 
             // btn_Guar
             // 
-            this.btn_Guar.Location = new System.Drawing.Point(817, 61);
+            this.btn_Guar.Location = new System.Drawing.Point(817, 150);
             this.btn_Guar.Name = "btn_Guar";
             this.btn_Guar.Size = new System.Drawing.Size(75, 40);
             this.btn_Guar.TabIndex = 22;
@@ -624,7 +625,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(817, 114);
+            this.button2.Location = new System.Drawing.Point(817, 218);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 22);
             this.button2.TabIndex = 23;

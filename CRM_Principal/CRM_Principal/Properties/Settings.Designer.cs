@@ -44,5 +44,16 @@ namespace CRM_Principal.Properties {
                 return ((string)(this["junodoctorConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=10.23.249.209;Initial Catalog=junodoctor_cliente;User ID=DOCTORJUNIO;" +
+            "Password=junodoctor2020")]
+        public string junodoctor_clienteConnectionString {
+            get {
+                return ((string)(this["junodoctor_clienteConnectionString"]));
+            }
+        }
     }
 }

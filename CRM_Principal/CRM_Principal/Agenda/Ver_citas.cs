@@ -69,7 +69,11 @@ namespace CRM_Principal.Agenda
 
         private void Ver_citas_Load(object sender, EventArgs e)
         {
-            
+            // TODO: esta línea de código carga datos en la tabla 'junodoctor_clienteDataSet1.consul_adulto' Puede moverla o quitarla según sea necesario.
+            this.consul_adultoTableAdapter.Fill(this.junodoctor_clienteDataSet1.consul_adulto);
+            // TODO: esta línea de código carga datos en la tabla 'junodoctor_clienteDataSet.consul_nino' Puede moverla o quitarla según sea necesario.
+            this.consul_ninoTableAdapter.Fill(this.junodoctor_clienteDataSet.consul_nino);
+
 
         }
     }

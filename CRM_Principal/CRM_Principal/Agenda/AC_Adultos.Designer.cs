@@ -95,6 +95,7 @@
             // 
             this.txt_edad.Location = new System.Drawing.Point(118, 138);
             this.txt_edad.Name = "txt_edad";
+            this.txt_edad.ReadOnly = true;
             this.txt_edad.Size = new System.Drawing.Size(121, 22);
             this.txt_edad.TabIndex = 36;
             // 
@@ -405,6 +406,7 @@
             this.combo_doc.Name = "combo_doc";
             this.combo_doc.Size = new System.Drawing.Size(121, 21);
             this.combo_doc.TabIndex = 31;
+            this.combo_doc.SelectedIndexChanged += new System.EventHandler(this.combo_doc_SelectedIndexChanged);
             // 
             // AC_Adultos
             // 

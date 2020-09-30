@@ -246,5 +246,10 @@ namespace CRM_Principal
             txt_edad.Text = anos + " Años";
             
         }
+
+        private void combo_doc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
