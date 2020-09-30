@@ -76,5 +76,23 @@ namespace CRM_Principal.Agenda
 
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Calendario_citas.BoldedDates = new DateTime[]
+            {
+                DateTime.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()),
+                DateTime.Today.AddDays(0)
+            };
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Calendario_citas.BoldedDates = new DateTime[]
+            {
+                DateTime.Parse(dataGridView2.CurrentRow.Cells[3].Value.ToString()),
+                DateTime.Today.AddDays(0)
+            };
+        }
     }
 }

@@ -119,6 +119,7 @@
             this.Calendario_citas.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.Calendario_citas.Name = "Calendario_citas";
             this.Calendario_citas.TabIndex = 3;
+            this.Calendario_citas.TitleForeColor = System.Drawing.Color.Red;
             // 
             // dataGridView1
             // 
@@ -135,11 +136,12 @@
             this.fehcacitaDataGridViewTextBoxColumn,
             this.horacitaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.consulninoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 19);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(481, 158);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridView2
             // 
@@ -160,6 +162,7 @@
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.Size = new System.Drawing.Size(476, 150);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // junodoctor_clienteDataSet
             // 
