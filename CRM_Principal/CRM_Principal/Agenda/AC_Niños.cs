@@ -22,11 +22,14 @@ namespace CRM_Principal.Agenda
             InitializeComponent();
             DateTime ahora = DateTime.Now;
             Hora_fecha = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
+            Especialidadse();
         }
         
         //conexion
         SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
-       
+        //conexion
+        SqlConnection conectar2 = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+
         private void button2_Click(object sender, EventArgs e)
         {
            
@@ -48,6 +51,28 @@ namespace CRM_Principal.Agenda
             //variable para correo
             public string correo;
          
+
+        }
+        public void Especialidadse()
+        {
+            
+               
+                conectar2.Open();
+
+                SqlCommand serv = new SqlCommand();
+                SqlConnection conectanos = new SqlConnection();
+                serv.Connection = conectar2;
+                serv.CommandText = ("Select *from Especialidad");
+
+                SqlDataReader leer = serv.ExecuteReader();
+                while (leer.Read())
+                {
+                    tipo_consulta.Items.Add(leer["nombre"].ToString());
+                }
+
+                conectar2.Close();
+            
+
 
         }
 
@@ -420,6 +445,29 @@ namespace CRM_Principal.Agenda
             {
                 edad_nino.Text = meses + " Meses";
             }
+        }
+
+        private void tipo_consulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            
+                doctora_combo.Items.Clear();
+                conectar2.Open();
+
+                SqlCommand serva = new SqlCommand();
+                SqlConnection conectanos = new SqlConnection();
+            serva.Connection = conectar2;
+            serva.CommandText = ("select *from "+tipo_consulta.Text+";");
+
+                SqlDataReader leer = serva.ExecuteReader();
+                while (leer.Read())
+                {
+                    doctora_combo.Items.Add(leer["nombre"].ToString());
+                }
+
+                conectar2.Close();
+            
+            
         }
     }
 

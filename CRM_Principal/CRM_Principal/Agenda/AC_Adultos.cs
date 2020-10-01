@@ -20,7 +20,11 @@ namespace CRM_Principal
             InitializeComponent();
             DateTime ahora = DateTime.Now;
             Hora_fecha = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
+            Especialidadse();
         }
+        //conexion
+        SqlConnection conectar2 = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+
         //pasiente
         String En_tuto;
         String Medi_tuto;
@@ -33,6 +37,28 @@ namespace CRM_Principal
             public string tel;
             //variable para correo
             public string correo;
+
+
+        }
+        public void Especialidadse()
+        {
+
+            cobo_tipc.Items.Clear();
+            conectar2.Open();
+
+            SqlCommand serv = new SqlCommand();
+            SqlConnection conectanos = new SqlConnection();
+            serv.Connection = conectar2;
+            serv.CommandText = ("Select *from Especialidad");
+
+            SqlDataReader leer = serv.ExecuteReader();
+            while (leer.Read())
+            {
+                cobo_tipc.Items.Add(leer["nombre"].ToString());
+            }
+
+            conectar2.Close();
+
 
 
         }
@@ -250,6 +276,25 @@ namespace CRM_Principal
         private void combo_doc_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cobo_tipc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            combo_doc.Items.Clear();
+            conectar2.Open();
+
+            SqlCommand serva = new SqlCommand();
+            SqlConnection conectanos = new SqlConnection();
+            serva.Connection = conectar2;
+            serva.CommandText = ("select *from " + cobo_tipc.Text + ";");
+
+            SqlDataReader leer = serva.ExecuteReader();
+            while (leer.Read())
+            {
+                combo_doc.Items.Add(leer["nombre"].ToString());
+            }
+
+            conectar2.Close();
         }
     }
 }

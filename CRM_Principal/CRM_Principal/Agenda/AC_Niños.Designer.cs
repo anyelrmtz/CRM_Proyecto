@@ -96,13 +96,11 @@
             // tipo_consulta
             // 
             this.tipo_consulta.FormattingEnabled = true;
-            this.tipo_consulta.Items.AddRange(new object[] {
-            "Pediatria",
-            "Nefrologia"});
             this.tipo_consulta.Location = new System.Drawing.Point(163, 12);
             this.tipo_consulta.Name = "tipo_consulta";
             this.tipo_consulta.Size = new System.Drawing.Size(121, 21);
             this.tipo_consulta.TabIndex = 0;
+            this.tipo_consulta.SelectedIndexChanged += new System.EventHandler(this.tipo_consulta_SelectedIndexChanged);
             // 
             // text_nom_tutor
             // 
@@ -696,8 +694,6 @@
             // doctora_combo
             // 
             this.doctora_combo.FormattingEnabled = true;
-            this.doctora_combo.Items.AddRange(new object[] {
-            "Dr.Citlalli Valera"});
             this.doctora_combo.Location = new System.Drawing.Point(345, 12);
             this.doctora_combo.Name = "doctora_combo";
             this.doctora_combo.Size = new System.Drawing.Size(121, 21);

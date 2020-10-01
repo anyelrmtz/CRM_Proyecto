@@ -331,13 +331,11 @@
             // cobo_tipc
             // 
             this.cobo_tipc.FormattingEnabled = true;
-            this.cobo_tipc.Items.AddRange(new object[] {
-            "Pediatria",
-            "Nefrologia"});
             this.cobo_tipc.Location = new System.Drawing.Point(116, 17);
             this.cobo_tipc.Name = "cobo_tipc";
             this.cobo_tipc.Size = new System.Drawing.Size(121, 21);
             this.cobo_tipc.TabIndex = 22;
+            this.cobo_tipc.SelectedIndexChanged += new System.EventHandler(this.cobo_tipc_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -400,8 +398,6 @@
             // combo_doc
             // 
             this.combo_doc.FormattingEnabled = true;
-            this.combo_doc.Items.AddRange(new object[] {
-            "Dra.Citlalli Valera"});
             this.combo_doc.Location = new System.Drawing.Point(298, 15);
             this.combo_doc.Name = "combo_doc";
             this.combo_doc.Size = new System.Drawing.Size(121, 21);

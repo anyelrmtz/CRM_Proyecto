@@ -33,6 +33,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.consulninoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junodoctor_clienteDataSet = new CRM_Principal.junodoctor_clienteDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.consuladultoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junodoctor_clienteDataSet1 = new CRM_Principal.junodoctor_clienteDataSet1();
+            this.Calendario_citas = new System.Windows.Forms.MonthCalendar();
+            this.consul_ninoTableAdapter = new CRM_Principal.junodoctor_clienteDataSetTableAdapters.consul_ninoTableAdapter();
+            this.junodoctorclienteDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consul_adultoTableAdapter = new CRM_Principal.junodoctor_clienteDataSet1TableAdapters.consul_adultoTableAdapter();
             this.fehcacitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horacitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreninoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,23 +51,17 @@
             this.tutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoconsultaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.consulninoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.junodoctor_clienteDataSet = new CRM_Principal.junodoctor_clienteDataSet();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_pagar = new System.Windows.Forms.Button();
+            this.btn_ver = new System.Windows.Forms.Button();
             this.fehcacitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horacitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.consuladultoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.junodoctor_clienteDataSet1 = new CRM_Principal.junodoctor_clienteDataSet1();
-            this.Calendario_citas = new System.Windows.Forms.MonthCalendar();
-            this.consul_ninoTableAdapter = new CRM_Principal.junodoctor_clienteDataSetTableAdapters.consul_ninoTableAdapter();
-            this.junodoctorclienteDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consul_adultoTableAdapter = new CRM_Principal.junodoctor_clienteDataSet1TableAdapters.consul_adultoTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.consuladultoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.junodoctorclienteDataSetBindingSource)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -104,7 +110,8 @@
             this.edadDataGridViewTextBoxColumn,
             this.tutorDataGridViewTextBoxColumn,
             this.tipoconsultaDataGridViewTextBoxColumn,
-            this.doctoraDataGridViewTextBoxColumn});
+            this.doctoraDataGridViewTextBoxColumn,
+            this.pago});
             this.dataGridView1.DataSource = this.consulninoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 23);
             this.dataGridView1.Name = "dataGridView1";
@@ -112,6 +119,91 @@
             this.dataGridView1.Size = new System.Drawing.Size(481, 158);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // consulninoBindingSource
+            // 
+            this.consulninoBindingSource.DataMember = "consul_nino";
+            this.consulninoBindingSource.DataSource = this.junodoctor_clienteDataSet;
+            // 
+            // junodoctor_clienteDataSet
+            // 
+            this.junodoctor_clienteDataSet.DataSetName = "junodoctor_clienteDataSet";
+            this.junodoctor_clienteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(414, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Citas Agendadas";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView2);
+            this.groupBox2.Location = new System.Drawing.Point(12, 269);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(488, 177);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Citas Adultos";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fehcacitaDataGridViewTextBoxColumn1,
+            this.horacitaDataGridViewTextBoxColumn1,
+            this.nombreDataGridViewTextBoxColumn,
+            this.generoDataGridViewTextBoxColumn,
+            this.edadDataGridViewTextBoxColumn1,
+            this.doctora,
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.consuladultoBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(476, 150);
+            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // consuladultoBindingSource
+            // 
+            this.consuladultoBindingSource.DataMember = "consul_adulto";
+            this.consuladultoBindingSource.DataSource = this.junodoctor_clienteDataSet1;
+            // 
+            // junodoctor_clienteDataSet1
+            // 
+            this.junodoctor_clienteDataSet1.DataSetName = "junodoctor_clienteDataSet1";
+            this.junodoctor_clienteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Calendario_citas
+            // 
+            this.Calendario_citas.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Calendario_citas.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.Calendario_citas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Calendario_citas.Location = new System.Drawing.Point(525, 87);
+            this.Calendario_citas.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.Calendario_citas.Name = "Calendario_citas";
+            this.Calendario_citas.TabIndex = 3;
+            this.Calendario_citas.TitleForeColor = System.Drawing.Color.Red;
+            // 
+            // consul_ninoTableAdapter
+            // 
+            this.consul_ninoTableAdapter.ClearBeforeFill = true;
+            // 
+            // junodoctorclienteDataSetBindingSource
+            // 
+            this.junodoctorclienteDataSetBindingSource.DataSource = this.junodoctor_clienteDataSet;
+            this.junodoctorclienteDataSetBindingSource.Position = 0;
+            // 
+            // consul_adultoTableAdapter
+            // 
+            this.consul_adultoTableAdapter.ClearBeforeFill = true;
             // 
             // fehcacitaDataGridViewTextBoxColumn
             // 
@@ -176,55 +268,43 @@
             this.doctoraDataGridViewTextBoxColumn.ReadOnly = true;
             this.doctoraDataGridViewTextBoxColumn.Width = 70;
             // 
-            // consulninoBindingSource
+            // pago
             // 
-            this.consulninoBindingSource.DataMember = "consul_nino";
-            this.consulninoBindingSource.DataSource = this.junodoctor_clienteDataSet;
+            this.pago.DataPropertyName = "pago";
+            this.pago.HeaderText = "pago";
+            this.pago.Name = "pago";
+            this.pago.ReadOnly = true;
+            this.pago.Visible = false;
             // 
-            // junodoctor_clienteDataSet
+            // groupBox3
             // 
-            this.junodoctor_clienteDataSet.DataSetName = "junodoctor_clienteDataSet";
-            this.junodoctor_clienteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.groupBox3.Controls.Add(this.btn_ver);
+            this.groupBox3.Controls.Add(this.btn_pagar);
+            this.groupBox3.Location = new System.Drawing.Point(551, 20);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(325, 55);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Opciones";
             // 
-            // label1
+            // btn_pagar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(414, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Citas Agendadas";
+            this.btn_pagar.Location = new System.Drawing.Point(20, 19);
+            this.btn_pagar.Name = "btn_pagar";
+            this.btn_pagar.Size = new System.Drawing.Size(75, 23);
+            this.btn_pagar.TabIndex = 0;
+            this.btn_pagar.Text = "Pagar Cita";
+            this.btn_pagar.UseVisualStyleBackColor = true;
+            this.btn_pagar.Click += new System.EventHandler(this.btn_pagar_Click);
             // 
-            // groupBox2
+            // btn_ver
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 269);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(488, 177);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Citas Adultos";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fehcacitaDataGridViewTextBoxColumn1,
-            this.horacitaDataGridViewTextBoxColumn1,
-            this.nombreDataGridViewTextBoxColumn,
-            this.generoDataGridViewTextBoxColumn,
-            this.edadDataGridViewTextBoxColumn1,
-            this.doctora});
-            this.dataGridView2.DataSource = this.consuladultoBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(476, 150);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.btn_ver.Location = new System.Drawing.Point(120, 19);
+            this.btn_ver.Name = "btn_ver";
+            this.btn_ver.Size = new System.Drawing.Size(75, 23);
+            this.btn_ver.TabIndex = 1;
+            this.btn_ver.Text = "Ver Estado";
+            this.btn_ver.UseVisualStyleBackColor = true;
             // 
             // fehcacitaDataGridViewTextBoxColumn1
             // 
@@ -268,45 +348,20 @@
             this.doctora.Name = "doctora";
             this.doctora.ReadOnly = true;
             // 
-            // consuladultoBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.consuladultoBindingSource.DataMember = "consul_adulto";
-            this.consuladultoBindingSource.DataSource = this.junodoctor_clienteDataSet1;
-            // 
-            // junodoctor_clienteDataSet1
-            // 
-            this.junodoctor_clienteDataSet1.DataSetName = "junodoctor_clienteDataSet1";
-            this.junodoctor_clienteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Calendario_citas
-            // 
-            this.Calendario_citas.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Calendario_citas.CalendarDimensions = new System.Drawing.Size(2, 2);
-            this.Calendario_citas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Calendario_citas.Location = new System.Drawing.Point(525, 87);
-            this.Calendario_citas.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.Calendario_citas.Name = "Calendario_citas";
-            this.Calendario_citas.TabIndex = 3;
-            this.Calendario_citas.TitleForeColor = System.Drawing.Color.Red;
-            // 
-            // consul_ninoTableAdapter
-            // 
-            this.consul_ninoTableAdapter.ClearBeforeFill = true;
-            // 
-            // junodoctorclienteDataSetBindingSource
-            // 
-            this.junodoctorclienteDataSetBindingSource.DataSource = this.junodoctor_clienteDataSet;
-            this.junodoctorclienteDataSetBindingSource.Position = 0;
-            // 
-            // consul_adultoTableAdapter
-            // 
-            this.consul_adultoTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "pago";
+            this.dataGridViewTextBoxColumn1.HeaderText = "pago";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // Ver_citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 487);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Calendario_citas);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -326,6 +381,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.consuladultoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.junodoctorclienteDataSetBindingSource)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,11 +410,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tutorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoconsultaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pago;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btn_ver;
+        private System.Windows.Forms.Button btn_pagar;
         private System.Windows.Forms.DataGridViewTextBoxColumn fehcacitaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn horacitaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

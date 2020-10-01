@@ -16,6 +16,7 @@ namespace CRM_Principal.Agenda
         public Ver_citas()
         {
             InitializeComponent();
+            btn_pagar.Enabled = false;
           
         }
        
@@ -76,6 +77,17 @@ namespace CRM_Principal.Agenda
 
 
         }
+        public struct Envio
+        {
+            public string nombre2;
+            public string estado2;
+            public string modo2;
+
+        }
+
+        string nombre;
+        string estado;
+        string modo;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -84,15 +96,51 @@ namespace CRM_Principal.Agenda
                 DateTime.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()),
                
             };
+            nombre = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            estado = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            modo = "1";
+            btn_pagar.Enabled = true;
+
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            nombre = dataGridView2.CurrentRow.Cells[2].Value.ToString();
+            estado = dataGridView2.CurrentRow.Cells[6].Value.ToString();
+            modo = "2";
+            btn_pagar.Enabled = true;
             Calendario_citas.BoldedDates = new DateTime[]
             {
                 DateTime.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString()),
                 
             };
+           
+        }
+
+        private void btn_pagar_Click(object sender, EventArgs e)
+        {
+            if (modo.ToString() == null)
+            {
+                MessageBox.Show("Selecione una Cita");
+
+            }else
+            if(modo.ToString() == "1")
+            {
+                Envio info;
+                info.nombre2 = nombre;
+                info.estado2 = estado;
+                info.modo2 = modo;
+
+                Pago_cita_nino.pago_ninocs entrada = new Pago_cita_nino.pago_ninocs(info);
+                entrada.ShowDialog();
+                    
+
+            }
+            else if (modo.ToString() == "2")
+            {
+
+            }
         }
     }
 }
