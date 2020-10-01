@@ -315,6 +315,10 @@ namespace CRM_Principal {
             
             private global::System.Data.DataColumn columnclave;
             
+            private global::System.Data.DataColumn columnpago;
+            
+            private global::System.Data.DataColumn columncantidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public consul_adultoDataTable() {
@@ -494,6 +498,22 @@ namespace CRM_Principal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn pagoColumn {
+                get {
+                    return this.columnpago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cantidadColumn {
+                get {
+                    return this.columncantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -546,7 +566,9 @@ namespace CRM_Principal {
                         string enfermedad_info, 
                         string medicacion, 
                         string info_medicacion, 
-                        string clave) {
+                        string clave, 
+                        string pago, 
+                        string cantidad) {
                 consul_adultoRow rowconsul_adultoRow = ((consul_adultoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -566,7 +588,9 @@ namespace CRM_Principal {
                         enfermedad_info,
                         medicacion,
                         info_medicacion,
-                        clave};
+                        clave,
+                        pago,
+                        cantidad};
                 rowconsul_adultoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowconsul_adultoRow);
                 return rowconsul_adultoRow;
@@ -614,6 +638,8 @@ namespace CRM_Principal {
                 this.columnmedicacion = base.Columns["medicacion"];
                 this.columninfo_medicacion = base.Columns["info_medicacion"];
                 this.columnclave = base.Columns["clave"];
+                this.columnpago = base.Columns["pago"];
+                this.columncantidad = base.Columns["cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -655,6 +681,10 @@ namespace CRM_Principal {
                 base.Columns.Add(this.columninfo_medicacion);
                 this.columnclave = new global::System.Data.DataColumn("clave", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnclave);
+                this.columnpago = new global::System.Data.DataColumn("pago", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpago);
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidad);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -680,6 +710,8 @@ namespace CRM_Principal {
                 this.columnmedicacion.MaxLength = 20;
                 this.columninfo_medicacion.MaxLength = 500;
                 this.columnclave.MaxLength = 50;
+                this.columnpago.MaxLength = 5;
+                this.columncantidad.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1105,6 +1137,38 @@ namespace CRM_Principal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string pago {
+                get {
+                    try {
+                        return ((string)(this[this.tableconsul_adulto.pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'pago\' de la tabla \'consul_adulto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableconsul_adulto.pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cantidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableconsul_adulto.cantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'consul_adulto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableconsul_adulto.cantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isfhec_horaNull() {
                 return this.IsNull(this.tableconsul_adulto.fhec_horaColumn);
             }
@@ -1306,6 +1370,30 @@ namespace CRM_Principal {
             public void SetclaveNull() {
                 this[this.tableconsul_adulto.claveColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IspagoNull() {
+                return this.IsNull(this.tableconsul_adulto.pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetpagoNull() {
+                this[this.tableconsul_adulto.pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IscantidadNull() {
+                return this.IsNull(this.tableconsul_adulto.cantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetcantidadNull() {
+                this[this.tableconsul_adulto.cantidadColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1485,6 +1573,8 @@ namespace CRM_Principal.junodoctor_clienteDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("medicacion", "medicacion");
             tableMapping.ColumnMappings.Add("info_medicacion", "info_medicacion");
             tableMapping.ColumnMappings.Add("clave", "clave");
+            tableMapping.ColumnMappings.Add("pago", "pago");
+            tableMapping.ColumnMappings.Add("cantidad", "cantidad");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1507,8 +1597,10 @@ namespace CRM_Principal.junodoctor_clienteDataSet1TableAdapters {
                 "edad_info] IS NULL) OR ([enfermedad_info] = @Original_enfermedad_info)) AND ((@I" +
                 "sNull_medicacion = 1 AND [medicacion] IS NULL) OR ([medicacion] = @Original_medi" +
                 "cacion)) AND ((@IsNull_info_medicacion = 1 AND [info_medicacion] IS NULL) OR ([i" +
-                "nfo_medicacion] = @Original_info_medicacion)) AND ((@IsNull_clave = 1 AND [clave" +
-                "] IS NULL) OR ([clave] = @Original_clave)))";
+                "nfo_medicacion] = @Original_info_medicacion)) AND ((@IsNull_pago = 1 AND [pago] " +
+                "IS NULL) OR ([pago] = @Original_pago)) AND ((@IsNull_cantidad = 1 AND [cantidad]" +
+                " IS NULL) OR ([cantidad] = @Original_cantidad)) AND ((@IsNull_clave = 1 AND [cla" +
+                "ve] IS NULL) OR ([clave] = @Original_clave)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fhec_hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fhec_hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1543,12 +1635,16 @@ namespace CRM_Principal.junodoctor_clienteDataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medicacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_info_medicacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "info_medicacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_info_medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "info_medicacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cantidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cantidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cantidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cantidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_clave", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clave", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_clave", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clave", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[consul_adulto] ([fhec_hora], [tipo_consulta], [doctora], [fehca_cita], [hora_cita], [genero], [nombre], [fecha_nac], [edad], [tipo_sangre], [telefono], [correo], [enfermedad], [enfermedad_info], [medicacion], [info_medicacion], [clave]) VALUES (@fhec_hora, @tipo_consulta, @doctora, @fehca_cita, @hora_cita, @genero, @nombre, @fecha_nac, @edad, @tipo_sangre, @telefono, @correo, @enfermedad, @enfermedad_info, @medicacion, @info_medicacion, @clave);
-SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, clave FROM consul_adulto WHERE (Id = SCOPE_IDENTITY()) ORDER BY fehca_cita";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[consul_adulto] ([fhec_hora], [tipo_consulta], [doctora], [fehca_cita], [hora_cita], [genero], [nombre], [fecha_nac], [edad], [tipo_sangre], [telefono], [correo], [enfermedad], [enfermedad_info], [medicacion], [info_medicacion], [pago], [cantidad], [clave]) VALUES (@fhec_hora, @tipo_consulta, @doctora, @fehca_cita, @hora_cita, @genero, @nombre, @fecha_nac, @edad, @tipo_sangre, @telefono, @correo, @enfermedad, @enfermedad_info, @medicacion, @info_medicacion, @pago, @cantidad, @clave);
+SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, pago, cantidad, clave FROM consul_adulto WHERE (Id = SCOPE_IDENTITY()) ORDER BY fehca_cita";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fhec_hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fhec_hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_consulta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_consulta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1566,6 +1662,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@enfermedad_info", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "enfermedad_info", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medicacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@info_medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "info_medicacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cantidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cantidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clave", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clave", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
@@ -1574,31 +1672,33 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                 "a_cita, [genero] = @genero, [nombre] = @nombre, [fecha_nac] = @fecha_nac, [edad]" +
                 " = @edad, [tipo_sangre] = @tipo_sangre, [telefono] = @telefono, [correo] = @corr" +
                 "eo, [enfermedad] = @enfermedad, [enfermedad_info] = @enfermedad_info, [medicacio" +
-                "n] = @medicacion, [info_medicacion] = @info_medicacion, [clave] = @clave WHERE (" +
-                "([Id] = @Original_Id) AND ((@IsNull_fhec_hora = 1 AND [fhec_hora] IS NULL) OR ([" +
-                "fhec_hora] = @Original_fhec_hora)) AND ((@IsNull_tipo_consulta = 1 AND [tipo_con" +
-                "sulta] IS NULL) OR ([tipo_consulta] = @Original_tipo_consulta)) AND ((@IsNull_do" +
-                "ctora = 1 AND [doctora] IS NULL) OR ([doctora] = @Original_doctora)) AND ((@IsNu" +
-                "ll_fehca_cita = 1 AND [fehca_cita] IS NULL) OR ([fehca_cita] = @Original_fehca_c" +
-                "ita)) AND ((@IsNull_hora_cita = 1 AND [hora_cita] IS NULL) OR ([hora_cita] = @Or" +
-                "iginal_hora_cita)) AND ((@IsNull_genero = 1 AND [genero] IS NULL) OR ([genero] =" +
-                " @Original_genero)) AND ((@IsNull_nombre = 1 AND [nombre] IS NULL) OR ([nombre] " +
-                "= @Original_nombre)) AND ((@IsNull_fecha_nac = 1 AND [fecha_nac] IS NULL) OR ([f" +
-                "echa_nac] = @Original_fecha_nac)) AND ((@IsNull_edad = 1 AND [edad] IS NULL) OR " +
-                "([edad] = @Original_edad)) AND ((@IsNull_tipo_sangre = 1 AND [tipo_sangre] IS NU" +
-                "LL) OR ([tipo_sangre] = @Original_tipo_sangre)) AND ((@IsNull_telefono = 1 AND [" +
-                "telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_correo = " +
-                "1 AND [correo] IS NULL) OR ([correo] = @Original_correo)) AND ((@IsNull_enfermed" +
-                "ad = 1 AND [enfermedad] IS NULL) OR ([enfermedad] = @Original_enfermedad)) AND (" +
-                "(@IsNull_enfermedad_info = 1 AND [enfermedad_info] IS NULL) OR ([enfermedad_info" +
-                "] = @Original_enfermedad_info)) AND ((@IsNull_medicacion = 1 AND [medicacion] IS" +
-                " NULL) OR ([medicacion] = @Original_medicacion)) AND ((@IsNull_info_medicacion =" +
-                " 1 AND [info_medicacion] IS NULL) OR ([info_medicacion] = @Original_info_medicac" +
-                "ion)) AND ((@IsNull_clave = 1 AND [clave] IS NULL) OR ([clave] = @Original_clave" +
-                ")));\r\nSELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, gener" +
-                "o, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermeda" +
-                "d_info, medicacion, info_medicacion, clave FROM consul_adulto WHERE (Id = @Id) O" +
-                "RDER BY fehca_cita";
+                "n] = @medicacion, [info_medicacion] = @info_medicacion, [pago] = @pago, [cantida" +
+                "d] = @cantidad, [clave] = @clave WHERE (([Id] = @Original_Id) AND ((@IsNull_fhec" +
+                "_hora = 1 AND [fhec_hora] IS NULL) OR ([fhec_hora] = @Original_fhec_hora)) AND (" +
+                "(@IsNull_tipo_consulta = 1 AND [tipo_consulta] IS NULL) OR ([tipo_consulta] = @O" +
+                "riginal_tipo_consulta)) AND ((@IsNull_doctora = 1 AND [doctora] IS NULL) OR ([do" +
+                "ctora] = @Original_doctora)) AND ((@IsNull_fehca_cita = 1 AND [fehca_cita] IS NU" +
+                "LL) OR ([fehca_cita] = @Original_fehca_cita)) AND ((@IsNull_hora_cita = 1 AND [h" +
+                "ora_cita] IS NULL) OR ([hora_cita] = @Original_hora_cita)) AND ((@IsNull_genero " +
+                "= 1 AND [genero] IS NULL) OR ([genero] = @Original_genero)) AND ((@IsNull_nombre" +
+                " = 1 AND [nombre] IS NULL) OR ([nombre] = @Original_nombre)) AND ((@IsNull_fecha" +
+                "_nac = 1 AND [fecha_nac] IS NULL) OR ([fecha_nac] = @Original_fecha_nac)) AND ((" +
+                "@IsNull_edad = 1 AND [edad] IS NULL) OR ([edad] = @Original_edad)) AND ((@IsNull" +
+                "_tipo_sangre = 1 AND [tipo_sangre] IS NULL) OR ([tipo_sangre] = @Original_tipo_s" +
+                "angre)) AND ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Ori" +
+                "ginal_telefono)) AND ((@IsNull_correo = 1 AND [correo] IS NULL) OR ([correo] = @" +
+                "Original_correo)) AND ((@IsNull_enfermedad = 1 AND [enfermedad] IS NULL) OR ([en" +
+                "fermedad] = @Original_enfermedad)) AND ((@IsNull_enfermedad_info = 1 AND [enferm" +
+                "edad_info] IS NULL) OR ([enfermedad_info] = @Original_enfermedad_info)) AND ((@I" +
+                "sNull_medicacion = 1 AND [medicacion] IS NULL) OR ([medicacion] = @Original_medi" +
+                "cacion)) AND ((@IsNull_info_medicacion = 1 AND [info_medicacion] IS NULL) OR ([i" +
+                "nfo_medicacion] = @Original_info_medicacion)) AND ((@IsNull_pago = 1 AND [pago] " +
+                "IS NULL) OR ([pago] = @Original_pago)) AND ((@IsNull_cantidad = 1 AND [cantidad]" +
+                " IS NULL) OR ([cantidad] = @Original_cantidad)) AND ((@IsNull_clave = 1 AND [cla" +
+                "ve] IS NULL) OR ([clave] = @Original_clave)));\r\nSELECT Id, fhec_hora, tipo_consu" +
+                "lta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangr" +
+                "e, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, p" +
+                "ago, cantidad, clave FROM consul_adulto WHERE (Id = @Id) ORDER BY fehca_cita";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fhec_hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fhec_hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_consulta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_consulta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1616,6 +1716,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@enfermedad_info", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "enfermedad_info", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medicacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@info_medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "info_medicacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pago", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cantidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cantidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@clave", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clave", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fhec_hora", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fhec_hora", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1650,6 +1752,10 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "medicacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_info_medicacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "info_medicacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_info_medicacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "info_medicacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pago", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pago", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pago", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pago", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_cantidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cantidad", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cantidad", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cantidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_clave", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clave", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_clave", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "clave", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1668,10 +1774,7 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nomb" +
-                "re, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info," +
-                " medicacion, info_medicacion, clave FROM dbo.consul_adulto ORDER BY fehca_cita A" +
-                "SC";
+            this._commandCollection[0].CommandText = @"SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, pago, cantidad, clave FROM dbo.consul_adulto WHERE pago='NO' ORDER BY fehca_cita ASC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1750,6 +1853,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                     string Original_enfermedad_info, 
                     string Original_medicacion, 
                     string Original_info_medicacion, 
+                    string Original_pago, 
+                    string Original_cantidad, 
                     string Original_clave) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_fhec_hora == null)) {
@@ -1880,13 +1985,29 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                 this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_info_medicacion));
             }
-            if ((Original_clave == null)) {
+            if ((Original_pago == null)) {
                 this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_clave));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_pago));
+            }
+            if ((Original_cantidad == null)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_cantidad));
+            }
+            if ((Original_clave == null)) {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_clave));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1925,6 +2046,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                     string enfermedad_info, 
                     string medicacion, 
                     string info_medicacion, 
+                    string pago, 
+                    string cantidad, 
                     string clave) {
             if ((fhec_hora == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -2022,11 +2145,23 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = ((string)(info_medicacion));
             }
-            if ((clave == null)) {
+            if ((pago == null)) {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(clave));
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(pago));
+            }
+            if ((cantidad == null)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(cantidad));
+            }
+            if ((clave == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(clave));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2065,6 +2200,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                     string enfermedad_info, 
                     string medicacion, 
                     string info_medicacion, 
+                    string pago, 
+                    string cantidad, 
                     string clave, 
                     int Original_Id, 
                     string Original_fhec_hora, 
@@ -2083,6 +2220,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                     string Original_enfermedad_info, 
                     string Original_medicacion, 
                     string Original_info_medicacion, 
+                    string Original_pago, 
+                    string Original_cantidad, 
                     string Original_clave, 
                     int Id) {
             if ((fhec_hora == null)) {
@@ -2181,150 +2320,178 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(info_medicacion));
             }
-            if ((clave == null)) {
+            if ((pago == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(clave));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(pago));
             }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Id));
-            if ((Original_fhec_hora == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            if ((cantidad == null)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_fhec_hora));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(cantidad));
             }
-            if ((Original_tipo_consulta == null)) {
+            if ((clave == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(clave));
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Id));
+            if ((Original_fhec_hora == null)) {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_tipo_consulta));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_fhec_hora));
             }
-            if ((Original_doctora == null)) {
+            if ((Original_tipo_consulta == null)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_doctora));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_tipo_consulta));
             }
-            if ((Original_fehca_cita == null)) {
+            if ((Original_doctora == null)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_fehca_cita));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_doctora));
             }
-            if ((Original_hora_cita == null)) {
+            if ((Original_fehca_cita == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_hora_cita));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_fehca_cita));
             }
-            if ((Original_genero == null)) {
+            if ((Original_hora_cita == null)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_genero));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_hora_cita));
             }
-            if ((Original_nombre == null)) {
+            if ((Original_genero == null)) {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_nombre));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_genero));
             }
-            if ((Original_fecha_nac == null)) {
+            if ((Original_nombre == null)) {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_fecha_nac));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_nombre));
             }
-            if ((Original_edad == null)) {
+            if ((Original_fecha_nac == null)) {
                 this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_edad));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_fecha_nac));
             }
-            if ((Original_tipo_sangre == null)) {
+            if ((Original_edad == null)) {
                 this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_tipo_sangre));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_edad));
             }
-            if ((Original_telefono == null)) {
+            if ((Original_tipo_sangre == null)) {
                 this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_telefono));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_tipo_sangre));
             }
-            if ((Original_correo == null)) {
+            if ((Original_telefono == null)) {
                 this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_correo));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_telefono));
             }
-            if ((Original_enfermedad == null)) {
+            if ((Original_correo == null)) {
                 this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_enfermedad));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_correo));
             }
-            if ((Original_enfermedad_info == null)) {
+            if ((Original_enfermedad == null)) {
                 this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_enfermedad_info));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_enfermedad));
             }
-            if ((Original_medicacion == null)) {
+            if ((Original_enfermedad_info == null)) {
                 this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_medicacion));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_enfermedad_info));
             }
-            if ((Original_info_medicacion == null)) {
+            if ((Original_medicacion == null)) {
                 this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_info_medicacion));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_medicacion));
             }
-            if ((Original_clave == null)) {
+            if ((Original_info_medicacion == null)) {
                 this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_clave));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_info_medicacion));
             }
-            this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(Id));
+            if ((Original_pago == null)) {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_pago));
+            }
+            if ((Original_cantidad == null)) {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_cantidad));
+            }
+            if ((Original_clave == null)) {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_clave));
+            }
+            this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2362,6 +2529,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                     string enfermedad_info, 
                     string medicacion, 
                     string info_medicacion, 
+                    string pago, 
+                    string cantidad, 
                     string clave, 
                     int Original_Id, 
                     string Original_fhec_hora, 
@@ -2380,8 +2549,10 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                     string Original_enfermedad_info, 
                     string Original_medicacion, 
                     string Original_info_medicacion, 
+                    string Original_pago, 
+                    string Original_cantidad, 
                     string Original_clave) {
-            return this.Update(fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, clave, Original_Id, Original_fhec_hora, Original_tipo_consulta, Original_doctora, Original_fehca_cita, Original_hora_cita, Original_genero, Original_nombre, Original_fecha_nac, Original_edad, Original_tipo_sangre, Original_telefono, Original_correo, Original_enfermedad, Original_enfermedad_info, Original_medicacion, Original_info_medicacion, Original_clave, Original_Id);
+            return this.Update(fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, pago, cantidad, clave, Original_Id, Original_fhec_hora, Original_tipo_consulta, Original_doctora, Original_fehca_cita, Original_hora_cita, Original_genero, Original_nombre, Original_fecha_nac, Original_edad, Original_tipo_sangre, Original_telefono, Original_correo, Original_enfermedad, Original_enfermedad_info, Original_medicacion, Original_info_medicacion, Original_pago, Original_cantidad, Original_clave, Original_Id);
         }
     }
     

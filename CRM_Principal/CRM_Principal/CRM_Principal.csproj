@@ -97,6 +97,18 @@
     <Compile Include="Administracion\Cotizacion.Designer.cs">
       <DependentUpon>Cotizacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="configuracion_user\Doctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion_user\Doctores.Designer.cs">
+      <DependentUpon>Doctores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion_user\servicios\Especialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion_user\servicios\Especialidad.Designer.cs">
+      <DependentUpon>Especialidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +144,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>junodoctorDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctorDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctorDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="junodoctor_clienteDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -186,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Cotizacion.resx">
       <DependentUpon>Cotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion_user\Doctores.resx">
+      <DependentUpon>Doctores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion_user\servicios\Especialidad.resx">
+      <DependentUpon>Especialidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -246,6 +274,28 @@
     </None>
     <None Include="junodoctorDataSet2.xss">
       <DependentUpon>junodoctorDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet3.xsc">
+      <DependentUpon>junodoctorDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctorDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctorDataSet3.xss">
+      <DependentUpon>junodoctorDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet4.xsc">
+      <DependentUpon>junodoctorDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctorDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctorDataSet4.xss">
+      <DependentUpon>junodoctorDataSet4.xsd</DependentUpon>
     </None>
     <None Include="junodoctor_clienteDataSet.xsc">
       <DependentUpon>junodoctor_clienteDataSet.xsd</DependentUpon>

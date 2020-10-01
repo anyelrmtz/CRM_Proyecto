@@ -140,11 +140,11 @@ namespace CRM_Principal
                 conectar.Open();
                 SqlCommand cliente_pasi_historial = new SqlCommand();
                 cliente_pasi_historial.Connection = conectar;
-                cliente_pasi_historial.CommandText = ("INSERT INTO consul_adulto(fhec_hora,tipo_consulta,doctora,fehca_cita,hora_cita,genero,nombre,fecha_nac,edad,tipo_sangre,telefono,correo,enfermedad,enfermedad_info,medicacion,info_medicacion,clave)VALUES('" + Hora_fecha + "','" + cobo_tipc.Text + "','" + combo_doc.Text + "','" + combo_fehc_cit.Text + "','" + hora_text.Text + "'" +
+                cliente_pasi_historial.CommandText = ("INSERT INTO consul_adulto(fhec_hora,tipo_consulta,doctora,fehca_cita,hora_cita,genero,nombre,fecha_nac,edad,tipo_sangre,telefono,correo,enfermedad,enfermedad_info,medicacion,info_medicacion,pago,cantidad,clave)VALUES('" + Hora_fecha + "','" + cobo_tipc.Text + "','" + combo_doc.Text + "','" + combo_fehc_cit.Text + "','" + hora_text.Text + "'" +
                     ",'" + combo_genero.Text + "','" + txt_nombre.Text + "','" + fehca_naci.Text + "'," +
                     "'" + txt_edad.Text + "','" + combo_sangre.Text + "','" + text_telefono.Text + "'," +
                     "'" + txt_correo.Text + "','" + En_tuto+ "','" + textBox5.Text + "','" + Medi_tuto + "'," +
-                    "'" + textBox1.Text + "','" + clavesit + "');");
+                    "'" + textBox1.Text + "','NO','','" + clavesit + "');");
                 SqlDataReader cliente_nino = cliente_pasi_historial.ExecuteReader();
                 if (cliente_nino.Read())
                 {

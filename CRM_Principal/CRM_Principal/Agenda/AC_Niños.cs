@@ -110,12 +110,12 @@ namespace CRM_Principal.Agenda
                 SqlCommand cliente_pasi_historial = new SqlCommand();
                 cliente_pasi_historial.Connection = conectar;
                 cliente_pasi_historial.CommandText = ("INSERT INTO consul_nino(fhec_hora,tipo_consulta,doctora,fehca_cita,hora_cita,tutor,nombre_tt,fehca_na,tipo_san,telefono,correo,enfermedas,infi_enfer,medicacion,infi_medic,nombre_nino,fecha_nino,tipo_sangre,edad,enfer_nino,info_enfer_nino,medicacion_nino,info_medicacion_nino" +
-                    ",hermano,info_hermano,clave)VALUES('" + Hora_fecha+"','"+tipo_consulta.Text+"','"+doctora_combo.Text+"','"+fehca_sita.Text+"','"+hora_text.Text+"'" +
+                    ",hermano,info_hermano,pago,cantidad,clave)VALUES('" + Hora_fecha+"','"+tipo_consulta.Text+"','"+doctora_combo.Text+"','"+fehca_sita.Text+"','"+hora_text.Text+"'" +
                     ",'"+combo_acompaña.Text+"','"+text_nom_tutor.Text+"','"+fecha_tutor_na.Text+"'," +
                     "'"+tipo_sangre_tu.Text+"','"+telefono.Text+"','"+correo.Text+"'," +
                     "'"+En_tuto+"','"+info_enfer_tutor.Text+"','"+Medi_tuto+"','"+info_medicacion_tuto.Text+"'," +
                     "'"+nombre_nino.Text+"','"+fecha_na_nino.Text+"','"+tipo_sangre_nino.Text+"'," +
-                    "'"+edad_nino.Text+"','"+enfer_nino+"','"+textBox7.Text+"','"+medi_nino+"','"+textBox1.Text+"','"+hermano+"','"+textBox2.Text+"','"+clavesit+"');");
+                    "'"+edad_nino.Text+"','"+enfer_nino+"','"+textBox7.Text+"','"+medi_nino+"','"+textBox1.Text+"','"+hermano+"','"+textBox2.Text+"','NO','','"+clavesit+"');");
                 SqlDataReader cliente_nino = cliente_pasi_historial.ExecuteReader();
                 if (cliente_nino.Read())
                 {

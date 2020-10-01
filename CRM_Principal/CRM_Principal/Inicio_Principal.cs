@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using CRM_Principal.Agenda;
+using CRM_Principal.configuracion_user;
+using CRM_Principal.configuracion_user.servicios;
 
 namespace CRM_Principal
 {
@@ -257,5 +259,29 @@ namespace CRM_Principal
             con.Show();
         }
 
+        private void doctoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frorom_Doctor(new Doctores());
+        }
+        public void Frorom_Doctor(object doctores)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            Doctores con = doctores as Doctores;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
+
+        private void especialidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Especialidad espe = new Especialidad();
+            espe.ShowDialog();
+        }
+
+
     }
 }
+

@@ -333,6 +333,10 @@ namespace CRM_Principal {
             
             private global::System.Data.DataColumn columnclave;
             
+            private global::System.Data.DataColumn columnpago;
+            
+            private global::System.Data.DataColumn columncantidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public consul_ninoDataTable() {
@@ -584,6 +588,22 @@ namespace CRM_Principal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn pagoColumn {
+                get {
+                    return this.columnpago;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn cantidadColumn {
+                get {
+                    return this.columncantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -645,7 +665,9 @@ namespace CRM_Principal {
                         string info_medicacion_nino, 
                         string hermano, 
                         string info_hermano, 
-                        string clave) {
+                        string clave, 
+                        string pago, 
+                        string cantidad) {
                 consul_ninoRow rowconsul_ninoRow = ((consul_ninoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -674,7 +696,9 @@ namespace CRM_Principal {
                         info_medicacion_nino,
                         hermano,
                         info_hermano,
-                        clave};
+                        clave,
+                        pago,
+                        cantidad};
                 rowconsul_ninoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowconsul_ninoRow);
                 return rowconsul_ninoRow;
@@ -731,6 +755,8 @@ namespace CRM_Principal {
                 this.columnhermano = base.Columns["hermano"];
                 this.columninfo_hermano = base.Columns["info_hermano"];
                 this.columnclave = base.Columns["clave"];
+                this.columnpago = base.Columns["pago"];
+                this.columncantidad = base.Columns["cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -790,6 +816,10 @@ namespace CRM_Principal {
                 base.Columns.Add(this.columninfo_hermano);
                 this.columnclave = new global::System.Data.DataColumn("clave", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnclave);
+                this.columnpago = new global::System.Data.DataColumn("pago", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpago);
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidad);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -824,6 +854,8 @@ namespace CRM_Principal {
                 this.columnhermano.MaxLength = 8;
                 this.columninfo_hermano.MaxLength = 500;
                 this.columnclave.MaxLength = 50;
+                this.columnpago.MaxLength = 5;
+                this.columncantidad.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1394,6 +1426,38 @@ namespace CRM_Principal {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string pago {
+                get {
+                    try {
+                        return ((string)(this[this.tableconsul_nino.pagoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'pago\' de la tabla \'consul_nino\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableconsul_nino.pagoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string cantidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableconsul_nino.cantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'consul_nino\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableconsul_nino.cantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Isfhec_horaNull() {
                 return this.IsNull(this.tableconsul_nino.fhec_horaColumn);
             }
@@ -1703,6 +1767,30 @@ namespace CRM_Principal {
             public void SetclaveNull() {
                 this[this.tableconsul_nino.claveColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IspagoNull() {
+                return this.IsNull(this.tableconsul_nino.pagoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetpagoNull() {
+                this[this.tableconsul_nino.pagoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IscantidadNull() {
+                return this.IsNull(this.tableconsul_nino.cantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetcantidadNull() {
+                this[this.tableconsul_nino.cantidadColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1891,6 +1979,8 @@ namespace CRM_Principal.junodoctor_clienteDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("hermano", "hermano");
             tableMapping.ColumnMappings.Add("info_hermano", "info_hermano");
             tableMapping.ColumnMappings.Add("clave", "clave");
+            tableMapping.ColumnMappings.Add("pago", "pago");
+            tableMapping.ColumnMappings.Add("cantidad", "cantidad");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1907,7 +1997,7 @@ namespace CRM_Principal.junodoctor_clienteDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, tutor, nombre_tt, fehca_na, tipo_san, telefono, correo, enfermedas, infi_enfer, medicacion, infi_medic, nombre_nino, fecha_nino, tipo_sangre, edad, enfer_nino, info_enfer_nino, medicacion_nino, info_medicacion_nino, hermano, info_hermano, clave FROM dbo.consul_nino  ORDER BY fehca_cita ASC";
+            this._commandCollection[0].CommandText = @"SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, tutor, nombre_tt, fehca_na, tipo_san, telefono, correo, enfermedas, infi_enfer, medicacion, infi_medic, nombre_nino, fecha_nino, tipo_sangre, edad, enfer_nino, info_enfer_nino, medicacion_nino, info_medicacion_nino, hermano, info_hermano, pago, cantidad, clave FROM dbo.consul_nino  WHERE pago='NO' ORDER BY fehca_cita ASC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

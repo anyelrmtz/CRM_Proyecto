@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="junodoctor_clienteConnectionString (Settings)" DbObjectName="junodoctor_cliente.dbo.consul_nino" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, tutor, nombre_tt, fehca_na, tipo_san, telefono, correo, enfermedas, infi_enfer, medicacion, infi_medic, nombre_nino, fecha_nino, tipo_sangre, edad, enfer_nino, info_enfer_nino, medicacion_nino, info_medicacion_nino, hermano, info_hermano, clave FROM dbo.consul_nino  ORDER BY fehca_cita ASC</CommandText>
+                    <CommandText>SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, tutor, nombre_tt, fehca_na, tipo_san, telefono, correo, enfermedas, infi_enfer, medicacion, infi_medic, nombre_nino, fecha_nino, tipo_sangre, edad, enfer_nino, info_enfer_nino, medicacion_nino, info_medicacion_nino, hermano, info_hermano, pago, cantidad, clave FROM dbo.consul_nino  WHERE pago='NO' ORDER BY fehca_cita ASC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -46,6 +46,8 @@
               <Mapping SourceColumn="hermano" DataSetColumn="hermano" />
               <Mapping SourceColumn="info_hermano" DataSetColumn="info_hermano" />
               <Mapping SourceColumn="clave" DataSetColumn="clave" />
+              <Mapping SourceColumn="pago" DataSetColumn="pago" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -57,7 +59,7 @@
   <xs:element name="junodoctor_clienteDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="junodoctor_clienteDataSet" msprop:Generator_UserDSName="junodoctor_clienteDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="consul_nino" msprop:Generator_TableClassName="consul_ninoDataTable" msprop:Generator_TableVarName="tableconsul_nino" msprop:Generator_RowChangedName="consul_ninoRowChanged" msprop:Generator_TablePropName="consul_nino" msprop:Generator_RowDeletingName="consul_ninoRowDeleting" msprop:Generator_RowChangingName="consul_ninoRowChanging" msprop:Generator_RowEvHandlerName="consul_ninoRowChangeEventHandler" msprop:Generator_RowDeletedName="consul_ninoRowDeleted" msprop:Generator_RowClassName="consul_ninoRow" msprop:Generator_UserTableName="consul_nino" msprop:Generator_RowEvArgName="consul_ninoRowChangeEvent">
+        <xs:element name="consul_nino" msprop:Generator_TableClassName="consul_ninoDataTable" msprop:Generator_TableVarName="tableconsul_nino" msprop:Generator_TablePropName="consul_nino" msprop:Generator_RowDeletingName="consul_ninoRowDeleting" msprop:Generator_RowChangingName="consul_ninoRowChanging" msprop:Generator_RowEvHandlerName="consul_ninoRowChangeEventHandler" msprop:Generator_RowDeletedName="consul_ninoRowDeleted" msprop:Generator_UserTableName="consul_nino" msprop:Generator_RowChangedName="consul_ninoRowChanged" msprop:Generator_RowEvArgName="consul_ninoRowChangeEvent" msprop:Generator_RowClassName="consul_ninoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -237,6 +239,20 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pago" msprop:Generator_ColumnVarNameInTable="columnpago" msprop:Generator_ColumnPropNameInRow="pago" msprop:Generator_ColumnPropNameInTable="pagoColumn" msprop:Generator_UserColumnName="pago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
