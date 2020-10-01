@@ -1548,7 +1548,7 @@ namespace CRM_Principal.junodoctor_clienteDataSet1TableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[consul_adulto] ([fhec_hora], [tipo_consulta], [doctora], [fehca_cita], [hora_cita], [genero], [nombre], [fecha_nac], [edad], [tipo_sangre], [telefono], [correo], [enfermedad], [enfermedad_info], [medicacion], [info_medicacion], [clave]) VALUES (@fhec_hora, @tipo_consulta, @doctora, @fehca_cita, @hora_cita, @genero, @nombre, @fecha_nac, @edad, @tipo_sangre, @telefono, @correo, @enfermedad, @enfermedad_info, @medicacion, @info_medicacion, @clave);
-SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, clave FROM consul_adulto WHERE (Id = SCOPE_IDENTITY())";
+SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info, medicacion, info_medicacion, clave FROM consul_adulto WHERE (Id = SCOPE_IDENTITY()) ORDER BY fehca_cita";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fhec_hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fhec_hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_consulta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_consulta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1597,7 +1597,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
                 "ion)) AND ((@IsNull_clave = 1 AND [clave] IS NULL) OR ([clave] = @Original_clave" +
                 ")));\r\nSELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, gener" +
                 "o, nombre, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermeda" +
-                "d_info, medicacion, info_medicacion, clave FROM consul_adulto WHERE (Id = @Id)";
+                "d_info, medicacion, info_medicacion, clave FROM consul_adulto WHERE (Id = @Id) O" +
+                "RDER BY fehca_cita";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fhec_hora", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fhec_hora", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tipo_consulta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tipo_consulta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1669,7 +1670,8 @@ SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nom
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, fhec_hora, tipo_consulta, doctora, fehca_cita, hora_cita, genero, nomb" +
                 "re, fecha_nac, edad, tipo_sangre, telefono, correo, enfermedad, enfermedad_info," +
-                " medicacion, info_medicacion, clave FROM dbo.consul_adulto";
+                " medicacion, info_medicacion, clave FROM dbo.consul_adulto ORDER BY fehca_cita A" +
+                "SC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

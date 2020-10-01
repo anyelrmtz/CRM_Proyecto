@@ -32,41 +32,41 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ver_citas));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.consulninoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junodoctor_clienteDataSet = new CRM_Principal.junodoctor_clienteDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Calendario_citas = new System.Windows.Forms.MonthCalendar();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.junodoctor_clienteDataSet = new CRM_Principal.junodoctor_clienteDataSet();
-            this.consulninoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consuladultoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junodoctor_clienteDataSet1 = new CRM_Principal.junodoctor_clienteDataSet1();
+            this.Calendario_citas = new System.Windows.Forms.MonthCalendar();
             this.consul_ninoTableAdapter = new CRM_Principal.junodoctor_clienteDataSetTableAdapters.consul_ninoTableAdapter();
+            this.junodoctorclienteDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consul_adultoTableAdapter = new CRM_Principal.junodoctor_clienteDataSet1TableAdapters.consul_adultoTableAdapter();
+            this.fehcacitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horacitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreninoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tutorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoconsultaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fehcacitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horacitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.junodoctorclienteDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.junodoctor_clienteDataSet1 = new CRM_Principal.junodoctor_clienteDataSet1();
-            this.consuladultoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.consul_adultoTableAdapter = new CRM_Principal.junodoctor_clienteDataSet1TableAdapters.consul_adultoTableAdapter();
+            this.fehcacitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horacitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edadDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fehcacitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.doctora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horacitaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consulninoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorclienteDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.consuladultoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorclienteDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -91,6 +91,38 @@
             this.groupBox1.Text = "Citas  Niños";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fehcacitaDataGridViewTextBoxColumn,
+            this.horacitaDataGridViewTextBoxColumn,
+            this.nombreninoDataGridViewTextBoxColumn,
+            this.edadDataGridViewTextBoxColumn,
+            this.tutorDataGridViewTextBoxColumn,
+            this.tipoconsultaDataGridViewTextBoxColumn,
+            this.doctoraDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.consulninoBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(481, 158);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // consulninoBindingSource
+            // 
+            this.consulninoBindingSource.DataMember = "consul_nino";
+            this.consulninoBindingSource.DataSource = this.junodoctor_clienteDataSet;
+            // 
+            // junodoctor_clienteDataSet
+            // 
+            this.junodoctor_clienteDataSet.DataSetName = "junodoctor_clienteDataSet";
+            this.junodoctor_clienteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -110,39 +142,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Citas Adultos";
             // 
-            // Calendario_citas
-            // 
-            this.Calendario_citas.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.Calendario_citas.CalendarDimensions = new System.Drawing.Size(2, 3);
-            this.Calendario_citas.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Calendario_citas.Location = new System.Drawing.Point(525, 9);
-            this.Calendario_citas.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.Calendario_citas.Name = "Calendario_citas";
-            this.Calendario_citas.TabIndex = 3;
-            this.Calendario_citas.TitleForeColor = System.Drawing.Color.Red;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreninoDataGridViewTextBoxColumn,
-            this.edadDataGridViewTextBoxColumn,
-            this.tutorDataGridViewTextBoxColumn,
-            this.tipoconsultaDataGridViewTextBoxColumn,
-            this.doctoraDataGridViewTextBoxColumn,
-            this.fehcacitaDataGridViewTextBoxColumn,
-            this.horacitaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.consulninoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 23);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(481, 158);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -150,12 +149,12 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fehcacitaDataGridViewTextBoxColumn1,
+            this.horacitaDataGridViewTextBoxColumn1,
             this.nombreDataGridViewTextBoxColumn,
             this.generoDataGridViewTextBoxColumn,
             this.edadDataGridViewTextBoxColumn1,
-            this.fehcacitaDataGridViewTextBoxColumn1,
-            this.doctora,
-            this.horacitaDataGridViewTextBoxColumn1});
+            this.doctora});
             this.dataGridView2.DataSource = this.consuladultoBindingSource;
             this.dataGridView2.Location = new System.Drawing.Point(6, 19);
             this.dataGridView2.Name = "dataGridView2";
@@ -164,19 +163,57 @@
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // junodoctor_clienteDataSet
+            // consuladultoBindingSource
             // 
-            this.junodoctor_clienteDataSet.DataSetName = "junodoctor_clienteDataSet";
-            this.junodoctor_clienteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.consuladultoBindingSource.DataMember = "consul_adulto";
+            this.consuladultoBindingSource.DataSource = this.junodoctor_clienteDataSet1;
             // 
-            // consulninoBindingSource
+            // junodoctor_clienteDataSet1
             // 
-            this.consulninoBindingSource.DataMember = "consul_nino";
-            this.consulninoBindingSource.DataSource = this.junodoctor_clienteDataSet;
+            this.junodoctor_clienteDataSet1.DataSetName = "junodoctor_clienteDataSet1";
+            this.junodoctor_clienteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Calendario_citas
+            // 
+            this.Calendario_citas.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.Calendario_citas.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.Calendario_citas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Calendario_citas.Location = new System.Drawing.Point(525, 87);
+            this.Calendario_citas.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.Calendario_citas.Name = "Calendario_citas";
+            this.Calendario_citas.TabIndex = 3;
+            this.Calendario_citas.TitleForeColor = System.Drawing.Color.Red;
             // 
             // consul_ninoTableAdapter
             // 
             this.consul_ninoTableAdapter.ClearBeforeFill = true;
+            // 
+            // junodoctorclienteDataSetBindingSource
+            // 
+            this.junodoctorclienteDataSetBindingSource.DataSource = this.junodoctor_clienteDataSet;
+            this.junodoctorclienteDataSetBindingSource.Position = 0;
+            // 
+            // consul_adultoTableAdapter
+            // 
+            this.consul_adultoTableAdapter.ClearBeforeFill = true;
+            // 
+            // fehcacitaDataGridViewTextBoxColumn
+            // 
+            this.fehcacitaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.fehcacitaDataGridViewTextBoxColumn.DataPropertyName = "fehca_cita";
+            this.fehcacitaDataGridViewTextBoxColumn.HeaderText = "Fecha de Cita";
+            this.fehcacitaDataGridViewTextBoxColumn.Name = "fehcacitaDataGridViewTextBoxColumn";
+            this.fehcacitaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fehcacitaDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // horacitaDataGridViewTextBoxColumn
+            // 
+            this.horacitaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.horacitaDataGridViewTextBoxColumn.DataPropertyName = "hora_cita";
+            this.horacitaDataGridViewTextBoxColumn.HeaderText = "Hora ";
+            this.horacitaDataGridViewTextBoxColumn.Name = "horacitaDataGridViewTextBoxColumn";
+            this.horacitaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horacitaDataGridViewTextBoxColumn.Width = 58;
             // 
             // nombreninoDataGridViewTextBoxColumn
             // 
@@ -223,42 +260,19 @@
             this.doctoraDataGridViewTextBoxColumn.ReadOnly = true;
             this.doctoraDataGridViewTextBoxColumn.Width = 70;
             // 
-            // fehcacitaDataGridViewTextBoxColumn
+            // fehcacitaDataGridViewTextBoxColumn1
             // 
-            this.fehcacitaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.fehcacitaDataGridViewTextBoxColumn.DataPropertyName = "fehca_cita";
-            this.fehcacitaDataGridViewTextBoxColumn.HeaderText = "Fecha de Cita";
-            this.fehcacitaDataGridViewTextBoxColumn.Name = "fehcacitaDataGridViewTextBoxColumn";
-            this.fehcacitaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fehcacitaDataGridViewTextBoxColumn.Width = 98;
+            this.fehcacitaDataGridViewTextBoxColumn1.DataPropertyName = "fehca_cita";
+            this.fehcacitaDataGridViewTextBoxColumn1.HeaderText = "Fecha de Cita";
+            this.fehcacitaDataGridViewTextBoxColumn1.Name = "fehcacitaDataGridViewTextBoxColumn1";
+            this.fehcacitaDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // horacitaDataGridViewTextBoxColumn
+            // horacitaDataGridViewTextBoxColumn1
             // 
-            this.horacitaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.horacitaDataGridViewTextBoxColumn.DataPropertyName = "hora_cita";
-            this.horacitaDataGridViewTextBoxColumn.HeaderText = "Hora ";
-            this.horacitaDataGridViewTextBoxColumn.Name = "horacitaDataGridViewTextBoxColumn";
-            this.horacitaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horacitaDataGridViewTextBoxColumn.Width = 58;
-            // 
-            // junodoctorclienteDataSetBindingSource
-            // 
-            this.junodoctorclienteDataSetBindingSource.DataSource = this.junodoctor_clienteDataSet;
-            this.junodoctorclienteDataSetBindingSource.Position = 0;
-            // 
-            // junodoctor_clienteDataSet1
-            // 
-            this.junodoctor_clienteDataSet1.DataSetName = "junodoctor_clienteDataSet1";
-            this.junodoctor_clienteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // consuladultoBindingSource
-            // 
-            this.consuladultoBindingSource.DataMember = "consul_adulto";
-            this.consuladultoBindingSource.DataSource = this.junodoctor_clienteDataSet1;
-            // 
-            // consul_adultoTableAdapter
-            // 
-            this.consul_adultoTableAdapter.ClearBeforeFill = true;
+            this.horacitaDataGridViewTextBoxColumn1.DataPropertyName = "hora_cita";
+            this.horacitaDataGridViewTextBoxColumn1.HeaderText = "Hora";
+            this.horacitaDataGridViewTextBoxColumn1.Name = "horacitaDataGridViewTextBoxColumn1";
+            this.horacitaDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -281,26 +295,12 @@
             this.edadDataGridViewTextBoxColumn1.Name = "edadDataGridViewTextBoxColumn1";
             this.edadDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // fehcacitaDataGridViewTextBoxColumn1
-            // 
-            this.fehcacitaDataGridViewTextBoxColumn1.DataPropertyName = "fehca_cita";
-            this.fehcacitaDataGridViewTextBoxColumn1.HeaderText = "Fecha de Cita";
-            this.fehcacitaDataGridViewTextBoxColumn1.Name = "fehcacitaDataGridViewTextBoxColumn1";
-            this.fehcacitaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // doctora
             // 
             this.doctora.DataPropertyName = "doctora";
             this.doctora.HeaderText = "Doctora";
             this.doctora.Name = "doctora";
             this.doctora.ReadOnly = true;
-            // 
-            // horacitaDataGridViewTextBoxColumn1
-            // 
-            this.horacitaDataGridViewTextBoxColumn1.DataPropertyName = "hora_cita";
-            this.horacitaDataGridViewTextBoxColumn1.HeaderText = "Hora";
-            this.horacitaDataGridViewTextBoxColumn1.Name = "horacitaDataGridViewTextBoxColumn1";
-            this.horacitaDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // Ver_citas
             // 
@@ -318,14 +318,14 @@
             this.Load += new System.EventHandler(this.Ver_citas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consulninoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorclienteDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consuladultoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctor_clienteDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorclienteDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,22 +343,22 @@
         private junodoctor_clienteDataSet junodoctor_clienteDataSet;
         private System.Windows.Forms.BindingSource consulninoBindingSource;
         private junodoctor_clienteDataSetTableAdapters.consul_ninoTableAdapter consul_ninoTableAdapter;
+        private System.Windows.Forms.BindingSource junodoctorclienteDataSetBindingSource;
+        private junodoctor_clienteDataSet1 junodoctor_clienteDataSet1;
+        private System.Windows.Forms.BindingSource consuladultoBindingSource;
+        private junodoctor_clienteDataSet1TableAdapters.consul_adultoTableAdapter consul_adultoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fehcacitaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horacitaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreninoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tutorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoconsultaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctoraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fehcacitaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horacitaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource junodoctorclienteDataSetBindingSource;
-        private junodoctor_clienteDataSet1 junodoctor_clienteDataSet1;
-        private System.Windows.Forms.BindingSource consuladultoBindingSource;
-        private junodoctor_clienteDataSet1TableAdapters.consul_adultoTableAdapter consul_adultoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fehcacitaDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horacitaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fehcacitaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn doctora;
-        private System.Windows.Forms.DataGridViewTextBoxColumn horacitaDataGridViewTextBoxColumn1;
     }
 }

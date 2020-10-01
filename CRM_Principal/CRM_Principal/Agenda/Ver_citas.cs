@@ -81,8 +81,8 @@ namespace CRM_Principal.Agenda
         {
             Calendario_citas.BoldedDates = new DateTime[]
             {
-                DateTime.Parse(dataGridView1.CurrentRow.Cells[5].Value.ToString()),
-                DateTime.Today.AddDays(0)
+                DateTime.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()),
+               
             };
         }
 
@@ -90,8 +90,8 @@ namespace CRM_Principal.Agenda
         {
             Calendario_citas.BoldedDates = new DateTime[]
             {
-                DateTime.Parse(dataGridView2.CurrentRow.Cells[3].Value.ToString()),
-                DateTime.Today.AddDays(0)
+                DateTime.Parse(dataGridView2.CurrentRow.Cells[0].Value.ToString()),
+                
             };
         }
     }
