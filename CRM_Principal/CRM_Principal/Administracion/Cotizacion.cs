@@ -28,60 +28,73 @@ namespace CRM_Principal
         //guardado de cotizacion
         private void button1_Click(object sender, EventArgs e)
         {
-            if(comb_cotizar.Text== "Selecione una Opcion")
+            if (combo_tipo.Text == "Otros")
             {
-                MessageBox.Show("Selecione una Cotizacion");
+                enviado();
             }
             else
             {
-                if(combo_tipo.Text== "Selecione una Opcion")
+                if (comb_cotizar.Text == "Selecione una Opcion")
                 {
-                    MessageBox.Show("Selecione un tipo ");
+                    MessageBox.Show("Selecione una Cotizacion");
                 }
                 else
                 {
-                    if(combo_servicio.Text== "Selecione una Opcion")
+                    if (combo_tipo.Text == "Selecione una Opcion")
                     {
-                        MessageBox.Show("Seleccione un Servicio");
+                        MessageBox.Show("Selecione un tipo ");
                     }
                     else
                     {
-                        if (cantidad_text.Text == "")
+                        if (combo_servicio.Text == "Selecione una Opcion")
                         {
-                            MessageBox.Show("ingrese un monto");
+                            MessageBox.Show("Seleccione un Servicio");
                         }
                         else
-
                         {
-
-                            DialogResult resultado = MessageBox.Show("Verifique los siguientes datos \n " +
-                                "Cotizar: "+comb_cotizar.Text+""+"\n"+"tipo: "+combo_tipo.Text+" \n"+"Servicio: "+combo_servicio.Text+"\n"+"Descripción: "+textbox_descrip.Text+"\n"+"Costo: "+cantidad_text.Text+"\n"+"Desea guardar los Datos?", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                            if (resultado == DialogResult.Yes) {
-                             
-
-                                conectar.Open();
-                            SqlCommand agregar_cotizacion = new SqlCommand();
-                            agregar_cotizacion.Connection = conectar;
-                            agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('"+Hora_fecha+"','"+ comb_cotizar .Text+ "','"+combo_tipo.Text+"','"+combo_servicio.Text+"','"+textbox_descrip.Text+"','"+cantidad_text.Text+"');");
-                            SqlDataReader cotizacion = agregar_cotizacion.ExecuteReader();
-                            if (cotizacion.Read())
+                            if (cantidad_text.Text == "")
                             {
-                                MessageBox.Show("eror");
-                                conectar.Close();
+                                MessageBox.Show("ingrese un monto");
                             }
                             else
+
                             {
-                                MessageBox.Show("agrgado exitosamente");
-                                conectar.Close();
-                                limpiar();
-                                Cargar_tabla();
+
+
+                                enviado();
+
+
                             }
-                            }
-
-
-
                         }
                     }
+                }
+            }
+            
+        }
+        public void enviado()
+        {
+            DialogResult resultado = MessageBox.Show("Verifique los siguientes datos \n " +
+                               "Cotizar: " + comb_cotizar.Text + "" + "\n" + "tipo: " + combo_tipo.Text + " \n" + "Servicio: " + combo_servicio.Text + "\n" + "Descripción: " + textbox_descrip.Text + "\n" + "Costo: " + cantidad_text.Text + "\n" + "Desea guardar los Datos?", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.Yes)
+            {
+
+
+                conectar.Open();
+                SqlCommand agregar_cotizacion = new SqlCommand();
+                agregar_cotizacion.Connection = conectar;
+                agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('" + Hora_fecha + "','" + comb_cotizar.Text + "','" + combo_tipo.Text + "','" + combo_servicio.Text + "','" + textbox_descrip.Text + "','" + cantidad_text.Text + "');");
+                SqlDataReader cotizacion = agregar_cotizacion.ExecuteReader();
+                if (cotizacion.Read())
+                {
+                    MessageBox.Show("eror");
+                    conectar.Close();
+                }
+                else
+                {
+                    MessageBox.Show("agrgado exitosamente");
+                    conectar.Close();
+                    limpiar();
+                    Cargar_tabla();
                 }
             }
         }
@@ -146,6 +159,7 @@ namespace CRM_Principal
             combo_tipo.Enabled = true;
             combo_tipo.Text = "Selecione una Opcion";
             combo_tipo.Items.Add("Vacunas");
+            combo_tipo.Items.Add("Otros");
 
             combo_servicio.Items.Clear();
         }
@@ -158,6 +172,7 @@ namespace CRM_Principal
             combo_tipo.Enabled = true;
             combo_tipo.Items.Add("Vacunas");
             combo_tipo.Items.Add("Servicios");
+            combo_tipo.Items.Add("Otros");
 
         }
 
@@ -200,11 +215,13 @@ namespace CRM_Principal
 
             conectar.Close();
         }
-       /* public void Taller()
+       public void otros()
         {
-
+            combo_servicio.Enabled = false;
+            cantidad_text.Enabled = true;
+            
         }
-        public void Cursos()
+        /* public void Cursos()
         {
 
         }*/
@@ -244,6 +261,10 @@ namespace CRM_Principal
             {
                 Servicio();
             }
+            else if (combo_tipo.SelectedItem.ToString() == "Otros")
+            {
+                otros();
+            }
         }
 
         private void combo_servicio_SelectedIndexChanged(object sender, EventArgs e)
@@ -270,6 +291,51 @@ namespace CRM_Principal
 
         private void cantidad_text_TextChanged(object sender, EventArgs e)
         {
+            
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox4.SelectedItem.ToString() == "Ingreso")
+            {
+                comboBox5.Enabled = true;
+                string orden = "SELECT *FROM Cotizacion WHERE cotizar='"+comboBox4.Text+"';";
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(orden, conectar);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataSet ds = new DataSet();
+                dataAdapter.Fill(ds);
+                dataGridView1.ReadOnly = true;
+                dataGridView1.DataSource = ds.Tables[0];
+
+            }
+            else
+            {
+                comboBox5.Enabled = true;
+                string orden = "SELECT *FROM Cotizacion WHERE cotizar='" + comboBox4.Text + "';";
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(orden, conectar);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataSet ds = new DataSet();
+                dataAdapter.Fill(ds);
+                dataGridView1.ReadOnly = true;
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+                string orden = "SELECT *FROM Cotizacion WHERE cotizar='" + comboBox4.Text + "' AND tipo_cot='"+comboBox5.Text+"';";
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(orden, conectar);
+                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(dataAdapter);
+                DataSet ds = new DataSet();
+                dataAdapter.Fill(ds);
+                dataGridView1.ReadOnly = true;
+                dataGridView1.DataSource = ds.Tables[0];
+            comboBox5.Enabled = false;
+
             
         }
     }

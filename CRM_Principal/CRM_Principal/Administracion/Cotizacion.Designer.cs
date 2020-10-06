@@ -58,11 +58,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textbox_descrip = new System.Windows.Forms.RichTextBox();
             this.cotizacionTableAdapter = new CRM_Principal.junodoctorDataSet2TableAdapters.CotizacionTableAdapter();
+            this.junodoctorDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cotizacionBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cotizacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cotizacionBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -286,6 +290,7 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
             "Opciones",
@@ -300,6 +305,7 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 9;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -315,13 +321,13 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "Opciones",
-            "Gastos",
-            "Ingresos"});
+            "Ingreso",
+            "Gastos"});
             this.comboBox4.Location = new System.Drawing.Point(108, 50);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 7;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -344,6 +350,16 @@
             // cotizacionTableAdapter
             // 
             this.cotizacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // junodoctorDataSet2BindingSource
+            // 
+            this.junodoctorDataSet2BindingSource.DataSource = this.junodoctorDataSet2;
+            this.junodoctorDataSet2BindingSource.Position = 0;
+            // 
+            // cotizacionBindingSource1
+            // 
+            this.cotizacionBindingSource1.DataMember = "Cotizacion";
+            this.cotizacionBindingSource1.DataSource = this.junodoctorDataSet2;
             // 
             // Cotizacion
             // 
@@ -374,6 +390,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cotizacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cotizacionBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,5 +427,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn serviDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource junodoctorDataSet2BindingSource;
+        private System.Windows.Forms.BindingSource cotizacionBindingSource1;
     }
 }
