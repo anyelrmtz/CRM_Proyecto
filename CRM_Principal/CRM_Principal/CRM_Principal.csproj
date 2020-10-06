@@ -61,6 +61,12 @@
     <Compile Include="Agenda\AC_Niños.Designer.cs">
       <DependentUpon>AC_Niños.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agenda\Pagar_cita_adulto\Pago_adulto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agenda\Pagar_cita_adulto\Pago_adulto.Designer.cs">
+      <DependentUpon>Pago_adulto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agenda\Pago_cita_nino\pago_ninocs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agenda\AC_Niños.resx">
       <DependentUpon>AC_Niños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agenda\Pagar_cita_adulto\Pago_adulto.resx">
+      <DependentUpon>Pago_adulto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agenda\Pago_cita_nino\pago_ninocs.resx">
       <DependentUpon>pago_ninocs.cs</DependentUpon>

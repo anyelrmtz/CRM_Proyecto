@@ -139,7 +139,12 @@ namespace CRM_Principal.Agenda
             }
             else if (modo.ToString() == "2")
             {
-
+                Envio info;
+                info.nombre2 = nombre;
+                info.estado2 = estado;
+                info.modo2 = modo;
+                Pagar_cita_adulto.Pago_adulto entrada = new Pagar_cita_adulto.Pago_adulto(info);
+                entrada.ShowDialog();
             }
         }
     }
