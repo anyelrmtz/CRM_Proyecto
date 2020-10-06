@@ -281,7 +281,17 @@ namespace CRM_Principal
             espe.ShowDialog();
         }
 
+        private void vacunasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Vacunas_new espe = new Vacunas_new();
+            espe.ShowDialog();
+        }
 
+        private void serviciosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Servicios espe = new Servicios();
+            espe.ShowDialog();
+        }
     }
 }
 

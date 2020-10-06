@@ -36,16 +36,16 @@
             this.text_especial = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.junodoctorDataSet3 = new CRM_Principal.junodoctorDataSet3();
             this.especialidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.junodoctorDataSet3 = new CRM_Principal.junodoctorDataSet3();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.especialidadTableAdapter = new CRM_Principal.junodoctorDataSet3TableAdapters.EspecialidadTableAdapter();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet3)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -112,6 +112,16 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // especialidadBindingSource
+            // 
+            this.especialidadBindingSource.DataMember = "Especialidad";
+            this.especialidadBindingSource.DataSource = this.junodoctorDataSet3;
+            // 
+            // junodoctorDataSet3
+            // 
+            this.junodoctorDataSet3.DataSetName = "junodoctorDataSet3";
+            this.junodoctorDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -123,28 +133,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Especialidad";
             // 
-            // junodoctorDataSet3
-            // 
-            this.junodoctorDataSet3.DataSetName = "junodoctorDataSet3";
-            this.junodoctorDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // especialidadBindingSource
-            // 
-            this.especialidadBindingSource.DataMember = "Especialidad";
-            this.especialidadBindingSource.DataSource = this.junodoctorDataSet3;
-            // 
             // especialidadTableAdapter
             // 
             this.especialidadTableAdapter.ClearBeforeFill = true;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
-            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nombreDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Especialidad";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 92;
             // 
             // Especialidad
             // 
@@ -164,9 +163,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.especialidadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.junodoctorDataSet3)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

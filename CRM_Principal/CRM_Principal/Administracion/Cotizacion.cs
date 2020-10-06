@@ -143,8 +143,9 @@ namespace CRM_Principal
         {
             combo_servicio.Text = "Selecione una Opcion";
             combo_tipo.Items.Clear();
+            combo_tipo.Enabled = true;
             combo_tipo.Text = "Selecione una Opcion";
-            combo_tipo.Items.Add("Procedimientos");
+            combo_tipo.Items.Add("Vacunas");
 
             combo_servicio.Items.Clear();
         }

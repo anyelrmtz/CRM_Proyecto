@@ -34,6 +34,9 @@
             this.agregarUsuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.doctoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.especialidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vacunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviciosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSecionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graficasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +55,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel_contenedor = new System.Windows.Forms.Panel();
-            this.especialidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -96,16 +98,39 @@
             // 
             this.doctoresToolStripMenuItem.Name = "doctoresToolStripMenuItem";
             this.doctoresToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.doctoresToolStripMenuItem.Text = "Doctores";
+            this.doctoresToolStripMenuItem.Text = "Nuevo Doctores";
             this.doctoresToolStripMenuItem.Click += new System.EventHandler(this.doctoresToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem
             // 
             this.serviciosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.especialidadToolStripMenuItem});
+            this.especialidadToolStripMenuItem,
+            this.vacunasToolStripMenuItem,
+            this.serviciosToolStripMenuItem1});
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
             this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.serviciosToolStripMenuItem.Text = "Servicios";
+            this.serviciosToolStripMenuItem.Text = "Nuevo Servicios";
+            // 
+            // especialidadToolStripMenuItem
+            // 
+            this.especialidadToolStripMenuItem.Name = "especialidadToolStripMenuItem";
+            this.especialidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.especialidadToolStripMenuItem.Text = "Especialidad";
+            this.especialidadToolStripMenuItem.Click += new System.EventHandler(this.especialidadToolStripMenuItem_Click);
+            // 
+            // vacunasToolStripMenuItem
+            // 
+            this.vacunasToolStripMenuItem.Name = "vacunasToolStripMenuItem";
+            this.vacunasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vacunasToolStripMenuItem.Text = "Vacunas";
+            this.vacunasToolStripMenuItem.Click += new System.EventHandler(this.vacunasToolStripMenuItem_Click);
+            // 
+            // serviciosToolStripMenuItem1
+            // 
+            this.serviciosToolStripMenuItem1.Name = "serviciosToolStripMenuItem1";
+            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.serviciosToolStripMenuItem1.Text = "Servicios";
+            this.serviciosToolStripMenuItem1.Click += new System.EventHandler(this.serviciosToolStripMenuItem1_Click);
             // 
             // cerrarSecionToolStripMenuItem
             // 
@@ -246,13 +271,6 @@
             this.panel_contenedor.Size = new System.Drawing.Size(920, 485);
             this.panel_contenedor.TabIndex = 3;
             // 
-            // especialidadToolStripMenuItem
-            // 
-            this.especialidadToolStripMenuItem.Name = "especialidadToolStripMenuItem";
-            this.especialidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.especialidadToolStripMenuItem.Text = "Especialidad";
-            this.especialidadToolStripMenuItem.Click += new System.EventHandler(this.especialidadToolStripMenuItem_Click);
-            // 
             // Inicio_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +324,7 @@
         private System.Windows.Forms.ToolStripMenuItem doctoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem especialidadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vacunasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serviciosToolStripMenuItem1;
     }
 }

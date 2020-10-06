@@ -121,6 +121,18 @@
     <Compile Include="configuracion_user\servicios\Especialidad.Designer.cs">
       <DependentUpon>Especialidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="configuracion_user\servicios\Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion_user\servicios\Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion_user\servicios\Vacunas_new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion_user\servicios\Vacunas_new.Designer.cs">
+      <DependentUpon>Vacunas_new.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>junodoctorDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctorDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctorDataSet_vacunasnew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet_vacunasnew.xsd</DependentUpon>
     </Compile>
     <Compile Include="junodoctor_clienteDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -232,6 +254,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="configuracion_user\servicios\Especialidad.resx">
       <DependentUpon>Especialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion_user\servicios\Servicios.resx">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracion_user\servicios\Vacunas_new.resx">
+      <DependentUpon>Vacunas_new.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -314,6 +342,28 @@
     </None>
     <None Include="junodoctorDataSet4.xss">
       <DependentUpon>junodoctorDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet5.xsc">
+      <DependentUpon>junodoctorDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctorDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctorDataSet5.xss">
+      <DependentUpon>junodoctorDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet_vacunasnew.xsc">
+      <DependentUpon>junodoctorDataSet_vacunasnew.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet_vacunasnew.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctorDataSet_vacunasnew.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctorDataSet_vacunasnew.xss">
+      <DependentUpon>junodoctorDataSet_vacunasnew.xsd</DependentUpon>
     </None>
     <None Include="junodoctor_clienteDataSet.xsc">
       <DependentUpon>junodoctor_clienteDataSet.xsd</DependentUpon>
