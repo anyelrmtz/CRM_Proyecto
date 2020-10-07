@@ -82,7 +82,7 @@ namespace CRM_Principal
                 conectar.Open();
                 SqlCommand agregar_cotizacion = new SqlCommand();
                 agregar_cotizacion.Connection = conectar;
-                agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('" + Hora_fecha + "','" + comb_cotizar.Text + "','" + combo_tipo.Text + "','" + combo_servicio.Text + "','" + textbox_descrip.Text + "','" + cantidad_text.Text + "');");
+                agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('" + Hora_fecha + "','" + comb_cotizar.Text + "','" + combo_tipo.Text + "','" + combo_servicio.Text + "','" + textbox_descrip.Text + "',CONVERT(VARCHAR, CONVERT(VARCHAR, CAST('"+cantidad_text.Text+"'  AS MONEY), 1)));");
                 SqlDataReader cotizacion = agregar_cotizacion.ExecuteReader();
                 if (cotizacion.Read())
                 {

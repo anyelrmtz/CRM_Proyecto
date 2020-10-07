@@ -177,7 +177,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(920, 487);
+            this.pictureBox1.Size = new System.Drawing.Size(906, 487);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -298,7 +298,7 @@
             "Talleres",
             "Procedimietos",
             "Servicios",
-            "Cita",
+            "Consulta",
             "Vacunas",
             "Medicinas"});
             this.comboBox5.Location = new System.Drawing.Point(246, 50);
@@ -321,7 +321,7 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
-            "Ingreso",
+            "Ingresos",
             "Gastos"});
             this.comboBox4.Location = new System.Drawing.Point(108, 50);
             this.comboBox4.Name = "comboBox4";

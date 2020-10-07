@@ -77,7 +77,7 @@ namespace CRM_Principal.Agenda.Pagar_cita_adulto
             conectar.Open();
             SqlCommand agregar_cotizacion = new SqlCommand();
             agregar_cotizacion.Connection = conectar;
-            agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('" + Hora_fecha + "','Ingreso','Cita','" + txt_cita.Text + "','Cita para " + txt_nombre.Text + " con " + txt_doctora.Text + "','" + txt_costo.Text + "');");
+            agregar_cotizacion.CommandText = ("insert into Cotizacion(fech_hora,cotizar,tipo_cot,servi,Descrip,cost) values('" + Hora_fecha + "','Ingresos','Consulta','" + txt_cita.Text + "','Cita para " + txt_nombre.Text + " con " + txt_doctora.Text + "','" + txt_costo.Text + "');");
             SqlDataReader cotizacion = agregar_cotizacion.ExecuteReader();
             if (cotizacion.Read())
             {

@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Graficacion\Graficas_mostradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Graficacion\Graficas_mostradas.Designer.cs">
+      <DependentUpon>Graficas_mostradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agenda\AC_Adultos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     <Compile Include="Clientes\U_Prospecto.Designer.cs">
       <DependentUpon>U_Prospecto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administracion\Graficacion\Graficas_mostradas.resx">
+      <DependentUpon>Graficas_mostradas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agenda\AC_Adultos.resx">
       <DependentUpon>AC_Adultos.cs</DependentUpon>
     </EmbeddedResource>
