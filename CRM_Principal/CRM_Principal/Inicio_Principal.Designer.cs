@@ -152,6 +152,7 @@
             this.graficasToolStripMenuItem.Name = "graficasToolStripMenuItem";
             this.graficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graficasToolStripMenuItem.Text = "Graficas";
+            this.graficasToolStripMenuItem.Click += new System.EventHandler(this.graficasToolStripMenuItem_Click);
             // 
             // cotizaciónToolStripMenuItem
             // 
@@ -174,21 +175,21 @@
             // generalesToolStripMenuItem
             // 
             this.generalesToolStripMenuItem.Name = "generalesToolStripMenuItem";
-            this.generalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generalesToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.generalesToolStripMenuItem.Text = "Generales";
             this.generalesToolStripMenuItem.Click += new System.EventHandler(this.generalesToolStripMenuItem_Click);
             // 
             // leadsToolStripMenuItem
             // 
             this.leadsToolStripMenuItem.Name = "leadsToolStripMenuItem";
-            this.leadsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.leadsToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.leadsToolStripMenuItem.Text = "Leads";
             this.leadsToolStripMenuItem.Click += new System.EventHandler(this.leadsToolStripMenuItem_Click);
             // 
             // prospectoToolStripMenuItem
             // 
             this.prospectoToolStripMenuItem.Name = "prospectoToolStripMenuItem";
-            this.prospectoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prospectoToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.prospectoToolStripMenuItem.Text = "Prospecto";
             this.prospectoToolStripMenuItem.Click += new System.EventHandler(this.prospectoToolStripMenuItem_Click);
             // 

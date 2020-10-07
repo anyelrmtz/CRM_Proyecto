@@ -287,6 +287,22 @@ namespace CRM_Principal
             Servicios espe = new Servicios();
             espe.ShowDialog();
         }
+
+        private void graficasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frorom_grafica(new Administracion.Graficacion.Graficas_mostradas());
+        }
+        public void Frorom_grafica(object grafica)
+        {
+            if (this.panel_contenedor.Controls.Count > 0)
+                this.panel_contenedor.Controls.RemoveAt(0);
+            Administracion.Graficacion.Graficas_mostradas con = grafica as Administracion.Graficacion.Graficas_mostradas;
+            con.TopLevel = false;
+            con.Dock = DockStyle.Fill;
+            this.panel_contenedor.Controls.Add(con);
+            this.panel_contenedor.Tag = con;
+            con.Show();
+        }
     }
 }
 
