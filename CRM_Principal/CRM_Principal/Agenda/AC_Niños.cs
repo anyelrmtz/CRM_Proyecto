@@ -270,23 +270,7 @@ namespace CRM_Principal.Agenda
 
         public void Limpiar()
         {
-            foreach(Control c in this.Controls)
-    {
-                if (c is TextBox)
-                {
-                    c.Text = "";
-
-                    this.textBox1.Focus();
-                }
-            }
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is ComboBox)
-                {
-                    ComboBox text = ctrl as ComboBox;
-                    text.SelectedIndex=-1;
-                }
-            }
+            
             
             
 

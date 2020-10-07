@@ -85,6 +85,12 @@
     <Compile Include="Clientes\Clientes_new.Designer.cs">
       <DependentUpon>Clientes_new.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clientes\New_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\New_cliente.Designer.cs">
+      <DependentUpon>New_cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="configuracion_user\Actulizar_Datos_user.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>junodoctorDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="junodoctorDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctorDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="junodoctorDataSet_vacunasnew.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,6 +203,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>junodoctor_clienteDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctor_clienteDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctor_clienteDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="junodoctor_clienteDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>junodoctor_clienteDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\Clientes_new.resx">
       <DependentUpon>Clientes_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\New_cliente.resx">
+      <DependentUpon>New_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configuracion_user\Actulizar_Datos_user.resx">
       <DependentUpon>Actulizar_Datos_user.cs</DependentUpon>
@@ -345,6 +369,17 @@
     <None Include="junodoctorDataSet5.xss">
       <DependentUpon>junodoctorDataSet5.xsd</DependentUpon>
     </None>
+    <None Include="junodoctorDataSet6.xsc">
+      <DependentUpon>junodoctorDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctorDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctorDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctorDataSet6.xss">
+      <DependentUpon>junodoctorDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="junodoctorDataSet_vacunasnew.xsc">
       <DependentUpon>junodoctorDataSet_vacunasnew.xsd</DependentUpon>
     </None>
@@ -377,6 +412,28 @@
     </None>
     <None Include="junodoctor_clienteDataSet1.xss">
       <DependentUpon>junodoctor_clienteDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctor_clienteDataSet2.xsc">
+      <DependentUpon>junodoctor_clienteDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctor_clienteDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctor_clienteDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctor_clienteDataSet2.xss">
+      <DependentUpon>junodoctor_clienteDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctor_clienteDataSet3.xsc">
+      <DependentUpon>junodoctor_clienteDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="junodoctor_clienteDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>junodoctor_clienteDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="junodoctor_clienteDataSet3.xss">
+      <DependentUpon>junodoctor_clienteDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

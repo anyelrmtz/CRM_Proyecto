@@ -35,7 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.text_nombre = new System.Windows.Forms.TextBox();
             this.txt_telefono = new System.Windows.Forms.TextBox();
             this.Txt_direcc = new System.Windows.Forms.TextBox();
@@ -88,22 +87,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(59, 174);
+            this.button1.Location = new System.Drawing.Point(111, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(167, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // text_nombre
             // 
@@ -143,7 +133,6 @@
             this.Controls.Add(this.Txt_direcc);
             this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.text_nombre);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -169,7 +158,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox text_nombre;
         private System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.TextBox Txt_direcc;
