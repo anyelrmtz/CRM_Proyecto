@@ -52,6 +52,8 @@ namespace CRM_Principal
             }else if(tipo_user == "Asistente")
             {
                 agregarUsuarioToolStripMenuItem1.Enabled= false;
+                doctoresToolStripMenuItem.Enabled = false;
+             serviciosToolStripMenuItem.Enabled = false;
             }
         }
 

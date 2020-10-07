@@ -131,6 +131,8 @@ namespace CRM_Principal.Clientes
                 DialogResult resultado = MessageBox.Show("el cliente " + text_nombre.Text + " Se registro exitosamente ", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
              
                 conectar.Close();
+                Correo();
+                Borar();
                 
 
             }
@@ -151,6 +153,35 @@ namespace CRM_Principal.Clientes
         private void button1_Click(object sender, EventArgs e)
         {
             Creacion_user();
+        }
+        public void Correo()
+        {
+            System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+            msg.To.Add(Txt_correo.Text);
+            msg.Subject = "JUNO DOCTOR: Paciente: " + text_nombre.Text + " ";
+            msg.SubjectEncoding = System.Text.Encoding.UTF8;
+            msg.Body = "Bienvenido a nuestra Clinica Juno Doctors los datos que nos proporciono se guardaron exitosamente \n" +
+                "los siguientes datos son para que ingrese con la app de Android <br>" +
+                "Usuario:" + usera + "<br>" +
+                "Contraseña: " + contra + " ";
+            msg.BodyEncoding = System.Text.Encoding.UTF8;
+            msg.IsBodyHtml = true;
+            msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");
+
+            System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+            cliente.Credentials = new System.Net.NetworkCredential("manuelangelrmtz19@gmail.com", "anyel123@");
+            cliente.Port = 587;
+            cliente.EnableSsl = true;
+            cliente.Host = "smtp.gmail.com";
+            try
+            {
+                cliente.Send(msg);
+            }
+            catch
+            {
+                MessageBox.Show("error correo");
+            }
+
         }
     }
 }

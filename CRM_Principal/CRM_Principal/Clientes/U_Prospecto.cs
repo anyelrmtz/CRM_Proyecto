@@ -16,5 +16,12 @@ namespace CRM_Principal
         {
             InitializeComponent();
         }
+
+        private void U_Prospecto_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'junodoctor_clienteDataSet_cliente_prospecto.Prospectos' Puede moverla o quitarla según sea necesario.
+            this.prospectosTableAdapter.Fill(this.junodoctor_clienteDataSet_cliente_prospecto.Prospectos);
+
+        }
     }
 }

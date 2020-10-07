@@ -89,7 +89,7 @@ namespace CRM_Principal
             
             nombre = dataGridView1.CurrentRow.Cells[0].Value.ToString();
              ubica = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            mandar();
+            button1.Enabled = true;
 
         }
         public void mandar()
@@ -100,5 +100,10 @@ namespace CRM_Principal
             New_clientes entrada = new New_clientes(info);
             entrada.ShowDialog();
          }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mandar();
+        }
     }
 }

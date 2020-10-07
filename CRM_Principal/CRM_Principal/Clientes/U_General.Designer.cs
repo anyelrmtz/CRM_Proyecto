@@ -57,6 +57,7 @@
             this.clientes_sin_statusTableAdapter = new CRM_Principal.junodoctorDataSet6TableAdapters.clientes_sin_statusTableAdapter();
             this.usuarioTableAdapter = new CRM_Principal.junodoctor_clienteDataSet2TableAdapters.usuarioTableAdapter();
             this.prospectosTableAdapter = new CRM_Principal.junodoctor_clienteDataSet3TableAdapters.ProspectosTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -94,6 +95,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dataGridView1);
@@ -300,6 +302,17 @@
             // 
             this.prospectosTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(292, 111);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 24);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Agregar al Sistema";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Principal
             // 
             this.ClientSize = new System.Drawing.Size(922, 487);
@@ -408,5 +421,6 @@
         private junodoctor_clienteDataSet3TableAdapters.ProspectosTableAdapter prospectosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoubiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button button1;
     }
 }

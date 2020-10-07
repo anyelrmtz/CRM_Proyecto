@@ -16,5 +16,12 @@ namespace CRM_Principal
         {
             InitializeComponent();
         }
+
+        private void U_Leads_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'junodoctor_clienteDataSet_clienlead.usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.junodoctor_clienteDataSet_clienlead.usuario);
+
+        }
     }
 }

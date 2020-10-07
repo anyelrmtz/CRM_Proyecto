@@ -45,7 +45,6 @@
             this.generalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leadsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prospectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCitasAgendadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendarCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -114,21 +113,21 @@
             // especialidadToolStripMenuItem
             // 
             this.especialidadToolStripMenuItem.Name = "especialidadToolStripMenuItem";
-            this.especialidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.especialidadToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.especialidadToolStripMenuItem.Text = "Especialidad";
             this.especialidadToolStripMenuItem.Click += new System.EventHandler(this.especialidadToolStripMenuItem_Click);
             // 
             // vacunasToolStripMenuItem
             // 
             this.vacunasToolStripMenuItem.Name = "vacunasToolStripMenuItem";
-            this.vacunasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vacunasToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.vacunasToolStripMenuItem.Text = "Vacunas";
             this.vacunasToolStripMenuItem.Click += new System.EventHandler(this.vacunasToolStripMenuItem_Click);
             // 
             // serviciosToolStripMenuItem1
             // 
             this.serviciosToolStripMenuItem1.Name = "serviciosToolStripMenuItem1";
-            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.serviciosToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
             this.serviciosToolStripMenuItem1.Text = "Servicios";
             this.serviciosToolStripMenuItem1.Click += new System.EventHandler(this.serviciosToolStripMenuItem1_Click);
             // 
@@ -151,13 +150,13 @@
             // graficasToolStripMenuItem
             // 
             this.graficasToolStripMenuItem.Name = "graficasToolStripMenuItem";
-            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.graficasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.graficasToolStripMenuItem.Text = "Graficas";
             // 
             // cotizaciónToolStripMenuItem
             // 
             this.cotizaciónToolStripMenuItem.Name = "cotizaciónToolStripMenuItem";
-            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.cotizaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cotizaciónToolStripMenuItem.Text = "Cotización";
             this.cotizaciónToolStripMenuItem.Click += new System.EventHandler(this.cotizaciónToolStripMenuItem_Click);
             // 
@@ -166,8 +165,7 @@
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generalesToolStripMenuItem,
             this.leadsToolStripMenuItem,
-            this.prospectoToolStripMenuItem,
-            this.agregarUsuarioToolStripMenuItem});
+            this.prospectoToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.usuariosToolStripMenuItem.Text = "Clientes";
@@ -176,30 +174,23 @@
             // generalesToolStripMenuItem
             // 
             this.generalesToolStripMenuItem.Name = "generalesToolStripMenuItem";
-            this.generalesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.generalesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.generalesToolStripMenuItem.Text = "Generales";
             this.generalesToolStripMenuItem.Click += new System.EventHandler(this.generalesToolStripMenuItem_Click);
             // 
             // leadsToolStripMenuItem
             // 
             this.leadsToolStripMenuItem.Name = "leadsToolStripMenuItem";
-            this.leadsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.leadsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.leadsToolStripMenuItem.Text = "Leads";
             this.leadsToolStripMenuItem.Click += new System.EventHandler(this.leadsToolStripMenuItem_Click);
             // 
             // prospectoToolStripMenuItem
             // 
             this.prospectoToolStripMenuItem.Name = "prospectoToolStripMenuItem";
-            this.prospectoToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.prospectoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.prospectoToolStripMenuItem.Text = "Prospecto";
             this.prospectoToolStripMenuItem.Click += new System.EventHandler(this.prospectoToolStripMenuItem_Click);
-            // 
-            // agregarUsuarioToolStripMenuItem
-            // 
-            this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
-            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
-            this.agregarUsuarioToolStripMenuItem.Text = "Agregar Cliente nuevo";
-            this.agregarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarUsuarioToolStripMenuItem_Click);
             // 
             // agendaToolStripMenuItem
             // 
@@ -309,7 +300,6 @@
         private System.Windows.Forms.ToolStripMenuItem generalesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem leadsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prospectoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCitasAgendadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarSecionToolStripMenuItem;

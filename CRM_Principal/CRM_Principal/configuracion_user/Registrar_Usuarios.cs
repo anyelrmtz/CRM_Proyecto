@@ -66,10 +66,10 @@ namespace CRM_Principal
                     if (resultado == DialogResult.Yes)
                     {
                         conectar.Open();
-                        SqlCommand agregar_user = new SqlCommand();
-                        agregar_user.Connection = conectar;
-                        agregar_user.CommandText = ("insert into usuarios(usuario,contra,nombre,tipo_user) values('" + ususario.Text + "','" + contra.Text + "','" + Nombre.Text + "','"+tipo_user.Text+"')");
-                        SqlDataReader leer3 = agregar_user.ExecuteReader();
+                        SqlCommand agregar_user4 = new SqlCommand();
+                        agregar_user4.Connection = conectar;
+                        agregar_user4.CommandText = ("insert into usuarios(usuario,contra,nombre,tipo_user) values('" + ususario.Text + "','" + contra.Text + "','" + Nombre.Text + "','"+tipo_user.Text+"')");
+                        SqlDataReader leer3 = agregar_user4.ExecuteReader();
                         if (leer3.Read())
                         {
                             MessageBox.Show("Error en guardad");

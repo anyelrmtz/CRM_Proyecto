@@ -298,7 +298,7 @@
             "Talleres",
             "Procedimietos",
             "Servicios",
-            "Consultas",
+            "Cita",
             "Vacunas",
             "Medicinas"});
             this.comboBox5.Location = new System.Drawing.Point(246, 50);

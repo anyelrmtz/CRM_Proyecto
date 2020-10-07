@@ -44,7 +44,7 @@ namespace CRM_Principal.Clientes
         public void Creacion_user()
         {//user
             string cadena = this.text_nombre.Text;
-            usera = cadena.Substring(0,5);
+            usera = cadena.Substring(0,3);
             //contra
             string cadena_contra = this.txt_telefono.Text;
             contra = usera + cadena_contra.Substring(0, 3);
@@ -137,6 +137,7 @@ namespace CRM_Principal.Clientes
             else
             {
                 conectar.Close();
+                Correo();
                 MessageBox.Show("El Cliente fue Agregado en el sistema Correctamente");
                 Limpiar();
 
@@ -159,7 +160,33 @@ namespace CRM_Principal.Clientes
             Creacion_user();
             
         }
+        public void Correo()
+        {
+            System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+            msg.To.Add(Txt_correo.Text);
+            msg.Subject = "JUNO DOCTOR: Paciente: "+text_nombre.Text+" ";
+            msg.SubjectEncoding = System.Text.Encoding.UTF8;
+            msg.Body= "Bienvenido a nuestra Clinica Juno Doctors los datos que nos proporciono se guardaron exitosamente \n" +
+                "los siguientes datos son para que ingrese con la app de Android <br>" +
+                "Usuario:" + usera + "<br>" +
+                "Contraseña: " + contra + " ";
+            msg.BodyEncoding = System.Text.Encoding.UTF8;
+            msg.IsBodyHtml = true;
+            msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");
 
+            System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+            cliente.Credentials = new System.Net.NetworkCredential("manuelangelrmtz19@gmail.com", "anyel123@");
+            cliente.Port = 587;
+            cliente.EnableSsl = true;
+            cliente.Host = "smtp.gmail.com";
+            try {
+                cliente.Send(msg);
+            } catch
+            {
+                MessageBox.Show("error correo");
+            }
+
+        }
         private void button2_Click(object sender, EventArgs e)
         {
 

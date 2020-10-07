@@ -125,7 +125,7 @@
             this.tipo_user.FormattingEnabled = true;
             this.tipo_user.Items.AddRange(new object[] {
             "Adimintrador",
-            "Acistene"});
+            "Asistente"});
             this.tipo_user.Location = new System.Drawing.Point(129, 145);
             this.tipo_user.Name = "tipo_user";
             this.tipo_user.Size = new System.Drawing.Size(170, 23);
