@@ -160,12 +160,13 @@ namespace CRM_Principal
             combo_tipo.Text = "Selecione una Opcion";
             combo_tipo.Items.Add("Vacunas");
             combo_tipo.Items.Add("Otros");
+            combo_servicio.Enabled = false;
 
             combo_servicio.Items.Clear();
         }
         public void Gastos()
         {
-
+            combo_servicio.Enabled = false;
             combo_servicio.Text = "Selecione una Opcion";
             combo_tipo.Text = "Selecione una Opcion";
             combo_tipo.Items.Clear();
@@ -194,7 +195,7 @@ namespace CRM_Principal
             {
                 combo_servicio.Items.Add(leer["Nombre"].ToString());
             }
-            
+            combo_servicio.Enabled = true;
             conectar.Close();
         }
 
@@ -214,6 +215,7 @@ namespace CRM_Principal
             }
 
             conectar.Close();
+            combo_servicio.Enabled = true;
         }
        public void otros()
         {
@@ -241,7 +243,7 @@ namespace CRM_Principal
             {
                 combo_servicio.Items.Add(leer["Nombre"].ToString());
             }
-
+            combo_servicio.Enabled = true;
             conectar.Close();
         }
         //seleciona tipo de dato
