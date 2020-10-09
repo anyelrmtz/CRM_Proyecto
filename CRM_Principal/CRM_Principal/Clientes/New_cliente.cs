@@ -35,7 +35,7 @@ namespace CRM_Principal.Clientes
                 SqlCommand cliente_pasiente = new SqlCommand();
                 SqlConnection conectanos = new SqlConnection();
                 cliente_pasiente.Connection = conectar;
-                cliente_pasiente.CommandText = ("Select *from usuari WHERE Nombre='"+text_nombre.Text+"';");
+                cliente_pasiente.CommandText = ("Select *from usuario WHERE Nombre='"+text_nombre.Text+"';");
                 SqlDataReader cliente_user = cliente_pasiente.ExecuteReader();
                 if (cliente_user.Read())
                 {
@@ -44,7 +44,8 @@ namespace CRM_Principal.Clientes
                 }
                 else
                 {
-
+                    conectar.Close();
+                    Creacion_user();
                 }
         }
             
@@ -69,7 +70,7 @@ namespace CRM_Principal.Clientes
         public void Claves()
         {
             Random obj = new Random();
-            String posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            String posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             int longitud = posibles.Length;
             char letra;
             char letra2;
@@ -101,8 +102,9 @@ namespace CRM_Principal.Clientes
             SqlDataReader cliente_user = cliente.ExecuteReader();
             if (cliente_user.Read())
             {
-                Claves();
                 conectar.Close();
+                Claves();
+               
                 Buscarclave();
             }
             else
@@ -128,12 +130,45 @@ namespace CRM_Principal.Clientes
             }
             else
             {
-                DialogResult resultado = MessageBox.Show("el cliente " + text_nombre.Text + " Se registro exitosamente ", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
              
                 conectar.Close();
-                Correo();
                 Borar();
+              
+
+
+            }
+        }
+        public void Crear_tabla_user()
+        {
+            conectar.Open();
+            SqlCommand agregado_user = new SqlCommand();
+            SqlConnection conectanos = new SqlConnection();
+            agregado_user.Connection = conectar;
+            agregado_user.CommandText = ("CREATE TABLE "+clave+"(Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,nombre_paciente varchar(50), fehca_nac varchar(50),edad varchar(8),estatus varchar(8)); ");
+            SqlDataReader cliente_user = agregado_user.ExecuteReader();
+            if (cliente_user.Read())
+            {
+                MessageBox.Show("error");
+                conectar.Close();
+            }
+            else
+            {
                 
+                if (Txt_correo.Text == "")
+                {
+
+                   
+                }
+                else
+                {
+                    DialogResult resultado = MessageBox.Show("el cliente " + text_nombre.Text + " Se registro exitosamente ", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    conectar.Close();
+                    Correo();
+                }
+                
+               
+
 
             }
         }
@@ -146,13 +181,24 @@ namespace CRM_Principal.Clientes
             agregado_user.Connection = conectar2;
             agregado_user.CommandText = ("DELETE FROM clientes_sin_status WHERE Nombre='"+nom+"'");
             SqlDataReader cliente_user = agregado_user.ExecuteReader();
-            conectar2.Close();
+            if (cliente_user.Read())
+            {
+                conectar2.Close();
+                MessageBox.Show("erro");
+            }
+            else
+            {
+                conectar2.Close();
+                Crear_tabla_user();
+                
+            }
+          
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Creacion_user();
+            Buscar();
         }
         public void Correo()
         {

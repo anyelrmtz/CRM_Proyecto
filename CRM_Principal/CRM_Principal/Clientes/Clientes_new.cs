@@ -56,7 +56,7 @@ namespace CRM_Principal.Clientes
      public void Claves()
         {
             Random obj = new Random();
-            String posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            String posibles = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
             int longitud = posibles.Length;
             char letra;
             char letra2;
@@ -136,10 +136,20 @@ namespace CRM_Principal.Clientes
             }
             else
             {
-                conectar.Close();
-                Correo();
-                MessageBox.Show("El Cliente fue Agregado en el sistema Correctamente");
-                Limpiar();
+                
+                if (Txt_correo.Text == "")
+                {
+                    conectar.Close();
+                    MessageBox.Show("El Cliente fue Agregado en el sistema Correctamente");
+                    Limpiar();
+                }
+                else{
+                    conectar.Close();
+                    MessageBox.Show("El Cliente fue Agregado en el sistema Correctamente");
+                    Correo();
+                    Limpiar();
+                }
+               
 
             }
         }
