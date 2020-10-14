@@ -86,12 +86,12 @@ namespace CRM_Principal
                 SqlDataReader cotizacion = agregar_cotizacion.ExecuteReader();
                 if (cotizacion.Read())
                 {
-                    MessageBox.Show("eror");
+                    MessageBox.Show("Error");
                     conectar.Close();
                 }
                 else
                 {
-                    MessageBox.Show("agrgado exitosamente");
+                    MessageBox.Show("Agregado exitosamente");
                     conectar.Close();
                     limpiar();
                     Cargar_tabla();

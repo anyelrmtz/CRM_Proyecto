@@ -126,7 +126,7 @@ namespace CRM_Principal
             }
             else
             {
-                DialogResult resultado = MessageBox.Show("El cliente " + txt_nombre.Text + " no aparece en el sistema \n ¿ Desea agregarla al Sistema? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult resultado = MessageBox.Show("El cliente " + txt_nombre.Text + " no aparece en el sistema \n ¿ Desea agregarlo al Sistema? ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 //si dise que si ase la funcion de actualisar la tabla de entrada_user y cecierra la ventana actual
                 if (resultado == DialogResult.Yes)
                 {

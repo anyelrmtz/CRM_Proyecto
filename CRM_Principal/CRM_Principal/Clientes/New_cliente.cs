@@ -149,7 +149,7 @@ namespace CRM_Principal.Clientes
             SqlDataReader cliente_user = agregado_user.ExecuteReader();
             if (cliente_user.Read())
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Error");
                 conectar.Close();
             }
             else
@@ -162,7 +162,7 @@ namespace CRM_Principal.Clientes
                 }
                 else
                 {
-                    DialogResult resultado = MessageBox.Show("el cliente " + text_nombre.Text + " Se registro exitosamente ", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult resultado = MessageBox.Show("El Cliente " + text_nombre.Text + " Se registro exitosamente ", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     conectar.Close();
                     Correo();
                 }
@@ -184,7 +184,7 @@ namespace CRM_Principal.Clientes
             if (cliente_user.Read())
             {
                 conectar2.Close();
-                MessageBox.Show("erro");
+                MessageBox.Show("Error");
             }
             else
             {
@@ -225,7 +225,7 @@ namespace CRM_Principal.Clientes
             }
             catch
             {
-                MessageBox.Show("error correo");
+                MessageBox.Show("Error correo");
             }
 
         }

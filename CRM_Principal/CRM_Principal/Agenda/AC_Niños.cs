@@ -93,7 +93,7 @@ namespace CRM_Principal.Agenda
                 Guardar_consulta();
             }
             else{
-                DialogResult resultado = MessageBox.Show("el cliente "+text_nom_tutor.Text+" no aparece en el sistema \n ¿ Desea agregarla al Sistema? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult resultado = MessageBox.Show("El cliente "+text_nom_tutor.Text+" no aparece en el sistema \n ¿ Desea agregarlo al Sistema? ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 //si dise que si ase la funcion de actualisar la tabla de entrada_user y cecierra la ventana actual
                 if (resultado == DialogResult.Yes)
                 {
@@ -125,7 +125,7 @@ namespace CRM_Principal.Agenda
             SqlDataReader cliente_user = cliente_pasiente.ExecuteReader();
             if (cliente_user.Read())
             {
-                MessageBox.Show("error guardar user en admin");
+                MessageBox.Show("Error guardar user en admin");
                 conectar.Close();
             }
             else
@@ -144,7 +144,7 @@ namespace CRM_Principal.Agenda
                 SqlDataReader cliente_nino = cliente_pasi_historial.ExecuteReader();
                 if (cliente_nino.Read())
                 {
-                    MessageBox.Show("EROR EN AGREGAR HISTORIAL");
+                    MessageBox.Show("ERROR EN AGREGAR HISTORIAL");
                     conectar.Close();
                 }
                 else
