@@ -184,6 +184,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.comboBox5);

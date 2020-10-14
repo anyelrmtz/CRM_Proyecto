@@ -327,6 +327,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox3.Controls.Add(this.btn_pagar);
             this.groupBox3.Location = new System.Drawing.Point(551, 20);
             this.groupBox3.Name = "groupBox3";

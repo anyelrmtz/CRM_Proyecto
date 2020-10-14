@@ -33,6 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -57,7 +58,6 @@
             this.clientes_sin_statusTableAdapter = new CRM_Principal.junodoctorDataSet6TableAdapters.clientes_sin_statusTableAdapter();
             this.usuarioTableAdapter = new CRM_Principal.junodoctor_clienteDataSet2TableAdapters.usuarioTableAdapter();
             this.prospectosTableAdapter = new CRM_Principal.junodoctor_clienteDataSet3TableAdapters.ProspectosTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -95,6 +95,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
@@ -105,6 +106,17 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes sin estatus";
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(292, 111);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 24);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Agregar al Sistema";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -169,6 +181,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.dataGridView2);
@@ -240,6 +253,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox3.Controls.Add(this.dataGridView3);
             this.groupBox3.Location = new System.Drawing.Point(248, 269);
             this.groupBox3.Name = "groupBox3";
@@ -301,17 +315,6 @@
             // prospectosTableAdapter
             // 
             this.prospectosTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(292, 111);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 24);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Agregar al Sistema";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Principal
             // 

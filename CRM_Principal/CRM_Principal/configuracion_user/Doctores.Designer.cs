@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_guardar_new = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -93,12 +93,13 @@
             // 
             // btn_guardar_new
             // 
+            this.btn_guardar_new.BackColor = System.Drawing.Color.Lime;
             this.btn_guardar_new.Location = new System.Drawing.Point(97, 156);
             this.btn_guardar_new.Name = "btn_guardar_new";
             this.btn_guardar_new.Size = new System.Drawing.Size(75, 23);
             this.btn_guardar_new.TabIndex = 8;
             this.btn_guardar_new.Text = "Guardar";
-            this.btn_guardar_new.UseVisualStyleBackColor = true;
+            this.btn_guardar_new.UseVisualStyleBackColor = false;
             this.btn_guardar_new.Click += new System.EventHandler(this.btn_guardar_new_Click);
             // 
             // label4
@@ -198,12 +199,13 @@
             // 
             // butn_actualizar
             // 
+            this.butn_actualizar.BackColor = System.Drawing.Color.Lime;
             this.butn_actualizar.Location = new System.Drawing.Point(43, 164);
             this.butn_actualizar.Name = "butn_actualizar";
             this.butn_actualizar.Size = new System.Drawing.Size(75, 23);
             this.butn_actualizar.TabIndex = 16;
             this.butn_actualizar.Text = "Actualizar";
-            this.butn_actualizar.UseVisualStyleBackColor = true;
+            this.butn_actualizar.UseVisualStyleBackColor = false;
             this.butn_actualizar.Click += new System.EventHandler(this.butn_actualizar_Click);
             // 
             // label5
@@ -375,8 +377,8 @@
             this.datos_Especialisados.Location = new System.Drawing.Point(162, 19);
             this.datos_Especialisados.Name = "datos_Especialisados";
             this.datos_Especialisados.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.datos_Especialisados.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.datos_Especialisados.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.datos_Especialisados.Size = new System.Drawing.Size(419, 157);
             this.datos_Especialisados.TabIndex = 0;
             this.datos_Especialisados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datos_Especialisados_CellContentClick);
@@ -389,6 +391,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(906, 448);
             this.Controls.Add(this.groupBox4);

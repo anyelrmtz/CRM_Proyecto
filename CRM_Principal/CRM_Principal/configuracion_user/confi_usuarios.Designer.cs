@@ -205,7 +205,7 @@
             // 
             // btn_elimi_historial
             // 
-            this.btn_elimi_historial.BackColor = System.Drawing.Color.Red;
+            this.btn_elimi_historial.BackColor = System.Drawing.Color.Tomato;
             this.btn_elimi_historial.Location = new System.Drawing.Point(18, 84);
             this.btn_elimi_historial.Name = "btn_elimi_historial";
             this.btn_elimi_historial.Size = new System.Drawing.Size(164, 26);
@@ -302,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(922, 487);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
