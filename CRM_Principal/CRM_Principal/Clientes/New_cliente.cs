@@ -39,7 +39,7 @@ namespace CRM_Principal.Clientes
                 SqlDataReader cliente_user = cliente_pasiente.ExecuteReader();
                 if (cliente_user.Read())
                 {
-                    DialogResult resultado = MessageBox.Show("el cliente " + text_nombre.Text + " Ya existe en el sistema ", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult resultado = MessageBox.Show("El Cliente " + text_nombre.Text + " Ya existe en el sistema ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     conectar.Close();
                 }
                 else

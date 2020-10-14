@@ -112,7 +112,7 @@ namespace CRM_Principal
         SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            conectar.Open();
+                conectar.Open();
             SqlCommand cliente = new SqlCommand();
             SqlConnection conectanos = new SqlConnection();
             cliente.Connection = conectar;
@@ -126,7 +126,7 @@ namespace CRM_Principal
             }
             else
             {
-                DialogResult resultado = MessageBox.Show("el cliente " + txt_nombre.Text + " no aparece en el sistema \n ¿ Desea agregarla al Sistema? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult resultado = MessageBox.Show("El cliente " + txt_nombre.Text + " no aparece en el sistema \n ¿ Desea agregarla al Sistema? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 //si dise que si ase la funcion de actualisar la tabla de entrada_user y cecierra la ventana actual
                 if (resultado == DialogResult.Yes)
                 {
@@ -157,7 +157,7 @@ namespace CRM_Principal
             SqlDataReader cliente_user = cliente_pasiente.ExecuteReader();
             if (cliente_user.Read())
             {
-                MessageBox.Show("error guardar user en admin");
+                MessageBox.Show("Error guardar user en admin");
                 conectar.Close();
             }
             else
@@ -174,7 +174,7 @@ namespace CRM_Principal
                 SqlDataReader cliente_nino = cliente_pasi_historial.ExecuteReader();
                 if (cliente_nino.Read())
                 {
-                    MessageBox.Show("EROR EN AGREGAR HISTORIAL");
+                    MessageBox.Show("ERROR EN AGREGAR HISTORIAL");
                     conectar.Close();
                 }
                 else

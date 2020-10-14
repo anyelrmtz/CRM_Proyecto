@@ -131,7 +131,7 @@ namespace CRM_Principal.Clientes
             SqlDataReader cliente_user = agregado_user.ExecuteReader();
             if (cliente_user.Read())
             {
-                MessageBox.Show("error");
+                MessageBox.Show("Error");
                 conectar.Close();
             }
             else

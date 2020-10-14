@@ -42,7 +42,7 @@ namespace CRM_Principal
             SqlDataReader leer = buscaruser.ExecuteReader();
             if (leer.Read())
             {
-                MessageBox.Show("ya existe el este usuario");
+                MessageBox.Show("Ya existe el este Usuario");
                 conectar.Close();
 
             }

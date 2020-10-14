@@ -88,7 +88,7 @@ namespace CRM_Principal
 
         private void cerrarSecionToolStripMenuItem_Click(object sender, EventArgs e)
         { //se llama un mensaje de avertencia si de sea cerrar sesion 
-            DialogResult resultado = MessageBox.Show("en verdad quiere cerar Sesión? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult resultado = MessageBox.Show("En verdad quiere cerrar Sesión? ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             //si dise que si ase la funcion de actualisar la tabla de entrada_user y cecierra la ventana actual
             if (resultado == DialogResult.Yes)
             {

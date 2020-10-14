@@ -79,7 +79,7 @@ namespace CRM_Principal
         private void btn_actualizar_Click(object sender, EventArgs e)
         {  if((data==null))
             {
-                MessageBox.Show("seleccione un Usuario porfavor");
+                MessageBox.Show("Seleccione un Usuario porfavor");
             }
             else
             {
@@ -106,11 +106,11 @@ namespace CRM_Principal
         {
             if ((data == null))
             {
-                MessageBox.Show("seleccione un Usuario porfavor");
+                MessageBox.Show("Seleccione un Usuario porfavor");
             }
             else
             {
-                DialogResult resultado = MessageBox.Show("en verdad quiere Eliminar el Usuario? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult resultado = MessageBox.Show("En verdad quiere Eliminar el Usuario? ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (resultado == DialogResult.Yes)
                 {
                     conectar.Open();
@@ -120,7 +120,7 @@ namespace CRM_Principal
                     SqlDataReader leer3 = agregar_user.ExecuteReader();
                     if (leer3.Read())
                     {
-                        MessageBox.Show("Error en guardad");
+                        MessageBox.Show("Error en guardar");
                         conectar.Close();
                     }
                     else
@@ -139,7 +139,7 @@ namespace CRM_Principal
 
         private void btn_elimi_historial_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("en verdad quieres Eliminar todo el historial? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult resultado = MessageBox.Show("En verdad quieres Eliminar todo el historial? ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (resultado == DialogResult.Yes)
             {
                 conectar.Open();
@@ -147,7 +147,7 @@ namespace CRM_Principal
                 agregar_user.Connection = conectar;
                 agregar_user.CommandText = ("TRUNCATE TABLE entrada_user");
                 SqlDataReader leer3 = agregar_user.ExecuteReader();
-                MessageBox.Show("Selimino todo los datos corectamente");
+                MessageBox.Show("Se Elimino todo los datos correctamente");
                 this.entrada_userTableAdapter.Fill(this.junodoctorDataSet1.entrada_user);
                 conectar.Close();
             }

@@ -87,7 +87,7 @@ namespace CRM_Principal
 
                 //MySqlDataReader insertado = registro_usuario.ExecuteReader();
                 SqlDataReader insertado = registro_usuario.ExecuteReader();
-                DialogResult resultado = MessageBox.Show("Bienvenido "+txtuser.Text+"\n Fecha y Hora de Entrada: "+entrada+"", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult resultado = MessageBox.Show("Bienvenido "+txtuser.Text+"\n Fecha y Hora de Entrada: "+entrada+"", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //llamamos el from Principal y se cierra el actual"
                 Inicio_Principal llamar = new Inicio_Principal(info);
                 this.Hide();
@@ -98,7 +98,7 @@ namespace CRM_Principal
             else
             {
                 //mesaje de error en la contraseña o ususario"
-                DialogResult resultado = MessageBox.Show("El usuario o Contraseña incorrecta ", "Avertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                DialogResult resultado = MessageBox.Show("El Usuario o Contraseña incorrecta ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             //cierra la conexion de base de datos
             conectar.Close();

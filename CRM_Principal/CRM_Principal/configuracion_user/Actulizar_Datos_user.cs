@@ -50,13 +50,13 @@ namespace CRM_Principal
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            if (tipo_user.Text == "Selecione una Opcion")
+            if (tipo_user.Text == "Seleccione una Opcion")
             {
                 MessageBox.Show("Por favor seleccione un tipo de Usuario");
             }
             else
             {
-                DialogResult resultado = MessageBox.Show("en verdad quiere Actualizar los datos ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult resultado = MessageBox.Show("En verdad quiere Actualizar los datos ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (resultado == DialogResult.Yes)
                 {
                     
