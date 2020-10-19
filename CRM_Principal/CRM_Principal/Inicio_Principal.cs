@@ -71,11 +71,53 @@ namespace CRM_Principal
         {
             Hora_envivo.Text = DateTime.Now.ToString();
         }
-
+        
         private void Inicio_Principal_Load(object sender, EventArgs e)
         {
+            Citas_nollegadas();
 
         }
+        public void Citas_nollegadas()
+        {
+            DateTime fecha = DateTime.Now;
+            fecha = fecha.AddDays(-1);
+            
+            string a = Convert.ToString(fecha.ToShortDateString());
+            SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            conectar.Open();
+            // MySqlCommand actualisar = new MySqlCommand();
+            SqlCommand actualisar = new SqlCommand();
+            //MySqlConnection conectanos = new MySqlConnection();
+            SqlConnection conectanos = new SqlConnection();
+            actualisar.Connection = conectar;
+            actualisar.CommandText = ("DELETE FROM consul_nino where fehca_cita='"+a+"' and pago='NO'");
+            // MySqlDataReader leer = actualisar.ExecuteReader();
+            SqlDataReader leer = actualisar.ExecuteReader();
+            conectar.Close();
+
+
+            citas_adulto_nollegada();
+        }
+        public void citas_adulto_nollegada()
+        {
+            DateTime fecha = DateTime.Now;
+            fecha = fecha.AddDays(-1);
+
+            string a = Convert.ToString(fecha.ToShortDateString());
+            SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            conectar.Open();
+            // MySqlCommand actualisar = new MySqlCommand();
+            SqlCommand actualisar = new SqlCommand();
+            //MySqlConnection conectanos = new MySqlConnection();
+            SqlConnection conectanos = new SqlConnection();
+            actualisar.Connection = conectar;
+            actualisar.CommandText = ("DELETE FROM consul_adulto where fehca_cita='" + a + "' and pago='NO'");
+            // MySqlDataReader leer = actualisar.ExecuteReader();
+            SqlDataReader leer = actualisar.ExecuteReader();
+            conectar.Close();
+        }
+
+
 
         private void Inicio_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
