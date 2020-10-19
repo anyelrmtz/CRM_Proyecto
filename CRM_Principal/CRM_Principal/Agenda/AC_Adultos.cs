@@ -149,40 +149,62 @@ namespace CRM_Principal
         //guardado
         public void Guardar_consulta()
         {//guardar user en el admin
+
             conectar.Open();
-            SqlCommand cliente_pasiente = new SqlCommand();
-            SqlConnection conectanos = new SqlConnection();
-            cliente_pasiente.Connection = conectar;
-            cliente_pasiente.CommandText = ("INSERT INTO " + clavesit + "(nombre_paciente,fehca_nac,edad,estatus)Values('" + txt_nombre.Text + "','" + fehca_naci.Text + "','" + txt_edad.Text+ "','2')");
-            SqlDataReader cliente_user = cliente_pasiente.ExecuteReader();
-            if (cliente_user.Read())
+            SqlCommand cliente_pasiente2 = new SqlCommand();
+            SqlConnection conectanos2 = new SqlConnection();
+            cliente_pasiente2.Connection = conectar;
+            cliente_pasiente2.CommandText = ("Select *from " + clavesit + " where nombre_paciente='"+txt_nombre.Text+"'");
+            SqlDataReader cliente_user2 = cliente_pasiente2.ExecuteReader();
+            if (cliente_user2.Read())
             {
-                MessageBox.Show("Error guardar user en admin");
                 conectar.Close();
+                Historial();
             }
             else
-            {///guardar historial
-                conectar.Close();
+            {
                 conectar.Open();
-                SqlCommand cliente_pasi_historial = new SqlCommand();
-                cliente_pasi_historial.Connection = conectar;
-                cliente_pasi_historial.CommandText = ("INSERT INTO consul_adulto(fhec_hora,tipo_consulta,doctora,fehca_cita,hora_cita,genero,nombre,fecha_nac,edad,tipo_sangre,telefono,correo,enfermedad,enfermedad_info,medicacion,info_medicacion,pago,cantidad,clave)VALUES('" + Hora_fecha + "','" + cobo_tipc.Text + "','" + combo_doc.Text + "','" + combo_fehc_cit.Text + "','" + hora_text.Text + "'" +
-                    ",'" + combo_genero.Text + "','" + txt_nombre.Text + "','" + fehca_naci.Text + "'," +
-                    "'" + txt_edad.Text + "','" + combo_sangre.Text + "','" + text_telefono.Text + "'," +
-                    "'" + txt_correo.Text + "','" + En_tuto+ "','" + textBox5.Text + "','" + Medi_tuto + "'," +
-                    "'" + textBox1.Text + "','NO','','" + clavesit + "');");
-                SqlDataReader cliente_nino = cliente_pasi_historial.ExecuteReader();
-                if (cliente_nino.Read())
+                SqlCommand cliente_pasiente = new SqlCommand();
+                SqlConnection conectanos = new SqlConnection();
+                cliente_pasiente.Connection = conectar;
+                cliente_pasiente.CommandText = ("INSERT INTO " + clavesit + "(nombre_paciente,fehca_nac,edad,estatus)Values('" + txt_nombre.Text + "','" + fehca_naci.Text + "','" + txt_edad.Text + "','2')");
+                SqlDataReader cliente_user = cliente_pasiente.ExecuteReader();
+                if (cliente_user.Read())
                 {
-                    MessageBox.Show("ERROR EN AGREGAR HISTORIAL");
+                    MessageBox.Show("Error guardar user en admin");
                     conectar.Close();
                 }
                 else
                 {
-                    MessageBox.Show("La cita fue agendada");
                     conectar.Close();
-                    Limpiar();
+                    Historial();
                 }
+            }
+        }
+
+        public void Historial()
+        {
+            ///guardar historial
+            
+            conectar.Open();
+            SqlCommand cliente_pasi_historial = new SqlCommand();
+            cliente_pasi_historial.Connection = conectar;
+            cliente_pasi_historial.CommandText = ("INSERT INTO consul_adulto(fhec_hora,tipo_consulta,doctora,fehca_cita,hora_cita,genero,nombre,fecha_nac,edad,tipo_sangre,telefono,correo,enfermedad,enfermedad_info,medicacion,info_medicacion,pago,cantidad,clave)VALUES('" + Hora_fecha + "','" + cobo_tipc.Text + "','" + combo_doc.Text + "','" + combo_fehc_cit.Text + "','" + hora_text.Text + "'" +
+                ",'" + combo_genero.Text + "','" + txt_nombre.Text + "','" + fehca_naci.Text + "'," +
+                "'" + txt_edad.Text + "','" + combo_sangre.Text + "','" + text_telefono.Text + "'," +
+                "'" + txt_correo.Text + "','" + En_tuto + "','" + textBox5.Text + "','" + Medi_tuto + "'," +
+                "'" + textBox1.Text + "','NO','','" + clavesit + "');");
+            SqlDataReader cliente_nino = cliente_pasi_historial.ExecuteReader();
+            if (cliente_nino.Read())
+            {
+                MessageBox.Show("ERROR EN AGREGAR HISTORIAL");
+                conectar.Close();
+            }
+            else
+            {
+                MessageBox.Show("La cita fue agendada");
+                conectar.Close();
+                Limpiar();
             }
         }
 
@@ -198,14 +220,7 @@ namespace CRM_Principal
                     this.textBox1.Focus();
                 }
             }
-            foreach (Control ctrl in this.Controls)
-            {
-                if (ctrl is ComboBox)
-                {
-                    ComboBox text = ctrl as ComboBox;
-                    text.SelectedIndex = -1;
-                }
-            }
+           
             /////////////////////grupo bos 1
             foreach (Control c in this.groupBox1.Controls)
             {
