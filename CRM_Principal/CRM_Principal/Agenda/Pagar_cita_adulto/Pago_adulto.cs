@@ -32,7 +32,7 @@ namespace CRM_Principal.Agenda.Pagar_cita_adulto
         }
         public void Busqueda()
         {
-            SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar.Open();
 
             SqlCommand buscar = new SqlCommand();
@@ -54,7 +54,7 @@ namespace CRM_Principal.Agenda.Pagar_cita_adulto
         }
         public void Update_junio_cliente()
         {
-            SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar.Open();
             SqlCommand actualisar = new SqlCommand();
             SqlConnection conectanos = new SqlConnection();
@@ -73,7 +73,7 @@ namespace CRM_Principal.Agenda.Pagar_cita_adulto
         }
         public void Doctor_ingreso()
         {
-            SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar.Open();
             SqlCommand agregar_cotizacion = new SqlCommand();
             agregar_cotizacion.Connection = conectar;

@@ -35,7 +35,7 @@ namespace CRM_Principal.configuracion_user.servicios
             Guardado();
 
         }
-        SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+        SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
         public void Guardado()
         {
             conectar.Open();

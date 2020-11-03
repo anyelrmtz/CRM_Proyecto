@@ -26,9 +26,9 @@ namespace CRM_Principal.Agenda
         }
         
         //conexion
-        SqlConnection conectar = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor_cliente ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+        SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
         //conexion
-        SqlConnection conectar2 = new SqlConnection("Data Source = 10.23.249.209; Initial Catalog = junodoctor ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+        SqlConnection conectar2 = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -201,6 +201,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>junodoctorDataSet_vacunasnew.xsd</DependentUpon>
     </Compile>
+    <Compile Include="junodoctor_clienteDataSet.cs">
+      <DependentUpon>junodoctor_clienteDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="junodoctor_clienteDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
