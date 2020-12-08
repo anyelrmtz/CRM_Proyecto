@@ -324,7 +324,9 @@ namespace CRM_Principal
              + "Fecha de la consulta:" + combo_fehc_cit.Text + "<br>"
              + "Hora de la consulta:" + hora_text.Text + "<br>"
             + "IMPORTANTE: Recuerde llegar 30 minutos antes de la hora de su consulta <br>"
-            + "Recuerde que puede revisar sus Consultas con la aplicación de Juno Doctors, sí aun no cuenta con la aplicación Descárguela aquí." + " ";
+             + "----------------------------------------------------------------------------- <br>"
+            + "Recuerde que puede revisar sus Consultas con la aplicación de Juno Doctors, sí aun no cuenta con la aplicación Descárguela aquí." + "<br> "
+            + "<div><p>Descarga la App Juno Doctors: <a href='http://177.228.214.8/junodoctor/Descarga.php'>Descargar</a></p> </div>" + "";
             msg.BodyEncoding = System.Text.Encoding.UTF8;
             msg.IsBodyHtml = true;
             msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");
@@ -344,6 +346,11 @@ namespace CRM_Principal
             {
                 MessageBox.Show("error de correo");
             }
+        }
+
+        private void combo_fehc_cit_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

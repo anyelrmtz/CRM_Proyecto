@@ -639,7 +639,7 @@
             this.fehca_sita.Name = "fehca_sita";
             this.fehca_sita.Size = new System.Drawing.Size(106, 22);
             this.fehca_sita.TabIndex = 20;
-            this.fehca_sita.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
+            this.fehca_sita.Value = new System.DateTime(2020, 12, 8, 13, 59, 58, 0);
             // 
             // label12
             // 

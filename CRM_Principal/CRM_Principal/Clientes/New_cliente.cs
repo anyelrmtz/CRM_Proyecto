@@ -209,7 +209,8 @@ namespace CRM_Principal.Clientes
             msg.Body = "Bienvenido a nuestra Clinica Juno Doctors los datos que nos proporciono se guardaron exitosamente \n" +
                 "los siguientes datos son para que ingrese con la app de Android <br>" +
                 "Usuario:" + usera + "<br>" +
-                "Contraseña: " + contra + " ";
+                "Contraseña: " + contra + "<br>"
+                + "<div><p>Descarga la App Juno Doctors: <a href='http://177.228.214.8/junodoctor/Descarga.php'>Descargar</a></p> </div>" + "";
             msg.BodyEncoding = System.Text.Encoding.UTF8;
             msg.IsBodyHtml = true;
             msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");

@@ -356,6 +356,7 @@
             this.combo_fehc_cit.Size = new System.Drawing.Size(106, 22);
             this.combo_fehc_cit.TabIndex = 25;
             this.combo_fehc_cit.Value = new System.DateTime(2020, 9, 22, 17, 44, 43, 0);
+            this.combo_fehc_cit.ValueChanged += new System.EventHandler(this.combo_fehc_cit_ValueChanged);
             // 
             // label18
             // 
