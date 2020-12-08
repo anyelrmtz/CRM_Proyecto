@@ -202,9 +202,9 @@ namespace CRM_Principal
             }
             else
             {
-                MessageBox.Show("La cita fue agendada");
+                
                 conectar.Close();
-                Limpiar();
+                Correo();
             }
         }
 
@@ -310,6 +310,40 @@ namespace CRM_Principal
             }
 
             conectar2.Close();
+        }
+        public void Correo()
+        {
+
+            System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+            msg.To.Add(txt_correo.Text);
+            msg.Subject = "JUNO DOCTOR: Paciente: " + txt_nombre.Text + " ";
+            msg.SubjectEncoding = System.Text.Encoding.UTF8;
+            msg.Body = "Bienvenido a Juno Doctors estos son los datos de su siguiente consulta  <br>" +
+                "Dr.(a):" + combo_doc.Text + "<br>"
+            + "Tipo de consulta: " + cobo_tipc.Text + "<br>"
+             + "Fecha de la consulta:" + combo_fehc_cit.Text + "<br>"
+             + "Hora de la consulta:" + hora_text.Text + "<br>"
+            + "IMPORTANTE: Recuerde llegar 30 minutos antes de la hora de su consulta <br>"
+            + "Recuerde que puede revisar sus Consultas con la aplicación de Juno Doctors, sí aun no cuenta con la aplicación Descárguela aquí." + " ";
+            msg.BodyEncoding = System.Text.Encoding.UTF8;
+            msg.IsBodyHtml = true;
+            msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");
+
+            System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+            cliente.Credentials = new System.Net.NetworkCredential("manuelangelrmtz19@gmail.com", "anyel2602@");
+            cliente.Port = 587;
+            cliente.EnableSsl = true;
+            cliente.Host = "smtp.gmail.com";
+            try
+            {
+                cliente.Send(msg);
+                Limpiar();
+                MessageBox.Show("La cita fue agendada");
+            }
+            catch
+            {
+                MessageBox.Show("error de correo");
+            }
         }
     }
 }

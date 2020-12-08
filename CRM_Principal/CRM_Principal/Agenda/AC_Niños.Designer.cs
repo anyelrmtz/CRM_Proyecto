@@ -33,7 +33,7 @@
             this.tipo_sangre_tu = new System.Windows.Forms.ComboBox();
             this.fecha_tutor_na = new System.Windows.Forms.DateTimePicker();
             this.telefono = new System.Windows.Forms.TextBox();
-            this.correo = new System.Windows.Forms.TextBox();
+            this.textcorreo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.info_medicacion_tuto = new System.Windows.Forms.TextBox();
@@ -140,12 +140,12 @@
             this.telefono.Size = new System.Drawing.Size(121, 22);
             this.telefono.TabIndex = 7;
             // 
-            // correo
+            // textcorreo
             // 
-            this.correo.Location = new System.Drawing.Point(151, 210);
-            this.correo.Name = "correo";
-            this.correo.Size = new System.Drawing.Size(200, 22);
-            this.correo.TabIndex = 8;
+            this.textcorreo.Location = new System.Drawing.Point(151, 210);
+            this.textcorreo.Name = "textcorreo";
+            this.textcorreo.Size = new System.Drawing.Size(200, 22);
+            this.textcorreo.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -160,7 +160,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.combo_acompaña);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.correo);
+            this.groupBox1.Controls.Add(this.textcorreo);
             this.groupBox1.Controls.Add(this.text_nom_tutor);
             this.groupBox1.Controls.Add(this.telefono);
             this.groupBox1.Controls.Add(this.fecha_tutor_na);
@@ -747,7 +747,7 @@
         private System.Windows.Forms.ComboBox tipo_sangre_tu;
         private System.Windows.Forms.DateTimePicker fecha_tutor_na;
         private System.Windows.Forms.TextBox telefono;
-        private System.Windows.Forms.TextBox correo;
+        private System.Windows.Forms.TextBox textcorreo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;

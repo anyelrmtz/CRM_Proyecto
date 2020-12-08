@@ -90,7 +90,9 @@ namespace CRM_Principal.Agenda
             {
                 clavesit = cliente_user["clave"].ToString();
                 conectar.Close();
-                Guardar_consulta();
+                //Guardar
+                // Guardar_consulta();
+                Busqueda_paciente();
             }
             else{
                 DialogResult resultado = MessageBox.Show("El cliente "+text_nom_tutor.Text+" no aparece en el sistema \n ¿ Desea agregarlo al Sistema? ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -100,7 +102,7 @@ namespace CRM_Principal.Agenda
                     Datos info;
                     info.nom = text_nom_tutor.Text;
                     info.tel = telefono.Text;
-                    info.correo = correo.Text;
+                    info.correo = textcorreo.Text;
                     conectar.Close();
                     Clientes_new ver = new Clientes_new(info);
                     ver.ShowDialog();
@@ -113,6 +115,53 @@ namespace CRM_Principal.Agenda
             }
 
 
+        }
+        public void Busqueda_paciente()
+        {
+            conectar.Open();
+            SqlCommand paciente = new SqlCommand();
+            SqlConnection conectanos = new SqlConnection();
+            paciente.Connection = conectar;
+            paciente.CommandText = ("Select *from " + clavesit + " where nombre_paciente='" + nombre_nino.Text + "'");
+            SqlDataReader cliente_user = paciente.ExecuteReader();
+            if (cliente_user.Read())
+            {
+                conectar.Close();
+                History();
+            }
+            else
+            {
+                conectar.Close();
+                Guardar_consulta();
+            }
+        }
+        public void History()
+        {
+            conectar.Close();
+            conectar.Open();
+            SqlCommand cliente_pasi_historial = new SqlCommand();
+            cliente_pasi_historial.Connection = conectar;
+            cliente_pasi_historial.CommandText = ("INSERT INTO consul_nino(fhec_hora,tipo_consulta,doctora,fehca_cita,hora_cita,tutor,nombre_tt,fehca_na,tipo_san,telefono,correo,enfermedas,infi_enfer,medicacion,infi_medic,nombre_nino,fecha_nino,tipo_sangre,edad,enfer_nino,info_enfer_nino,medicacion_nino,info_medicacion_nino" +
+                ",hermano,info_hermano,pago,cantidad,clave)VALUES('" + Hora_fecha + "','" + tipo_consulta.Text + "','" + doctora_combo.Text + "','" + fehca_sita.Text + "','" + hora_text.Text + "'" +
+                ",'" + combo_acompaña.Text + "','" + text_nom_tutor.Text + "','" + fecha_tutor_na.Text + "'," +
+                "'" + tipo_sangre_tu.Text + "','" + telefono.Text + "','" + textcorreo.Text + "'," +
+                "'" + En_tuto + "','" + info_enfer_tutor.Text + "','" + Medi_tuto + "','" + info_medicacion_tuto.Text + "'," +
+                "'" + nombre_nino.Text + "','" + fecha_na_nino.Text + "','" + tipo_sangre_nino.Text + "'," +
+                "'" + edad_nino.Text + "','" + enfer_nino + "','" + textBox7.Text + "','" + medi_nino + "','" + textBox1.Text + "','" + hermano + "','" + textBox2.Text + "','NO','','" + clavesit + "');");
+            SqlDataReader cliente_nino = cliente_pasi_historial.ExecuteReader();
+            if (cliente_nino.Read())
+            {
+                MessageBox.Show("ERROR EN AGREGAR HISTORIAL");
+                conectar.Close();
+            }
+            else
+            {
+                Correo();
+                //MessageBox.Show("La cita fue agendada");
+                conectar.Close();
+                //Limpiar();
+
+            }
         }
         //guardado
         public void Guardar_consulta()
@@ -137,7 +186,7 @@ namespace CRM_Principal.Agenda
                 cliente_pasi_historial.CommandText = ("INSERT INTO consul_nino(fhec_hora,tipo_consulta,doctora,fehca_cita,hora_cita,tutor,nombre_tt,fehca_na,tipo_san,telefono,correo,enfermedas,infi_enfer,medicacion,infi_medic,nombre_nino,fecha_nino,tipo_sangre,edad,enfer_nino,info_enfer_nino,medicacion_nino,info_medicacion_nino" +
                     ",hermano,info_hermano,pago,cantidad,clave)VALUES('" + Hora_fecha+"','"+tipo_consulta.Text+"','"+doctora_combo.Text+"','"+fehca_sita.Text+"','"+hora_text.Text+"'" +
                     ",'"+combo_acompaña.Text+"','"+text_nom_tutor.Text+"','"+fecha_tutor_na.Text+"'," +
-                    "'"+tipo_sangre_tu.Text+"','"+telefono.Text+"','"+correo.Text+"'," +
+                    "'"+tipo_sangre_tu.Text+"','"+telefono.Text+"','"+textcorreo.Text+"'," +
                     "'"+En_tuto+"','"+info_enfer_tutor.Text+"','"+Medi_tuto+"','"+info_medicacion_tuto.Text+"'," +
                     "'"+nombre_nino.Text+"','"+fecha_na_nino.Text+"','"+tipo_sangre_nino.Text+"'," +
                     "'"+edad_nino.Text+"','"+enfer_nino+"','"+textBox7.Text+"','"+medi_nino+"','"+textBox1.Text+"','"+hermano+"','"+textBox2.Text+"','NO','','"+clavesit+"');");
@@ -149,9 +198,11 @@ namespace CRM_Principal.Agenda
                 }
                 else
                 {
-                    MessageBox.Show("La cita fue agendada");
+                    Correo();
+                    //MessageBox.Show("La cita fue agendada");
                     conectar.Close();
-                    Limpiar();
+                    //Limpiar();
+                    
                 }
             }
         }
@@ -453,7 +504,41 @@ namespace CRM_Principal.Agenda
             
             
         }
-    }
+        public void Correo()
+        {
+           
+             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
+             msg.To.Add(textcorreo.Text);
+             msg.Subject = "JUNO DOCTOR: Paciente: " + nombre_nino.Text + " ";
+             msg.SubjectEncoding = System.Text.Encoding.UTF8;
+             msg.Body = "Bienvenido a Juno Doctors estos son los datos de su siguiente consulta  <br>"+
+                 "Dr.(a):" + doctora_combo.Text +"<br>"
+             +"Tipo de consulta: "+tipo_consulta.Text+ "<br>"
+              + "Fecha de la consulta:" + fehca_sita.Text + "<br>"
+              + "Hora de la consulta:" + hora_text.Text + "<br>"
+             + "IMPORTANTE: Recuerde llegar 30 minutos antes de la hora de su consulta <br>"
+             + "Recuerde que puede revisar sus Consultas con la aplicación de Juno Doctors, sí aun no cuenta con la aplicación Descárguela aquí." + " " ;
+             msg.BodyEncoding = System.Text.Encoding.UTF8;
+             msg.IsBodyHtml = true;
+             msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");
 
+             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
+             cliente.Credentials = new System.Net.NetworkCredential("manuelangelrmtz19@gmail.com","anyel2602@");
+             cliente.Port = 587;
+             cliente.EnableSsl = true;
+             cliente.Host = "smtp.gmail.com";
+             try
+             {
+                 cliente.Send(msg);
+                 Limpiar();
+                 MessageBox.Show("La cita fue agendada");
+             }
+             catch
+             {
+                 MessageBox.Show(textcorreo.Text);
+             }
+        }
     }
+} 
+
 
