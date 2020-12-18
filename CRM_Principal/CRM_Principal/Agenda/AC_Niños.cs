@@ -523,7 +523,7 @@ namespace CRM_Principal.Agenda
              msg.BodyEncoding = System.Text.Encoding.UTF8;
              msg.IsBodyHtml = true;
              msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");
-
+            //upss
              System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
              cliente.Credentials = new System.Net.NetworkCredential("manuelangelrmtz19@gmail.com", "anyel2602@2");
              cliente.Port = 587;
