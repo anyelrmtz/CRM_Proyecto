@@ -149,7 +149,7 @@ namespace CRM_Principal
         //guardado
         public void Guardar_consulta()
         {//guardar user en el admin
-
+            conectar.Close();
             conectar.Open();
             SqlCommand cliente_pasiente2 = new SqlCommand();
             SqlConnection conectanos2 = new SqlConnection();
@@ -163,6 +163,7 @@ namespace CRM_Principal
             }
             else
             {
+                conectar.Close();
                 conectar.Open();
                 SqlCommand cliente_pasiente = new SqlCommand();
                 SqlConnection conectanos = new SqlConnection();
@@ -332,7 +333,7 @@ namespace CRM_Principal
             msg.From = new System.Net.Mail.MailAddress("manuelangelrmtz19@gmail.com");
 
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
-            cliente.Credentials = new System.Net.NetworkCredential("manuelangelrmtz19@gmail.com", "anyel2602@");
+            cliente.Credentials = new System.Net.NetworkCredential("manuelangelrmtz19@gmail.com", "anyel2602@2");
             cliente.Port = 587;
             cliente.EnableSsl = true;
             cliente.Host = "smtp.gmail.com";
