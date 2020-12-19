@@ -75,7 +75,7 @@ namespace CRM_Principal
         private void Inicio_Principal_Load(object sender, EventArgs e)
         {
             Citas_nollegadas();
-
+           
         }
         public void Citas_nollegadas()
         {
@@ -94,8 +94,6 @@ namespace CRM_Principal
             // MySqlDataReader leer = actualisar.ExecuteReader();
             SqlDataReader leer = actualisar.ExecuteReader();
             conectar.Close();
-
-
             citas_adulto_nollegada();
         }
         public void citas_adulto_nollegada()
@@ -112,6 +110,26 @@ namespace CRM_Principal
             SqlConnection conectanos = new SqlConnection();
             actualisar.Connection = conectar;
             actualisar.CommandText = ("DELETE FROM consul_adulto where fehca_cita='" + a + "' and pago='NO'");
+            // MySqlDataReader leer = actualisar.ExecuteReader();
+            SqlDataReader leer = actualisar.ExecuteReader();
+            conectar.Close();
+            Clientes_sin_estatus_pasado();
+        }
+        public void Clientes_sin_estatus_pasado()
+        {
+            DateTime fecha = DateTime.Now;
+            fecha = fecha.AddDays(-2);
+            string a = Convert.ToString(fecha.ToShortDateString());
+         
+          
+            SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            conectar.Open();
+            // MySqlCommand actualisar = new MySqlCommand();
+            SqlCommand actualisar = new SqlCommand();
+            //MySqlConnection conectanos = new MySqlConnection();
+            SqlConnection conectanos = new SqlConnection();
+            actualisar.Connection = conectar;
+            actualisar.CommandText = ("DELETE FROM clientes_sin_status where fehca='" + a + "'");
             // MySqlDataReader leer = actualisar.ExecuteReader();
             SqlDataReader leer = actualisar.ExecuteReader();
             conectar.Close();
