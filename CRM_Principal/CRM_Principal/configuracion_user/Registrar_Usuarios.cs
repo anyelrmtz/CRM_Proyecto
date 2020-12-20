@@ -27,8 +27,10 @@ namespace CRM_Principal
             inicio.ShowDialog();
             this.Close();
         }
+        //conexion la base datos
         SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
+        //funcion de busqueda de ususario
         private void button1_Click(object sender, EventArgs e)
         {
             //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
@@ -92,6 +94,8 @@ namespace CRM_Principal
             conectar.Close();
            
         }
+
+        //funcion limpiar campos
         class limpiar
         {
             public void limpiarcampos(Control control)
@@ -108,7 +112,7 @@ namespace CRM_Principal
                 }
             }
         }
-
+        // boton de cancelar el gusardado
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Desea cancelar el guardado? ", "Avertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

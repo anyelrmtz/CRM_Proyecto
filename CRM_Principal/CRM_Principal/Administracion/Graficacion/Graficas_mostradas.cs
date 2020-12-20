@@ -599,6 +599,8 @@ namespace CRM_Principal.Administracion.Graficacion
                 LOLI12 = Convert.ToDouble(converido12);
 
             }
+
+            //graficacion
             string[] series = { "Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiebre","Octubre","Noviembre","Diciembre" };
             double[] puntos = { LOLI1,LOLI2,LOLI3,LOLI4,LOLI5,LOLI6,LOLI7,LOLI8,LOLI9,LOLI10,LOLI11,LOLI12};
 

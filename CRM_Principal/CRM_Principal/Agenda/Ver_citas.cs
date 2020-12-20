@@ -89,6 +89,7 @@ namespace CRM_Principal.Agenda
         string estado;
         string modo;
 
+        //visualisacion de la tabla niño
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Calendario_citas.BoldedDates = new DateTime[]
@@ -104,6 +105,7 @@ namespace CRM_Principal.Agenda
 
         }
 
+        //visualisacion de tabla citas adulto
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             nombre = dataGridView2.CurrentRow.Cells[2].Value.ToString();
@@ -118,6 +120,7 @@ namespace CRM_Principal.Agenda
            
         }
 
+        //boton de pagar citas
         private void btn_pagar_Click(object sender, EventArgs e)
         {
             if (modo.ToString() == null)

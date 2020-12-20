@@ -71,6 +71,8 @@ namespace CRM_Principal
             }
             
         }
+
+        //funcion de verificacion 
         public void enviado()
         {
             DialogResult resultado = MessageBox.Show("Verifique los siguientes datos \n " +

@@ -32,6 +32,8 @@ namespace CRM_Principal.Agenda.Pago_cita_nino
 
 
         }
+
+        //busqueda de citas 
         public void Busqueda()
         {
             SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
@@ -54,7 +56,7 @@ namespace CRM_Principal.Agenda.Pago_cita_nino
             }
             conectar.Close();
         }
-
+        //actualisacion de status del paciente
         public void Update_junio_cliente()
         {
             SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
@@ -75,6 +77,7 @@ namespace CRM_Principal.Agenda.Pago_cita_nino
             }
         }
 
+        //funcion ingresa a cotizacion la cita
         public void Doctor_ingreso()
         {
             SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");

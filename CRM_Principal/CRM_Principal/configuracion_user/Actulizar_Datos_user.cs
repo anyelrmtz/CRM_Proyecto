@@ -22,7 +22,10 @@ namespace CRM_Principal
             nombre_user = info.user;
             Busqueda();
         }
+        //conexion de la base de datos
         SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+       
+        //funcion de busqueda en la tabla ususario
         public void Busqueda()
         {
             //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
@@ -48,6 +51,7 @@ namespace CRM_Principal
 
         }
 
+        //actualiza la tabla 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             if (tipo_user.Text == "Seleccione una Opcion")

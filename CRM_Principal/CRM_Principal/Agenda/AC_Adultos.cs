@@ -40,6 +40,7 @@ namespace CRM_Principal
 
 
         }
+        //busca las especialidades disponibles
         public void Especialidadse()
         {
 
@@ -110,6 +111,8 @@ namespace CRM_Principal
         }
         //conexion
         SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente ; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+
+        //Boton de guardado
         private void btn_guardar_Click(object sender, EventArgs e)
         {
                 conectar.Open();
@@ -279,7 +282,7 @@ namespace CRM_Principal
                 }
             }
         }
-
+        //funciona de calcular la edad del paciente automaticamente
         private void fehca_naci_ValueChanged(object sender, EventArgs e)
         {
             DateTime fechaacutal = DateTime.Today;
@@ -293,6 +296,7 @@ namespace CRM_Principal
         {
 
         }
+
 
         private void cobo_tipc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -312,6 +316,8 @@ namespace CRM_Principal
 
             conectar2.Close();
         }
+
+        //enviar correo electronico
         public void Correo()
         {
 

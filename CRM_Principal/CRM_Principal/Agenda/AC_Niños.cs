@@ -53,6 +53,8 @@ namespace CRM_Principal.Agenda
          
 
         }
+
+        //buca la especialidades exitentes
         public void Especialidadse()
         {
             
@@ -76,6 +78,7 @@ namespace CRM_Principal.Agenda
 
         }
 
+        // Boton de guardar
         private void btn_Guar_Click(object sender, EventArgs e)
         {
             
@@ -116,6 +119,8 @@ namespace CRM_Principal.Agenda
 
 
         }
+
+        //funcion de la busqueda del paciente si existe en el sistema
         public void Busqueda_paciente()
         {
             conectar.Open();
@@ -135,6 +140,8 @@ namespace CRM_Principal.Agenda
                 Guardar_consulta();
             }
         }
+
+        //funcion de guardar en el historial
         public void History()
         {
             conectar.Close();
@@ -464,6 +471,7 @@ namespace CRM_Principal.Agenda
 
         }
 
+        //genera automaticamente la edad del paciente
         private void fecha_na_nino_ValueChanged(object sender, EventArgs e)
         {
             DateTime fechaacutal = DateTime.Today;
@@ -504,6 +512,8 @@ namespace CRM_Principal.Agenda
             
             
         }
+
+        //funcion de enviar correo electronico
         public void Correo()
         {
            

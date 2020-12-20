@@ -67,6 +67,8 @@ namespace CRM_Principal.Clientes
 
 
         }
+
+        //funcion de generar clave unica para el usuario
         public void Claves()
         {
             Random obj = new Random();
@@ -114,6 +116,8 @@ namespace CRM_Principal.Clientes
 
             }
         }
+
+        //funcion de guardado del ususario
         public void agregar_user()
         {
             conectar.Open();
@@ -139,6 +143,8 @@ namespace CRM_Principal.Clientes
 
             }
         }
+
+        //crea propia tabla del ususario
         public void Crear_tabla_user()
         {
             conectar.Open();
@@ -172,6 +178,8 @@ namespace CRM_Principal.Clientes
 
             }
         }
+
+        //funcion borrar datos del usuario
         public void Borar()
         {
             SqlConnection conectar2 = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
@@ -200,6 +208,8 @@ namespace CRM_Principal.Clientes
         {
             Buscar();
         }
+
+        //funcion de enviar correo electronico 
         public void Correo()
         {
             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();

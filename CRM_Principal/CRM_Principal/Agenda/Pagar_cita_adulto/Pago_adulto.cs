@@ -30,6 +30,8 @@ namespace CRM_Principal.Agenda.Pagar_cita_adulto
             DateTime ahora = DateTime.Now;
             Hora_fecha = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
         }
+
+        //busca la cita para pagar
         public void Busqueda()
         {
             SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
@@ -52,6 +54,8 @@ namespace CRM_Principal.Agenda.Pagar_cita_adulto
             }
             conectar.Close();
         }
+
+        //actualisa el estatus del pasiente
         public void Update_junio_cliente()
         {
             SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
@@ -71,6 +75,8 @@ namespace CRM_Principal.Agenda.Pagar_cita_adulto
                 Doctor_ingreso();
             }
         }
+
+        //ingresa la cita a ingresos
         public void Doctor_ingreso()
         {
             SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");

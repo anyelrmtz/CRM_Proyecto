@@ -69,6 +69,7 @@ namespace CRM_Principal
         }
         SqlConnection conectar2 = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
+        //barra de busqueda
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             conectar2.Open();
@@ -92,6 +93,7 @@ namespace CRM_Principal
             button1.Enabled = true;
 
         }
+        //manda informacion del cliente
         public void mandar()
         {
             Envio info;

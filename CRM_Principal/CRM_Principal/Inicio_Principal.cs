@@ -77,6 +77,7 @@ namespace CRM_Principal
             Citas_nollegadas();
            
         }
+        //funcion para borra las citas que no llegaron el dia anterior niño
         public void Citas_nollegadas()
         {
             DateTime fecha = DateTime.Now;
@@ -96,6 +97,7 @@ namespace CRM_Principal
             conectar.Close();
             citas_adulto_nollegada();
         }
+        //funcion para borra las citas que no llegaron el dia anterior Adulto
         public void citas_adulto_nollegada()
         {
             DateTime fecha = DateTime.Now;
@@ -115,6 +117,8 @@ namespace CRM_Principal
             conectar.Close();
             Clientes_sin_estatus_pasado();
         }
+
+        //funcion para eliminar los ususarios que llegan desde la pagina web mas tardar 2 dias despues
         public void Clientes_sin_estatus_pasado()
         {
             DateTime fecha = DateTime.Now;

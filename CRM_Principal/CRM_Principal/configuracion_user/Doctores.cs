@@ -21,6 +21,7 @@ namespace CRM_Principal.configuracion_user
 
         }
 
+        //funcion mostrar las especialidades exitentes en la base de datos
         public void Especialida()
         {
             try
@@ -47,6 +48,8 @@ namespace CRM_Principal.configuracion_user
 
 
         }
+
+        //busca la especialidad
         public void buscar()
         {
             try
@@ -77,7 +80,7 @@ namespace CRM_Principal.configuracion_user
         //MySqlConnection conectar = new MySqlConnection("server=10.23.249.209;  Uid=doctorjuno; pwd=12345; database=crm;");
         SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
-
+        //boton de guardado 
         private void btn_guardar_new_Click(object sender, EventArgs e)
         {
             conectar.Open();
@@ -97,6 +100,8 @@ namespace CRM_Principal.configuracion_user
             }
 
         }
+        
+        //funcion de Guardado  en la base de datos
         public void Guardado()
         {
             conectar.Close();
@@ -117,6 +122,7 @@ namespace CRM_Principal.configuracion_user
             }
         }
 
+        //busca en la expecialidad si el doctor existe
         public void Especialidad()
         {
             if (combo_especialidad.Text == combo_especialidad.Text)
@@ -156,6 +162,8 @@ namespace CRM_Principal.configuracion_user
             }
         }
 
+
+        //boton de actualisar los datos del doctor
         private void butn_actualizar_Click(object sender, EventArgs e)
         {
             Actualisar();
@@ -207,6 +215,8 @@ namespace CRM_Principal.configuracion_user
             }
 
         }
+
+        //funcion limpiar los campos
         public void limpiando()
         {
             foreach (Control c in this.groupBox2.Controls)

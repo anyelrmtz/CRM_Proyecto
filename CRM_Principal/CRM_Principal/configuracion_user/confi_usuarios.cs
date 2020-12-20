@@ -101,6 +101,7 @@ namespace CRM_Principal
             
            data = dataGridView_user.CurrentRow.Cells[1].Value.ToString();
         }
+
         //boton para eliminar un usuario
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -137,6 +138,7 @@ namespace CRM_Principal
            
         }
 
+        //boton eliminar historial de ingreso del sistema
         private void btn_elimi_historial_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("En verdad quieres Eliminar todo el historial? ", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);

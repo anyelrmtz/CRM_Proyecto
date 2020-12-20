@@ -53,6 +53,8 @@ namespace CRM_Principal.Clientes
             
 
         }
+
+        //genera clave unica
      public void Claves()
         {
             Random obj = new Random();
@@ -99,6 +101,8 @@ namespace CRM_Principal.Clientes
 
             }
         }
+        
+        //agregar ususario nuevos boton
         public void agregar_user()
         {
             conectar.Open();
@@ -121,6 +125,7 @@ namespace CRM_Principal.Clientes
             }
         }
     
+        //funcion crea tabla unic del nuevo ususario
         public void Crear_tabla_user()
         {
             conectar.Open();
@@ -170,6 +175,8 @@ namespace CRM_Principal.Clientes
             Creacion_user();
             
         }
+
+        //funcion de nevio de correo con los datos
         public void Correo()
         {
             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
