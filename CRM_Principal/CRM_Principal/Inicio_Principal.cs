@@ -84,7 +84,7 @@ namespace CRM_Principal
             fecha = fecha.AddDays(-1);
             
             string a = Convert.ToString(fecha.ToShortDateString());
-            SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            SqlConnection conectar = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar.Open();
             // MySqlCommand actualisar = new MySqlCommand();
             SqlCommand actualisar = new SqlCommand();
@@ -104,7 +104,7 @@ namespace CRM_Principal
             fecha = fecha.AddDays(-1);
 
             string a = Convert.ToString(fecha.ToShortDateString());
-            SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            SqlConnection conectar = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar.Open();
             // MySqlCommand actualisar = new MySqlCommand();
             SqlCommand actualisar = new SqlCommand();
@@ -126,7 +126,7 @@ namespace CRM_Principal
             string a = Convert.ToString(fecha.ToShortDateString());
          
           
-            SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            SqlConnection conectar = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar.Open();
             // MySqlCommand actualisar = new MySqlCommand();
             SqlCommand actualisar = new SqlCommand();
@@ -157,7 +157,7 @@ namespace CRM_Principal
             if (resultado == DialogResult.Yes)
             {
                 //MySqlConnection conectar = new MySqlConnection("server = 10.23.249.209; Uid = doctorjuno; pwd = 12345; database = crm; ");
-                SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+                SqlConnection conectar = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
                 conectar.Open();
                 // MySqlCommand actualisar = new MySqlCommand();
                 SqlCommand actualisar = new SqlCommand();

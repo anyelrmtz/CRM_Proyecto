@@ -28,7 +28,7 @@ namespace CRM_Principal
             this.Close();
         }
         //conexion la base datos
-        SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+        SqlConnection conectar = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
 
         //funcion de busqueda de ususario
         private void button1_Click(object sender, EventArgs e)

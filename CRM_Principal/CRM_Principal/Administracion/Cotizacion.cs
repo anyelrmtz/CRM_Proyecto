@@ -180,7 +180,7 @@ namespace CRM_Principal
         }
 
 
-        SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+        SqlConnection conectar = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
         //vacunas,procesos,Consultas,Talleres,Cursos,Servicios
         public void Vacuna()
         {

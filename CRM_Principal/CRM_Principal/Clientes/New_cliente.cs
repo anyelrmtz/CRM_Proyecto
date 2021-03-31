@@ -28,7 +28,7 @@ namespace CRM_Principal.Clientes
        
         }
 
-        SqlConnection conectar = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+        SqlConnection conectar = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor_cliente; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
          public void Buscar() {
             {//guardar user en el admin
                 conectar.Open();
@@ -182,7 +182,7 @@ namespace CRM_Principal.Clientes
         //funcion borrar datos del usuario
         public void Borar()
         {
-            SqlConnection conectar2 = new SqlConnection("Data Source = 177.228.214.8; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
+            SqlConnection conectar2 = new SqlConnection("Data Source = 192.168.100.65; Initial Catalog = junodoctor; Persist Security Info = True; User ID = DOCTORJUNIO; Password = junodoctor2020");
             conectar2.Open();
             SqlCommand agregado_user = new SqlCommand();
             SqlConnection conectanos = new SqlConnection();
