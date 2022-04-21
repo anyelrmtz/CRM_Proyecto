@@ -35,7 +35,7 @@ namespace CRM_Principal
             InitializeComponent();
             //optiene la fecha y hora del sistema Formato 12horas 
             DateTime ahora = DateTime.Now;
-            entrada = ahora.ToString("dd-MM-yyyy hh:mm:ss:tt");
+            entrada = ahora.ToString("dd-MM-yyyy hh:mm:s:tt");
         }
 
         private void label1_Click(object sender, EventArgs e)
